@@ -1,0 +1,26 @@
+{
+  "name": "fun-matrix",
+  "version": "1.0.0",
+  "description": "Matrix operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astuanax/fun-matrix.git"
+  },
+  "keywords": [
+    "matrix",
+    "functional-programming"
+  ],
+  "author": "Len Dierickx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astuanax/fun-matrix/issues"
+  },
+  "homepage": "https://github.com/astuanax/fun-matrix#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
