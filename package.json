@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/astuanax/fun-matrix#readme",
   "dependencies": {
+    "fun.js": "git+https://github.com/astuanax/fun.git",
     "jest": "^23.6.0"
   }
 }
