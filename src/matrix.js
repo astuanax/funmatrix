@@ -1,110 +1,75 @@
-// var curry = require('fun.js').curry
-// import curry from './curry'
-import curry from 'fun.js/src/util/curry'
+import curry from 'fun.js/src/curry'
+import map from 'fun.js/src/map'
+import fold from 'fun.js/src/fold'
+import concat from 'util/concat'
+import empty from 'util/empty'
+import dot from 'util/dot'
 
-const concatMatrix = curry((M, m) => m.map((rows, idx) => Array.prototype.concat.call(rows, M.__value[idx])))
-
-const addMatrix = curry((M, m) => m.map((row, idx) => row.map((col, jdx) => col + M.__value[idx][jdx])))
-
-const addScalar = curry((M, m) => {
-  return m.map(row => row.map(col => col + M.__value))
-})
-
-const dot = curry((X, y) => {
-  let result = []
-  for (let i = 0; i < X.__value.length; i++) {
-    for (let j = 0; j < y[0].length; j++) {
-      // let val = X.__value[i][j]
-      let sum = 0
-      for (let k = 0; k < X.__value[0].length; k++) {
-        sum += X.__value[i][k] * y[k][j]
-      }
-      result[i] = result[i] || []
-      result[i][j] = sum
-    }
-  }
-  return result
-})
-
-const emptyMatrix = curry(m => m.map(rows => []))
-
-const identityMatrix = curry(m => m.map((rows, idx) => rows.map((cols, jdx) => (idx === jdx) * 1)))
-
-let Matrix = function (...value) {
-  if (arguments.length === 1) {
-    [this.__value] = value
-  } else {
-    // eslint-disable-next-line no-undef
-    [rows, cols, this.__value = []] = value
-    if (this.__value.length === 0) {
-      // eslint-disable-next-line no-undef
-      this.__value = Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
-    }
-  }
+let Matrix = function (val) {
+  this.__value = val
 }
 
-Matrix.of = function (...args) {
-  if (arguments.length === 1) {
-    // eslint-disable-next-line no-undef
-    [value] = args
-    // eslint-disable-next-line no-undef
-    if (value instanceof Matrix) return value
-    if (this instanceof Matrix) {
-      // eslint-disable-next-line no-undef
-      this.__value = value
-    } else {
-      // eslint-disable-next-line no-undef
-      return new Matrix(value)
-    }
-  } else {
-    return new Matrix(...args)
+Matrix.prototype.type = 'Matrix'
+
+Matrix.of = function (val) {
+  if (val instanceof Matrix) return val
+  if (this instanceof Matrix) {
+    this.__value = val
+    return this
   }
+  return new Matrix(val)
 }
 
-Matrix.prototype.fmap = function (f) {
-  return Matrix.of(f(this.__value))
+Matrix.prototype.map = function (f) {
+  return Matrix.of(map(f)(this.__value))
 }
 
-Matrix.fmap = curry(function (f, M) {
-  return Matrix.of(M).fmap(f) // (f(M.__value))
+Matrix.map = curry(function (f, M) {
+  return Matrix.of(M).map(f)
 })
 
-Matrix.prototype.map = Matrix.prototype.fmap
-Matrix.map = Matrix.fmap
+Matrix.prototype.fold = function (f) {
+  return Matrix.of(fold(f, [])(this.__value))
+}
+
+Matrix.fold = curry(function (f, M) {
+  return Matrix.of(M).fold(f)
+})
 
 Matrix.prototype.ap = function (M) {
-  return Matrix.of(M).fmap(this.__value)
+  return Matrix.of(M).map(this.__value)
 }
 
 Matrix.ap = curry(function (f, M) {
   return Matrix.of(f).ap(M)
 })
 
-Matrix.prototype.concat = function (M, f = concatMatrix) {
-  return Matrix.of(this).fmap(f(M))
+Matrix.prototype.concat = function (M, f = concat) {
+  return Matrix.of(this).map(f(M))
 }
 
-Matrix.concat = curry(function (A, B, f = concatMatrix) {
-  return Matrix.of(A).fmap(f(B))
+Matrix.concat = curry(function (A, B, f = concat) {
+  return Matrix.of(A).map(f(B))
 })
 
-Matrix.prototype.empty = function (f = emptyMatrix) {
-  return Matrix.of(this.__value.length, this.__value[0].length).fmap(f)
+Matrix.prototype.empty = function () {
+  return Matrix.of(this).map(empty)
 }
 
-Matrix.empty = curry(function (rows, cols, f = emptyMatrix) {
-  return Matrix.of(rows, cols).fmap(f)
+Matrix.empty = curry(function (rows, cols, f = empty) {
+  const m = Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
+  return Matrix.of(m).map(f)
 })
 
 // #### #### #### //
 
-Matrix.prototype.identity = function (f = identityMatrix) {
-  return Matrix.of(this).empty(f)
-}
-
-Matrix.identity = function (m, n, f = identityMatrix) {
-  return Matrix.empty(m, n, f)
-}
+// Matrix.prototype.identity = function (f = identityMatrix) {
+//   return Matrix.of(this).empty(f)
+// }
+//
+// Matrix.identity = function (m, n, f = identityMatrix) {
+//   return Matrix.empty(m, n, f)
+// }
 
 Matrix.prototype.combine = function (M) {
   return Matrix.of(this).concat(Matrix.of(M))
@@ -123,7 +88,7 @@ Matrix.dot = function (A, B, f = dot) {
 }
 
 Matrix.prototype.fill = function (f) {
-  return Matrix.of(this).fmap(m => m.map(x => x.map(y => f())))
+  return Matrix.of(this).map(m => x => x.map(y => f()))
 }
 
 Matrix.prototype.zeros = function () {
@@ -132,36 +97,6 @@ Matrix.prototype.zeros = function () {
 
 Matrix.prototype.ones = function () {
   return Matrix.of(this).fill(x => 1)
-}
-
-Matrix.prototype.random = function (f = e => Math.random() * 2 - 1) {
-  return Matrix.of(this).fill(f)
-}
-
-Matrix.prototype.toArray = function () {
-  return this.__value.map(row => row.map(col => col))
-}
-
-Matrix.fromArray = function (arr) {
-  return Matrix.of(arr.map(row => row.map(col => col)))
-}
-
-Matrix.prototype.transpose = function () {
-  return Matrix.of(this).fmap(m => m.reduce((prev, next) => next.map((item, i) =>
-    (prev[i] || []).concat(next[i])
-  ), []))
-}
-
-Matrix.transpose = function (M) {
-  return Matrix.of(M).transpose()
-}
-
-Matrix.prototype.add = function (M, f = addMatrix) {
-  return Matrix.of(this).concat(Matrix.of(M), f)
-}
-
-Matrix.prototype.addScalar = function (M, f = addScalar) {
-  return Matrix.of(this).concat(Matrix.of(M), f)
 }
 
 export default Matrix

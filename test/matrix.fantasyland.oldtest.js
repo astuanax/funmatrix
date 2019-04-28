@@ -1,26 +1,25 @@
 // import Matrix from '../src/matrix'
-var Matrix = require('../src/matrix')
-var assert = require('assert')
+// import chai from 'chai'
+// import Matrix from '../lib/fun-matrix'
+//
+// describe('Fantasyland specifications', function () {
+//   describe('Semigroup concat', function () {
+//     it('should return N', function () {
+//       const a = [[0, 1, 1], [2, 3, 4]]
+//       const b = [[2, 2, 2], [3, 3, 3]]
+//       const c = [[5, 5, 5], [4, 4, 4]]
+//       const A = Matrix.of(a)
+//       const B = Matrix.of(b)
+//       const C = Matrix.of(c)
+//
+//       const M = Matrix.concat(Matrix.concat(A, B), C)
+//       const N = Matrix.concat(A, Matrix.concat(B, C))
+//
+//       chai.expect(M).to.deep.equal(N)
+//     })
+//   })
 
-describe('Fantasyland specifications', function () {
-  describe('Semigroup concat', function () {
-    it('should return N', function () {
-      const a = [[0, 1, 1], [2, 3, 4]]
-      const b = [[2, 2, 2], [3, 3, 3]]
-      const c = [[5, 5, 5], [4, 4, 4]]
-      const A = Matrix.of(a)
-      const B = Matrix.of(b)
-      const C = Matrix.of(c)
-
-      const M = Matrix.concat(Matrix.concat(A, B), C)
-      const N = Matrix.concat(A, Matrix.concat(B, C))
-
-      assert.equal(M, N)
-    })
-  })
-})
-
-// test('Semigroup concat', () => {
+// it('Semigroup concat', () => {
 //   // S.concat(S.concat(a, b), c) ≡ S.concat(a, S.concat(b, c))
 //
 //   const a = [[0, 1, 1], [2, 3, 4]];
@@ -33,8 +32,10 @@ describe('Fantasyland specifications', function () {
 //   const M = Matrix.concat(Matrix.concat(A, B), C);
 //   const N = Matrix.concat(A, Matrix.concat(B, C));
 //
-//   expect(M).toEqual(N);
+//   chai.expect(M).to.deep.equal(N);
 // });
+// })
+
 //
 // test('Monoid empty and concat', () => {
 //   // Right identity: M.concat(a, M.empty()) ≡ a
