@@ -5,13 +5,23 @@
   "description": "Matrix monad",
   "main": "src/matrix.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "./node_modules/.bin/eslint ./src --fix && npm run compile && npm run test && npm run jsdocs-json && npm run jsdocs && npm run size",
     "dev": "webpack --progress --colors --watch --env dev",
+    "compile": "webpack --env dev && webpack --env build",
     "test": "mocha --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js",
     "test:cover": "cross-env NODE_ENV=test nyc mocha --require babel-register --colors test/*.spec.js",
-    "repl": "node -i -e \"$(< ./lib/matrix.js)\""
+    "repl": "node -i -e \"$(< ./lib/matrix.js)\"",
+    "size": "size-limit",
+    "jsdocs": "jsdoc ./src -r -t ./node_modules/minami -d ./docs/ -R README.md",
+    "jsdocs-json": "jsdoc -X ./src -r > docs.json"
   },
+  "size-limit": [
+    {
+      "path": "./lib/fun-matrix.js",
+      "webpack": "./webpack.config.js"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/astuanax/fun-matrix.git"

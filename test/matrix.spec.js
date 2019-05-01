@@ -151,3 +151,25 @@ describe('DOT product', function () {
     chai.expect(dot.__value).to.deep.equal([[58, 64], [139, 154]])
   })
 })
+
+describe('Identity Matrix', function () {
+  it('should return identity matrix', function () {
+    const a = [[1, 2, 3], [4, 5, 6]]
+    const b = [[7, 8], [9, 10], [11, 12]]
+
+    const A = Matrix.of(a)
+    const B = Matrix.of(b)
+
+    const Aidentity = A.identity()
+    const AStaticIdentity = Matrix.identity(2, 3)
+
+    const Bidentity = B.identity()
+    const BStaticIdentity = Matrix.identity(3, 2)
+
+    chai.expect(Aidentity.__value).to.deep.equal([[1, 0, 0], [0, 1, 0]])
+    // chai.expect(AStaticIdentity.__value).to.deep.equal([[1, 0, 0], [0, 1, 0]])
+
+    chai.expect(Bidentity.__value).to.deep.equal([[1, 0], [0, 1], [0, 0]])
+    // chai.expect(BStaticIdentity.__value).to.deep.equal([[1, 0], [0, 1], [0, 0]])
+  })
+})

@@ -1,3 +1,10 @@
-import {curry} from 'fun.js';
+import map from 'fun.js/src/map'
 
-const identityMatrix = curry(m => m.map((rows, idx) => rows.map((cols, jdx) => (idx === jdx) * 1)))
+/**
+ * @function identity
+ * @desc Creates an identiy matrix from an empty array
+ * @param m {array}
+ * @param idx {number}
+ * @return {Matrix}
+ */
+export default (m, idx) => map((rows, jdx) => (idx === jdx) * 1, m)
