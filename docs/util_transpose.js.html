@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/dot.js - Documentation</title>
+    <title>util/transpose.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/dot.js</h1>
+    <h1 class="page-title">util/transpose.js</h1>
     
 
     
@@ -39,21 +39,17 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import curry from 'fun.js/src/curry'
-import fold from 'fun.js/src/fold'
-import map from 'fun.js/src/map'
+            <pre class="prettyprint source linenums"><code>import map from 'fun.js/src/map'
+import curry from 'fun.js/src/curry'
 
 /**
- * @function dot
- * @param B {Matrix}
- * @param a {Array}
- * @returns {Array}
+ * @function transpose
+ * @desc Transposes a array of arrays using the Matrix.map function
+ * @param m {array}
+ * @param idx {number}
+ * @return {Matrix}
  */
-export default curry((B, a) => map((item, i) => {
-  return fold((acc, x, j) => {
-    return (acc += x * B.__value[j][i])
-  }, 0)(a)
-})(B.__value[0]))
+export default curry((prev, next) => map((item, i) => (prev[i] || []).concat(next[i]))(next))
 </code></pre>
         </article>
     </section>

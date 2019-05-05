@@ -7,4 +7,4 @@ import map from 'fun.js/src/map'
  * @param idx {number}
  * @return {Matrix}
  */
-export default (m, idx) => map((rows, jdx) => (idx === jdx) * 1, m)
+export default (m, idx) => map((rows, jdx) => (idx === jdx) * 1)(m)
