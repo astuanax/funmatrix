@@ -177,27 +177,45 @@ describe('Identity Matrix', function () {
 describe('Transpose Matrix', function () {
   it('should transpose a matrix', function () {
     const A = Matrix.transpose([[-1, 2], [3, 4], [-8, 2]])
-    const result = [[-1,3,-8], [2, 4, 2]]
-    
+    const result = [[-1, 3, -8], [2, 4, 2]]
+
     chai.expect(A.__value).to.deep.equal(result)
   })
+
   it('should transpose an identity matrix', function () {
-    const A = Matrix.identity(10,10)
-    const B = Matrix.identity(10,10)
-    
+    const A = Matrix.identity(10, 10)
+    const B = Matrix.identity(10, 10)
+
     chai.expect(A.transpose().__value).to.deep.equal(B.__value)
   })
+
   it('should transpose a matrix', function () {
-    const A = Matrix.identity(10,5).zeros()
+    const A = Matrix.identity(10, 5).zeros()
     const B = Matrix.identity(5, 10).zeros().transpose()
 
     chai.expect(A.__value).to.deep.equal(B.__value)
   })
+
   it('should transpose a matrix', function () {
-    const a = Matrix.identity(10,5).zeros().toArray()
+    const a = Matrix.identity(10, 5).zeros().toArray()
     const b = Matrix.identity(5, 10).zeros().toArray()
 
     chai.expect(Matrix.of(a)).to.deep.equal(Matrix.transpose(b))
   })
-  
+})
+
+describe('from and toArray Matrix', function () {
+  it('should make a Matrix from an array', function () {
+    const arr = [[-1, 2], [3, 4], [-8, 2]]
+    const A = Matrix.fromArray(arr)
+    chai.expect(Matrix.of(arr)).to.deep.equal(A)
+    chai.expect(arr).to.not.equal(A._value)
+  })
+
+  it('should return an array from a Matrix', function () {
+    const arr = [[-1, 2], [3, 4], [-8, 2]]
+    const a = Matrix.of(arr).toArray()
+    chai.expect(arr).to.deep.equal(a)
+    chai.expect(arr).to.not.equal(a)
+  })
 })
