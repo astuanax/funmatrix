@@ -1,6 +1,7 @@
 import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
+import equals from 'fun.js/src/equals'
 import concat from 'util/concat'
 import empty from 'util/empty'
 import dot from 'util/dot'
@@ -32,6 +33,54 @@ let Matrix = function (val) {
   * m.type === 'Matrix'
  */
 Matrix.prototype.type = 'Matrix'
+
+/**
+ * @memberOf Matrix
+ * @member isSymmetric
+ * @returns {boolean}
+ */
+Matrix.prototype.isSymmetric = function () {
+  const a = this.__value
+  const b = Matrix.transpose(this).__value
+  return equals(a, b)
+}
+
+/**
+ * @memberOf Matrix
+ * @member getCols
+ * @returns {*}
+ */
+Matrix.prototype.getCols = function () {
+  return this.__value[0].length
+}
+
+/**
+ * @memberOf Matrix
+ * @member equals
+ * @parma M {Matrix|array}
+ * @returns {Boolean}
+ */
+Matrix.prototype.equals = function (M) {
+  return equals(this.__value, M.__value || M)
+}
+
+/**
+ * @memberOf Matrix
+ * @member getRows
+ * @returns {*}
+ */
+Matrix.prototype.getRows = function () {
+  return this.__value.length
+}
+
+/**
+ * @memberOf Matrix
+ * @member getShape
+ * @returns {array}
+ */
+Matrix.prototype.getShape = function () {
+  return [this.getRows(), this.getCols()]
+}
 
 /**
  * @memberOf Matrix
@@ -313,8 +362,19 @@ Matrix.prototype.toArray = function () {
 /**
  * @memberOf Matrix
  * @instance
- * @member fromArray
- * @desc Returns a Matrix from an array
+ * @member clone
+ * @desc Returns a clone of the matrix
+ * @returns {Matrix}
+ */
+Matrix.prototype.clone = function () {
+  return Matrix.fromArray(this.__value)
+}
+
+/**
+ * @memberOf Matrix
+ * @instance
+ * @member clone
+ * @desc Returns a clone Matrix from an array
  * @returns {array}
  */
 Matrix.fromArray = function (arr) {
@@ -351,6 +411,23 @@ Matrix.prototype.transpose = function () {
  */
 Matrix.transpose = function (M) {
   return Matrix.of(M).transpose()
+}
+
+/**
+ * @memberOf Matrix
+ * @member add
+ * @param M {Matrix|number} Add a Matrix or a number
+ * @returns {Matrix}
+ */
+Matrix.prototype.add = function (M) {
+  if (M instanceof Matrix) {
+    if (this.getCols() !== M.getCols() || this.getRows() !== M.getRows()) {
+      throw new Error('Matrices do not match, cannot add')
+    }
+    return this.map((row, idx) => map((val, jdx) => val + M.__value[idx][jdx])(row))
+  } else {
+    return this.map(x => x + M)
+  }
 }
 
 export default Matrix

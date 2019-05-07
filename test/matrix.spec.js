@@ -219,3 +219,23 @@ describe('from and toArray Matrix', function () {
     chai.expect(arr).to.not.equal(a)
   })
 })
+
+describe('Matrix properties', function () {
+  it('getCols, getRows, getShape', function () {
+    const arr = [[-1, 2], [3, 4], [-8, 2]]
+    const A = Matrix.of(arr)
+    chai.expect(A.getCols()).to.equal(2)
+    chai.expect(A.getRows()).to.equal(3)
+    chai.expect(A.getShape()).to.deep.equal([3, 2])
+  })
+
+  it('equals and add', function () {
+    const arr = [[-1, 2], [3, 4], [-8, 2]]
+    const brr = [[-1, 2], [3, 4], [-8, 2]]
+    const A = Matrix.of(arr)
+    const B = Matrix.of(brr)
+    const C = B.transpose()
+    chai.expect(A.equals(B)).to.be.true
+    chai.expect(A.equals(C)).to.be.false
+  })
+})
