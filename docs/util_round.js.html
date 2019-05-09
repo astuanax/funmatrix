@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/dot.js - Documentation</title>
+    <title>util/round.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/dot.js</h1>
+    <h1 class="page-title">util/round.js</h1>
     
 
     
@@ -39,23 +39,15 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import curry from 'fun.js/src/curry'
-import fold from 'fun.js/src/fold'
-import map from 'fun.js/src/map'
-import round from './round'
-
-/**
- * @function dot
- * @param B {Matrix}
- * @param a {Array}
- * @returns {Array}
+            <pre class="prettyprint source linenums"><code>/**
+ * @function round
+ * @param value {number}
+ * @param decimals {number}
+ * @returns {number}
  */
-export default curry((decimals, B, a) => map((item, i) => {
-  return fold((acc, x, j) => {
-    acc += round(x * B.__value[j][i], decimals)
-    return acc
-  }, 0)(a)
-})(B.__value[0]))
+export default function round (value, decimals) {
+  return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals)
+}
 </code></pre>
         </article>
     </section>

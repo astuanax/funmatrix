@@ -21,6 +21,7 @@ import transpose from 'util/transpose'
  */
 let Matrix = function (val) {
   this.__value = val
+  this.precision = 4
 }
 
 /**
@@ -36,6 +37,15 @@ Matrix.prototype.type = 'Matrix'
 
 /**
  * @memberOf Matrix
+ * @member setPrecision
+ * @param precision {number} Set the number of decimals for rounding
+ */
+Matrix.prototype.setPrecision = function (precision) {
+  this.precision = precision
+}
+
+/**
+ * @memberOf Matrix
  * @member isSymmetric
  * @returns {boolean}
  */
@@ -43,6 +53,18 @@ Matrix.prototype.isSymmetric = function () {
   const a = this.__value
   const b = Matrix.transpose(this).__value
   return equals(a, b)
+}
+
+/**
+ * @memberOf Matrix
+ * @member isOrthogonal
+ * @param M {Matrix|array}
+ * @returns {boolean}
+ */
+Matrix.prototype.isOrthogonal = function () {
+  const AxAt = this.dot(this.transpose())
+  const I = this.identity()
+  return equals(AxAt, I)
 }
 
 /**
@@ -223,7 +245,7 @@ Matrix.prototype.empty = function () {
  * @param cols {number}
  * @returns {Matrix}
  */
-Matrix.empty = curry(function (rows, cols) {
+Matrix.empty = curry(function (rows = 0, cols = 0) {
   const m = Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
   return Matrix.of(m).map(empty)
 })
@@ -287,7 +309,7 @@ Matrix.combine = function (A, B) {
  * @returns {Matrix}
  */
 Matrix.prototype.dot = function (M) {
-  return Matrix.of(this).concat(Matrix.of(M), dot)
+  return Matrix.of(this).concat(Matrix.of(M), dot(this.precision))
 }
 
 /**
@@ -299,7 +321,7 @@ Matrix.prototype.dot = function (M) {
  * @returns {Matrix}
  */
 Matrix.dot = function (A, B) {
-  return Matrix.of(A).concat(Matrix.of(B), dot)
+  return Matrix.of(A).dot(Matrix.of(B))
 }
 
 /**
@@ -416,6 +438,7 @@ Matrix.transpose = function (M) {
 /**
  * @memberOf Matrix
  * @member add
+ * @instance
  * @param M {Matrix|number} Add a Matrix or a number
  * @returns {Matrix}
  */
@@ -426,8 +449,203 @@ Matrix.prototype.add = function (M) {
     }
     return this.map((row, idx) => map((val, jdx) => val + M.__value[idx][jdx])(row))
   } else {
-    return this.map(x => x + M)
+    return this.map(map(x => x + M))
   }
+}
+
+/**
+ * @memberOf Matrix
+ * @member subtract
+ * @instance
+ * @param M {Matrix|number} Subtract a Matrix or a number
+ * @returns {Matrix}
+ */
+Matrix.prototype.subtract = function (M) {
+  if (M instanceof Matrix) {
+    if (this.getCols() !== M.getCols() || this.getRows() !== M.getRows()) {
+      throw new Error('Matrices do not match, cannot subtract')
+    }
+    return this.map((row, idx) => map((val, jdx) => val - M.__value[idx][jdx])(row))
+  } else {
+    return this.map(map(x => x - M))
+  }
+}
+
+/**
+ * @memberOf Matrix
+ * @member multiply
+ * @instance
+ * @desc Mutliplw a scalar or a mtraix with a matrix. Throws an error if the multiplication is not possible.
+ * @param M {Matrix|number}
+ * @returns {Matrix}
+ */
+Matrix.prototype.multiply = function (M) {
+  if (M instanceof Matrix) {
+    if (this.getCols() !== M.getCols() || this.getRows() !== M.getRows()) {
+      console.log('Use static method \'dot\' to do matrix multiplication')
+      throw new Error('Matrices do not match, cannot create hadamard product')
+    }
+    return this.map((row, idx) => map((col, jdx) => col * M.__value[idx][jdx])(row))
+  } else {
+    return this.map(map(x => x * M))
+  }
+}
+
+/**
+ * @memberOf Matrix
+ * @member additiveinverse
+ * @instance
+ * @desc Function that returns the matrix obtained by changing the sign of every matrix element. The additive inverse of matrix A is written –A.
+ * @returns {Matrix}
+ */
+Matrix.prototype.additiveinverse = function () {
+  return Matrix.of(this).multiply(-1)
+}
+
+/**
+ * @memberOf Matrix
+ * @member hadamard
+ * @instance
+ * @see mumtiply
+ * @param M
+ * @returns {Matrix}
+ */
+Matrix.prototype.hadamard = function (M) {
+  return Matrix.of(this).multiply(M)
+}
+
+/**
+ * @memberOf Matrix
+ * @member lu
+ * @desc Calculates LU decomposition of the current Matrix
+ * @returns {Matrix[]}
+ */
+Matrix.prototype.lu = function () {
+  const n = this.getRows()
+  const tol = 1e-6
+  const A = this.clone()
+  const L = this.zeros()
+  const U = this.zeros()
+
+  for (let k = 0; k < n; ++k) {
+    if (Math.abs(A.__value[k][k]) < tol) throw Error('Cannot proceed without a row exchange')
+    L.__value[k][k] = 1
+    for (let i = k + 1; i < n; ++i) {
+      L.__value[i][k] = A.__value[i][k] / A.__value[k][k]
+      for (let j = k + 1; j < n; ++j) {
+        A.__value[i][j] = A.__value[i][j] - L.__value[i][k] * A.__value[k][j]
+      }
+    }
+    for (let l = k; l < n; ++l) {
+      U.__value[k][l] = A.__value[k][l]
+    }
+  }
+  return [L, U]
+}
+
+Matrix.prototype.rref = function () {
+  let lead = 0
+  const resultMatrix = this.clone()
+
+  for (let r = 0; r < this.getRows(); ++r) {
+    if (this.getCols() <= lead) {
+      return resultMatrix
+    }
+    let i = r
+    while (resultMatrix.__value[i][lead] === 0) {
+      ++i
+      if (this.getRows() === i) {
+        i = r
+        ++lead
+        if (this.getCols() === lead) {
+          return resultMatrix
+        }
+      }
+    }
+
+    let tmp = resultMatrix.__value[i]
+    resultMatrix.__value[i] = resultMatrix.__value[r]
+    resultMatrix.__value[r] = tmp
+
+    let val = resultMatrix.__value[r][lead]
+    for (let j = 0; j < this.getCols(); ++j) {
+      resultMatrix.__value[r][j] /= val
+    }
+
+    for (let i = 0; i < this.getRows(); ++i) {
+      if (i === r) continue
+      val = resultMatrix.__value[i][lead]
+      for (let j = 0; j < this.getCols(); ++j) {
+        resultMatrix.__value[i][j] -= val * resultMatrix.__value[r][j]
+      }
+    }
+    lead++
+  }
+  return resultMatrix
+}
+
+Matrix.prototype.solve = function (b) {
+  const A = this.clone()
+  const LU = A.lu()
+  const L = LU[0]
+  const U = LU[1]
+  const n = this.getRows()
+  let s = 0
+  const c = []
+  const x = []
+
+  for (let k = 0; k < n; ++k) {
+    for (let j = 0; j < k; ++j) {
+      s = s + L.__value[k][j] * c[j]
+    }
+    c[k] = b[k] - s
+    s = 0
+  }
+  for (let a = n - 1; a > -1; --a) {
+    let t = 0
+    for (let b = a + 1; b < n; ++b) {
+      t = t + U.__value[a][b] * x[b]
+    }
+    x[a] = (c[a] - t) / U.__value[a][a]
+  }
+  return x
+}
+
+Matrix.prototype.inverse = function () {
+  const A = this.clone()
+  const I = A.identity()
+  const Inv = A.concat(I).rref()
+
+  const result = Inv.__value.reduce((result, x, idx) => {
+    const half = x.length / 2
+    result.push(x.slice(half, x.length))
+    return result
+  }, [])
+  return Matrix.of(result)
+}
+
+Matrix.prototype.lsq = function (b) {
+  const A = this.clone()
+  const At = Matrix.transpose(A)
+  const x = Matrix.dot(At, A).solve(Matrix.dot(At, b).__value)
+
+  const X = Matrix.of(x.map(x => [x]))
+  const P = Matrix.dot(A, X)
+  const E = Matrix.subtract(b, P)
+  return [x, P, E]
+}
+
+Matrix.prototype.rank = function () {
+  const rref = this.rref()
+  let result = 0
+  for (let i = 0; i < rref.getCols(); ++i) {
+    result += rref.__value[i][i]
+  }
+  return result
+}
+
+Matrix.prototype.dimension = function () {
+  return this.rank()
 }
 
 export default Matrix
