@@ -1,5 +1,5 @@
 {
-  "name": "funmatrix",
+  "name": "@astuanax/funmatrix",
   "sideEffects": false,
   "version": "1.0.0",
   "description": "Matrix monad",
@@ -18,7 +18,7 @@
   },
   "size-limit": [
     {
-      "path": "./lib/funmatrix.js",
+      "path": "./lib/@astuanax/funmatrix.js",
       "webpack": "./webpack.config.js"
     }
   ],

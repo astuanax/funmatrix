@@ -1,7 +1,7 @@
 # funmatrix
 Matrix applicative providing standard matrix operations [Fork on Github](https://github.com/astuanax/funmatrix)
 
-[![Build Status](https://travis-ci.org/astuanax/funmatrix.svg?branch=master)](https://travis-ci.org/astuanax/funmatrix)  [![Code Climate](https://codeclimate.com/github/astuanax/funmatrix/badges/gpa.svg)](https://codeclimate.com/github/astuanax/funmatrix) ![GitHub file size in bytes](https://img.badgesize.io/astuanax/funmatrix/master/lib/funmatrix.min.js.svg?compression=gzip) 
+[![Build Status](https://travis-ci.org/astuanax/funmatrix.svg?branch=master)](https://travis-ci.org/astuanax/funmatrix)  [![Code Climate](https://codeclimate.com/github/astuanax/funmatrix/badges/gpa.svg)](https://codeclimate.com/github/astuanax/funmatrix) ![GitHub file size in bytes](https://img.badgesize.io/astuanax/funmatrix/master/lib/@astuanax/funmatrix.min.js.svg?compression=gzip) 
 
 [Check bundle size on bundlephobia](https://bundlephobia.com/result?p=fun.js@1.0.3)
 
