@@ -1,5 +1,5 @@
 import chai from 'chai'
-import Matrix from '../lib/funMatrix'
+import Matrix from '../lib/funmatrix'
 
 describe('create a Matrix', function () {
   it('it returns type Matrix', function () {

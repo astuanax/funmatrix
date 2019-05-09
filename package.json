@@ -1,5 +1,5 @@
 {
-  "name": "funMatrix",
+  "name": "funmatrix",
   "sideEffects": false,
   "version": "1.0.0",
   "description": "Matrix monad",
@@ -18,13 +18,13 @@
   },
   "size-limit": [
     {
-      "path": "./lib/funMatrix.js",
+      "path": "./lib/funmatrix.js",
       "webpack": "./webpack.config.js"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/astuanax/funMatrix.git"
+    "url": "https://github.com/astuanax/funmatrix.git"
   },
   "keywords": [
     "webpack",
@@ -37,9 +37,9 @@
   "author": "Len Dierickx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/astuanax/funMatrix/issues"
+    "url": "https://github.com/astuanax/funmatrix/issues"
   },
-  "homepage": "https://astuanax.github.io/funMatrix/",
+  "homepage": "https://astuanax.github.io/funmatrix/",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",

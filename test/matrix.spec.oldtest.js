@@ -1,5 +1,5 @@
 import chai from 'chai'
-import Matrix from '../lib/funMatrix'
+import Matrix from '../lib/funmatrix'
 
 // describe('create Matrix monad', function () {
 //   it('should return a Matrix', function () {

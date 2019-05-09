@@ -1,6 +1,6 @@
 // import Matrix from '../src/matrix'
 // import chai from 'chai'
-// import Matrix from '../lib/funMatrix'
+// import Matrix from '../lib/funmatrix'
 //
 // describe('Fantasyland specifications', function () {
 //   describe('Semigroup concat', function () {
