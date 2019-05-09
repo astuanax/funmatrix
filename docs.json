@@ -5,7 +5,7 @@
             "filename": "matrix.js",
             "lineno": 11,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "kind": "class",
@@ -38,7 +38,7 @@
             "filename": "matrix.js",
             "lineno": 22,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000039",
                 "name": "Matrix",
@@ -65,7 +65,7 @@
             "filename": "matrix.js",
             "lineno": 23,
             "columnno": 2,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000045",
                 "name": "this.__value",
@@ -90,7 +90,7 @@
             "filename": "matrix.js",
             "lineno": 35,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000051",
                 "name": "Matrix.prototype.type",
@@ -133,7 +133,7 @@
             "filename": "matrix.js",
             "lineno": 46,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000059",
                 "name": "Matrix.prototype.precision",
@@ -172,7 +172,7 @@
             "filename": "matrix.js",
             "lineno": 48,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -202,7 +202,7 @@
             "filename": "matrix.js",
             "lineno": 54,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000067",
                 "name": "Matrix.prototype.setPrecision",
@@ -232,7 +232,7 @@
             "filename": "matrix.js",
             "lineno": 55,
             "columnno": 2,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000077",
                 "name": "this.precision",
@@ -254,7 +254,7 @@
             "filename": "matrix.js",
             "lineno": 58,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -282,7 +282,7 @@
             "filename": "matrix.js",
             "lineno": 64,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000083",
                 "name": "Matrix.prototype.isSymmetric",
@@ -311,7 +311,7 @@
             "filename": "matrix.js",
             "lineno": 65,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000092",
                 "name": "a",
@@ -337,7 +337,7 @@
             "filename": "matrix.js",
             "lineno": 66,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000098",
                 "name": "b",
@@ -359,7 +359,7 @@
             "filename": "matrix.js",
             "lineno": 70,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -398,7 +398,7 @@
             "filename": "matrix.js",
             "lineno": 77,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000113",
                 "name": "Matrix.prototype.isOrthogonal",
@@ -427,7 +427,7 @@
             "filename": "matrix.js",
             "lineno": 78,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000122",
                 "name": "AxAt",
@@ -453,7 +453,7 @@
             "filename": "matrix.js",
             "lineno": 79,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000133",
                 "name": "I",
@@ -475,7 +475,7 @@
             "filename": "matrix.js",
             "lineno": 83,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -503,7 +503,7 @@
             "filename": "matrix.js",
             "lineno": 89,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000145",
                 "name": "Matrix.prototype.getCols",
@@ -524,7 +524,7 @@
             "filename": "matrix.js",
             "lineno": 93,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -563,7 +563,7 @@
             "filename": "matrix.js",
             "lineno": 100,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000162",
                 "name": "Matrix.prototype.equals",
@@ -586,7 +586,7 @@
             "filename": "matrix.js",
             "lineno": 104,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -614,7 +614,7 @@
             "filename": "matrix.js",
             "lineno": 110,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000183",
                 "name": "Matrix.prototype.getRows",
@@ -635,7 +635,7 @@
             "filename": "matrix.js",
             "lineno": 114,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -663,7 +663,7 @@
             "filename": "matrix.js",
             "lineno": 120,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000198",
                 "name": "Matrix.prototype.getShape",
@@ -684,7 +684,7 @@
             "filename": "matrix.js",
             "lineno": 124,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -727,7 +727,7 @@
             "filename": "matrix.js",
             "lineno": 136,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000217",
                 "name": "Matrix.of",
@@ -757,7 +757,7 @@
             "filename": "matrix.js",
             "lineno": 139,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000236",
                 "name": "this.__value",
@@ -779,7 +779,7 @@
             "filename": "matrix.js",
             "lineno": 145,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -818,7 +818,7 @@
             "filename": "matrix.js",
             "lineno": 153,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000248",
                 "name": "Matrix.prototype.map",
@@ -841,7 +841,7 @@
             "filename": "matrix.js",
             "lineno": 157,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -888,7 +888,7 @@
             "filename": "matrix.js",
             "lineno": 166,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000270",
                 "name": "Matrix.map",
@@ -910,7 +910,7 @@
             "filename": "matrix.js",
             "lineno": 170,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -949,7 +949,7 @@
             "filename": "matrix.js",
             "lineno": 178,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000291",
                 "name": "Matrix.prototype.fold",
@@ -972,7 +972,7 @@
             "filename": "matrix.js",
             "lineno": 182,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1019,7 +1019,7 @@
             "filename": "matrix.js",
             "lineno": 191,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000314",
                 "name": "Matrix.fold",
@@ -1041,7 +1041,7 @@
             "filename": "matrix.js",
             "lineno": 195,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1080,7 +1080,7 @@
             "filename": "matrix.js",
             "lineno": 203,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000335",
                 "name": "Matrix.prototype.ap",
@@ -1103,7 +1103,7 @@
             "filename": "matrix.js",
             "lineno": 207,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1150,7 +1150,7 @@
             "filename": "matrix.js",
             "lineno": 216,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000357",
                 "name": "Matrix.ap",
@@ -1172,7 +1172,7 @@
             "filename": "matrix.js",
             "lineno": 220,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1211,7 +1211,7 @@
             "filename": "matrix.js",
             "lineno": 228,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000378",
                 "name": "Matrix.prototype.concat",
@@ -1235,7 +1235,7 @@
             "filename": "matrix.js",
             "lineno": 232,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1282,7 +1282,7 @@
             "filename": "matrix.js",
             "lineno": 241,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000403",
                 "name": "Matrix.concat",
@@ -1304,7 +1304,7 @@
             "filename": "matrix.js",
             "lineno": 245,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1333,7 +1333,7 @@
             "filename": "matrix.js",
             "lineno": 252,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000429",
                 "name": "Matrix.prototype.empty",
@@ -1354,7 +1354,7 @@
             "filename": "matrix.js",
             "lineno": 256,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1401,7 +1401,7 @@
             "filename": "matrix.js",
             "lineno": 265,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000448",
                 "name": "Matrix.empty",
@@ -1427,7 +1427,7 @@
             "filename": "matrix.js",
             "lineno": 266,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000463",
                 "name": "m",
@@ -1449,7 +1449,7 @@
             "filename": "matrix.js",
             "lineno": 272,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1478,7 +1478,7 @@
             "filename": "matrix.js",
             "lineno": 279,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000497",
                 "name": "Matrix.prototype.identity",
@@ -1499,7 +1499,7 @@
             "filename": "matrix.js",
             "lineno": 283,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1528,7 +1528,7 @@
             "filename": "matrix.js",
             "lineno": 290,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000516",
                 "name": "Matrix.identity",
@@ -1560,7 +1560,7 @@
             "filename": "matrix.js",
             "lineno": 291,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000525",
                 "name": "m",
@@ -1582,7 +1582,7 @@
             "filename": "matrix.js",
             "lineno": 295,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1618,7 +1618,7 @@
             "filename": "matrix.js",
             "lineno": 303,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000559",
                 "name": "Matrix.prototype.combine",
@@ -1641,7 +1641,7 @@
             "filename": "matrix.js",
             "lineno": 307,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1677,7 +1677,7 @@
             "filename": "matrix.js",
             "lineno": 315,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000584",
                 "name": "Matrix.combine",
@@ -1701,7 +1701,7 @@
             "filename": "matrix.js",
             "lineno": 319,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1738,7 +1738,7 @@
             "filename": "matrix.js",
             "lineno": 328,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000608",
                 "name": "Matrix.prototype.dot",
@@ -1761,7 +1761,7 @@
             "filename": "matrix.js",
             "lineno": 332,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1795,7 +1795,7 @@
             "filename": "matrix.js",
             "lineno": 340,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000637",
                 "name": "Matrix.dot",
@@ -1819,7 +1819,7 @@
             "filename": "matrix.js",
             "lineno": 344,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1853,7 +1853,7 @@
             "filename": "matrix.js",
             "lineno": 352,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000660",
                 "name": "Matrix.prototype.fill",
@@ -1879,7 +1879,7 @@
             "filename": "matrix.js",
             "lineno": 356,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1908,7 +1908,7 @@
             "filename": "matrix.js",
             "lineno": 363,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000686",
                 "name": "Matrix.prototype.zeros",
@@ -1932,7 +1932,7 @@
             "filename": "matrix.js",
             "lineno": 367,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -1961,7 +1961,7 @@
             "filename": "matrix.js",
             "lineno": 374,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000707",
                 "name": "Matrix.prototype.ones",
@@ -1985,7 +1985,7 @@
             "filename": "matrix.js",
             "lineno": 378,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2026,7 +2026,7 @@
             "filename": "matrix.js",
             "lineno": 386,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000728",
                 "name": "Matrix.prototype.random",
@@ -2052,7 +2052,7 @@
             "filename": "matrix.js",
             "lineno": 390,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2081,7 +2081,7 @@
             "filename": "matrix.js",
             "lineno": 397,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000759",
                 "name": "Matrix.prototype.toArray",
@@ -2105,7 +2105,7 @@
             "filename": "matrix.js",
             "lineno": 401,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2134,7 +2134,7 @@
             "filename": "matrix.js",
             "lineno": 408,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000784",
                 "name": "Matrix.prototype.clone",
@@ -2155,7 +2155,7 @@
             "filename": "matrix.js",
             "lineno": 412,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2184,7 +2184,7 @@
             "filename": "matrix.js",
             "lineno": 419,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000801",
                 "name": "Matrix.fromArray",
@@ -2210,7 +2210,7 @@
             "filename": "matrix.js",
             "lineno": 423,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2242,7 +2242,7 @@
             "filename": "matrix.js",
             "lineno": 435,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000827",
                 "name": "Matrix.prototype.transpose",
@@ -2263,7 +2263,7 @@
             "filename": "matrix.js",
             "lineno": 439,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2307,7 +2307,7 @@
             "filename": "matrix.js",
             "lineno": 451,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000848",
                 "name": "Matrix.transpose",
@@ -2330,7 +2330,7 @@
             "filename": "matrix.js",
             "lineno": 455,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2370,7 +2370,7 @@
             "filename": "matrix.js",
             "lineno": 462,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000865",
                 "name": "Matrix.prototype.add",
@@ -2396,7 +2396,7 @@
             "filename": "matrix.js",
             "lineno": 473,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2436,7 +2436,7 @@
             "filename": "matrix.js",
             "lineno": 480,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100000942",
                 "name": "Matrix.prototype.subtract",
@@ -2462,7 +2462,7 @@
             "filename": "matrix.js",
             "lineno": 491,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2502,7 +2502,7 @@
             "filename": "matrix.js",
             "lineno": 499,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001019",
                 "name": "Matrix.prototype.multiply",
@@ -2528,7 +2528,7 @@
             "filename": "matrix.js",
             "lineno": 511,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2557,7 +2557,7 @@
             "filename": "matrix.js",
             "lineno": 518,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001102",
                 "name": "Matrix.prototype.additiveinverse",
@@ -2578,7 +2578,7 @@
             "filename": "matrix.js",
             "lineno": 522,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2614,7 +2614,7 @@
             "filename": "matrix.js",
             "lineno": 530,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001122",
                 "name": "Matrix.prototype.hadamard",
@@ -2637,7 +2637,7 @@
             "filename": "matrix.js",
             "lineno": 534,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -2666,7 +2666,7 @@
             "filename": "matrix.js",
             "lineno": 541,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001142",
                 "name": "Matrix.prototype.lu",
@@ -2705,7 +2705,7 @@
             "filename": "matrix.js",
             "lineno": 542,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001151",
                 "name": "n",
@@ -2731,7 +2731,7 @@
             "filename": "matrix.js",
             "lineno": 543,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001158",
                 "name": "tol",
@@ -2757,7 +2757,7 @@
             "filename": "matrix.js",
             "lineno": 544,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001162",
                 "name": "A",
@@ -2783,7 +2783,7 @@
             "filename": "matrix.js",
             "lineno": 545,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001169",
                 "name": "L",
@@ -2809,7 +2809,7 @@
             "filename": "matrix.js",
             "lineno": 546,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001176",
                 "name": "U",
@@ -2835,7 +2835,7 @@
             "filename": "matrix.js",
             "lineno": 548,
             "columnno": 11,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001184",
                 "name": "k",
@@ -2861,7 +2861,7 @@
             "filename": "matrix.js",
             "lineno": 550,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001212",
                 "name": "L.__value[undefined][undefined]",
@@ -2888,7 +2888,7 @@
             "filename": "matrix.js",
             "lineno": 551,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001223",
                 "name": "i",
@@ -2914,7 +2914,7 @@
             "filename": "matrix.js",
             "lineno": 552,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001235",
                 "name": "L.__value[undefined][undefined]",
@@ -2941,7 +2941,7 @@
             "filename": "matrix.js",
             "lineno": 553,
             "columnno": 15,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001260",
                 "name": "j",
@@ -2967,7 +2967,7 @@
             "filename": "matrix.js",
             "lineno": 554,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001272",
                 "name": "A.__value[undefined][undefined]",
@@ -2994,7 +2994,7 @@
             "filename": "matrix.js",
             "lineno": 557,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001305",
                 "name": "l",
@@ -3020,7 +3020,7 @@
             "filename": "matrix.js",
             "lineno": 558,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001315",
                 "name": "U.__value[undefined][undefined]",
@@ -3043,7 +3043,7 @@
             "filename": "matrix.js",
             "lineno": 564,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -3072,7 +3072,7 @@
             "filename": "matrix.js",
             "lineno": 570,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001335",
                 "name": "Matrix.prototype.rref",
@@ -3108,7 +3108,7 @@
             "filename": "matrix.js",
             "lineno": 571,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001344",
                 "name": "lead",
@@ -3134,7 +3134,7 @@
             "filename": "matrix.js",
             "lineno": 572,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001348",
                 "name": "resultMatrix",
@@ -3160,7 +3160,7 @@
             "filename": "matrix.js",
             "lineno": 574,
             "columnno": 11,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001356",
                 "name": "r",
@@ -3186,7 +3186,7 @@
             "filename": "matrix.js",
             "lineno": 578,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001379",
                 "name": "i",
@@ -3212,7 +3212,7 @@
             "filename": "matrix.js",
             "lineno": 582,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001405",
                 "name": "i",
@@ -3239,7 +3239,7 @@
             "filename": "matrix.js",
             "lineno": 590,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001422",
                 "name": "tmp",
@@ -3265,7 +3265,7 @@
             "filename": "matrix.js",
             "lineno": 591,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001430",
                 "name": "resultMatrix.__value[undefined]",
@@ -3292,7 +3292,7 @@
             "filename": "matrix.js",
             "lineno": 592,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001442",
                 "name": "resultMatrix.__value[undefined]",
@@ -3319,7 +3319,7 @@
             "filename": "matrix.js",
             "lineno": 594,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001450",
                 "name": "val",
@@ -3345,7 +3345,7 @@
             "filename": "matrix.js",
             "lineno": 595,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001461",
                 "name": "j",
@@ -3371,7 +3371,7 @@
             "filename": "matrix.js",
             "lineno": 596,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001474",
                 "name": "resultMatrix.__value[undefined][undefined]",
@@ -3398,7 +3398,7 @@
             "filename": "matrix.js",
             "lineno": 599,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001485",
                 "name": "i",
@@ -3424,7 +3424,7 @@
             "filename": "matrix.js",
             "lineno": 601,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001503",
                 "name": "val",
@@ -3451,7 +3451,7 @@
             "filename": "matrix.js",
             "lineno": 602,
             "columnno": 15,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001514",
                 "name": "j",
@@ -3477,7 +3477,7 @@
             "filename": "matrix.js",
             "lineno": 603,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001527",
                 "name": "resultMatrix.__value[undefined][undefined]",
@@ -3500,7 +3500,7 @@
             "filename": "matrix.js",
             "lineno": 611,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -3533,7 +3533,7 @@
             "filename": "matrix.js",
             "lineno": 618,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001550",
                 "name": "Matrix.prototype.solve",
@@ -3577,7 +3577,7 @@
             "filename": "matrix.js",
             "lineno": 619,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001560",
                 "name": "A",
@@ -3603,7 +3603,7 @@
             "filename": "matrix.js",
             "lineno": 620,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001567",
                 "name": "LU",
@@ -3629,7 +3629,7 @@
             "filename": "matrix.js",
             "lineno": 621,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001574",
                 "name": "L",
@@ -3655,7 +3655,7 @@
             "filename": "matrix.js",
             "lineno": 622,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001580",
                 "name": "U",
@@ -3681,7 +3681,7 @@
             "filename": "matrix.js",
             "lineno": 623,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001586",
                 "name": "n",
@@ -3707,7 +3707,7 @@
             "filename": "matrix.js",
             "lineno": 624,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001593",
                 "name": "s",
@@ -3733,7 +3733,7 @@
             "filename": "matrix.js",
             "lineno": 625,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001597",
                 "name": "c",
@@ -3759,7 +3759,7 @@
             "filename": "matrix.js",
             "lineno": 626,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001601",
                 "name": "x",
@@ -3785,7 +3785,7 @@
             "filename": "matrix.js",
             "lineno": 628,
             "columnno": 11,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001606",
                 "name": "k",
@@ -3811,7 +3811,7 @@
             "filename": "matrix.js",
             "lineno": 629,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001617",
                 "name": "j",
@@ -3837,7 +3837,7 @@
             "filename": "matrix.js",
             "lineno": 630,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001627",
                 "name": "s",
@@ -3864,7 +3864,7 @@
             "filename": "matrix.js",
             "lineno": 632,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001643",
                 "name": "c[undefined]",
@@ -3891,7 +3891,7 @@
             "filename": "matrix.js",
             "lineno": 633,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001653",
                 "name": "s",
@@ -3918,7 +3918,7 @@
             "filename": "matrix.js",
             "lineno": 635,
             "columnno": 11,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001658",
                 "name": "a",
@@ -3944,7 +3944,7 @@
             "filename": "matrix.js",
             "lineno": 636,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001671",
                 "name": "t",
@@ -3970,7 +3970,7 @@
             "filename": "matrix.js",
             "lineno": 637,
             "columnno": 13,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001676",
                 "name": "b",
@@ -3996,7 +3996,7 @@
             "filename": "matrix.js",
             "lineno": 638,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001688",
                 "name": "t",
@@ -4023,7 +4023,7 @@
             "filename": "matrix.js",
             "lineno": 640,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001704",
                 "name": "x[undefined]",
@@ -4046,7 +4046,7 @@
             "filename": "matrix.js",
             "lineno": 645,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -4074,7 +4074,7 @@
             "filename": "matrix.js",
             "lineno": 651,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001724",
                 "name": "Matrix.prototype.inverse",
@@ -4106,7 +4106,7 @@
             "filename": "matrix.js",
             "lineno": 652,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001733",
                 "name": "A",
@@ -4132,7 +4132,7 @@
             "filename": "matrix.js",
             "lineno": 653,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001740",
                 "name": "I",
@@ -4158,7 +4158,7 @@
             "filename": "matrix.js",
             "lineno": 654,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001747",
                 "name": "Inv",
@@ -4184,7 +4184,7 @@
             "filename": "matrix.js",
             "lineno": 656,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001758",
                 "name": "result",
@@ -4210,7 +4210,7 @@
             "filename": "matrix.js",
             "lineno": 657,
             "columnno": 10,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001772",
                 "name": "half",
@@ -4232,7 +4232,7 @@
             "filename": "matrix.js",
             "lineno": 664,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -4260,7 +4260,7 @@
             "filename": "matrix.js",
             "lineno": 670,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001802",
                 "name": "Matrix.prototype.lsq",
@@ -4296,7 +4296,7 @@
             "filename": "matrix.js",
             "lineno": 671,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001812",
                 "name": "A",
@@ -4322,7 +4322,7 @@
             "filename": "matrix.js",
             "lineno": 672,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001819",
                 "name": "At",
@@ -4348,7 +4348,7 @@
             "filename": "matrix.js",
             "lineno": 673,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001827",
                 "name": "x",
@@ -4374,7 +4374,7 @@
             "filename": "matrix.js",
             "lineno": 675,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001847",
                 "name": "X",
@@ -4400,7 +4400,7 @@
             "filename": "matrix.js",
             "lineno": 676,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001862",
                 "name": "P",
@@ -4426,7 +4426,7 @@
             "filename": "matrix.js",
             "lineno": 677,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001871",
                 "name": "E",
@@ -4448,7 +4448,7 @@
             "filename": "matrix.js",
             "lineno": 681,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -4476,7 +4476,7 @@
             "filename": "matrix.js",
             "lineno": 687,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001885",
                 "name": "Matrix.prototype.rank",
@@ -4506,7 +4506,7 @@
             "filename": "matrix.js",
             "lineno": 688,
             "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001894",
                 "name": "rref",
@@ -4532,7 +4532,7 @@
             "filename": "matrix.js",
             "lineno": 689,
             "columnno": 6,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001901",
                 "name": "result",
@@ -4558,7 +4558,7 @@
             "filename": "matrix.js",
             "lineno": 690,
             "columnno": 11,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001906",
                 "name": "i",
@@ -4584,7 +4584,7 @@
             "filename": "matrix.js",
             "lineno": 691,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001919",
                 "name": "result",
@@ -4607,7 +4607,7 @@
             "filename": "matrix.js",
             "lineno": 696,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
@@ -4638,7 +4638,7 @@
             "filename": "matrix.js",
             "lineno": 703,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001931",
                 "name": "Matrix.prototype.dimension",
@@ -4663,7 +4663,7 @@
             "filename": "matrix.js",
             "lineno": 707,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "path": "/Volumes/BigOne/github/funmatrix/src",
             "code": {
                 "id": "astnode100001944",
                 "name": "module.exports",
@@ -4687,7 +4687,7 @@
             "filename": "addMatrix.js",
             "lineno": 4,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100001956",
                 "name": "module.exports",
@@ -4711,7 +4711,7 @@
             "filename": "addScalar.js",
             "lineno": 4,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100001995",
                 "name": "module.exports",
@@ -4731,7 +4731,7 @@
             "filename": "concat.js",
             "lineno": 4,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {}
         },
         "kind": "function",
@@ -4784,7 +4784,7 @@
             "filename": "concat.js",
             "lineno": 11,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002022",
                 "name": "module.exports",
@@ -4804,7 +4804,7 @@
             "filename": "dot.js",
             "lineno": 6,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {}
         },
         "kind": "function",
@@ -4849,7 +4849,7 @@
             "filename": "dot.js",
             "lineno": 12,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002057",
                 "name": "module.exports",
@@ -4873,7 +4873,7 @@
             "filename": "dot.js",
             "lineno": 14,
             "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002081",
                 "name": "acc",
@@ -4900,7 +4900,7 @@
             "filename": "empty.js",
             "lineno": 3,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002110",
                 "name": "module.exports",
@@ -4920,7 +4920,7 @@
             "filename": "identity.js",
             "lineno": 3,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {}
         },
         "kind": "function",
@@ -4966,7 +4966,7 @@
             "filename": "identity.js",
             "lineno": 10,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002122",
                 "name": "module.exports",
@@ -4993,7 +4993,7 @@
             "filename": "round.js",
             "lineno": 1,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {}
         },
         "kind": "function",
@@ -5038,7 +5038,7 @@
             "filename": "round.js",
             "lineno": 7,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002140",
                 "name": "module.exports",
@@ -5066,7 +5066,7 @@
             "filename": "round.js",
             "lineno": 7,
             "columnno": 15,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002141",
                 "name": "round",
@@ -5090,7 +5090,7 @@
             "filename": "transpose.js",
             "lineno": 4,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {}
         },
         "kind": "function",
@@ -5136,7 +5136,7 @@
             "filename": "transpose.js",
             "lineno": 11,
             "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "path": "/Volumes/BigOne/github/funmatrix/src/util",
             "code": {
                 "id": "astnode100002172",
                 "name": "module.exports",
@@ -5154,15 +5154,15 @@
         "kind": "package",
         "longname": "package:undefined",
         "files": [
-            "/Volumes/BigOne/github/funMatrix/src/matrix.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/addMatrix.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/addScalar.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/concat.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/dot.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/empty.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/identity.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/round.js",
-            "/Volumes/BigOne/github/funMatrix/src/util/transpose.js"
+            "/Volumes/BigOne/github/funmatrix/src/matrix.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/addMatrix.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/addScalar.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/concat.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/dot.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/empty.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/identity.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/round.js",
+            "/Volumes/BigOne/github/funmatrix/src/util/transpose.js"
         ]
     }
 ]
