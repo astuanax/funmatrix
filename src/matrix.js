@@ -21,7 +21,6 @@ import transpose from 'util/transpose'
  */
 let Matrix = function (val) {
   this.__value = val
-  this.precision = 4
 }
 
 /**
@@ -37,6 +36,18 @@ Matrix.prototype.type = 'Matrix'
 
 /**
  * @memberOf Matrix
+ * @property {number} precision
+ * @type {number}
+ * @example
+ *
+ * const m =  Matrix.of([[1,2],[2,3],[4,5]])
+ * m.precision === 4
+ */
+Matrix.prototype.precision = 4
+
+/**
+ * @memberOf Matrix
+ * @instance
  * @member setPrecision
  * @param precision {number} Set the number of decimals for rounding
  */
@@ -46,6 +57,7 @@ Matrix.prototype.setPrecision = function (precision) {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member isSymmetric
  * @returns {boolean}
  */
@@ -57,6 +69,7 @@ Matrix.prototype.isSymmetric = function () {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member isOrthogonal
  * @param M {Matrix|array}
  * @returns {boolean}
@@ -69,6 +82,7 @@ Matrix.prototype.isOrthogonal = function () {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member getCols
  * @returns {*}
  */
@@ -78,8 +92,9 @@ Matrix.prototype.getCols = function () {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member equals
- * @parma M {Matrix|array}
+ * @param M {Matrix|array}
  * @returns {Boolean}
  */
 Matrix.prototype.equals = function (M) {
@@ -88,6 +103,7 @@ Matrix.prototype.equals = function (M) {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member getRows
  * @returns {*}
  */
@@ -97,6 +113,7 @@ Matrix.prototype.getRows = function () {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member getShape
  * @returns {array}
  */
@@ -516,6 +533,7 @@ Matrix.prototype.hadamard = function (M) {
 
 /**
  * @memberOf Matrix
+ * @instance
  * @member lu
  * @desc Calculates LU decomposition of the current Matrix
  * @returns {Matrix[]}
@@ -543,6 +561,12 @@ Matrix.prototype.lu = function () {
   return [L, U]
 }
 
+/**
+ * @memberOf Matrix
+ * @instance
+ * @member rref
+ * @returns {Matrix|array}
+ */
 Matrix.prototype.rref = function () {
   let lead = 0
   const resultMatrix = this.clone()
@@ -584,6 +608,13 @@ Matrix.prototype.rref = function () {
   return resultMatrix
 }
 
+/**
+ * @memberOf Matrix
+ * @instance
+ * @member solve
+ * @param b
+ * @returns {Array}
+ */
 Matrix.prototype.solve = function (b) {
   const A = this.clone()
   const LU = A.lu()
@@ -611,6 +642,12 @@ Matrix.prototype.solve = function (b) {
   return x
 }
 
+/**
+ * @memberOf Matrix
+ * @member inverse
+ * @instance
+ * @returns {Matrix}
+ */
 Matrix.prototype.inverse = function () {
   const A = this.clone()
   const I = A.identity()
@@ -624,6 +661,12 @@ Matrix.prototype.inverse = function () {
   return Matrix.of(result)
 }
 
+/**
+ * @memberOf Matrix
+ * @member lsq
+ * @instance
+ * @returns {array}
+ */
 Matrix.prototype.lsq = function (b) {
   const A = this.clone()
   const At = Matrix.transpose(A)
@@ -635,6 +678,12 @@ Matrix.prototype.lsq = function (b) {
   return [x, P, E]
 }
 
+/**
+ * @memberOf Matrix
+ * @member rank
+ * @instance
+ * @returns {number}
+ */
 Matrix.prototype.rank = function () {
   const rref = this.rref()
   let result = 0
@@ -644,6 +693,13 @@ Matrix.prototype.rank = function () {
   return result
 }
 
+/**
+ * @memberOf Matrix
+ * @member dimension
+ * @instance
+ * @see rank
+ * @returns {number}
+ */
 Matrix.prototype.dimension = function () {
   return this.rank()
 }
