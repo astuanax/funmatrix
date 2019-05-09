@@ -5,10 +5,85 @@ Matrix applicative providing standard matrix operations [Fork on Github](https:/
 
 [Check bundle size on bundlephobia](https://bundlephobia.com/result?p=fun.js@1.0.3)
 
-## Install fun.js
+## Install funmatrix.js
 
-TODO : publish to npm
+```$ npm install @astuanax/funmatrix.js --save``` 
 
 ## Docs
 
 The documentation is done using jsdocs and can be found in the /docs folder or at the url [https://astuanax.github.io/funmatrix/](https://astuanax.github.io/funmatrix/)
+
+## Example
+
+```
+// Create matrix
+const m = Matrix.of([[1, 2], [3, 4]])
+
+// Generate identity matrix
+const I  = m.identity() // [[1, 0], [0, 1]]
+
+if(m.dot(I).equals(m)) {
+    console.log('Dot product with identity matrix returns the same matrix')
+}0
+```
+
+## Create a matrix
+
+There are 2 ways to instantiate a Matrix, though you should not use the new keyword.
+
+### Maybe.of()
+`Maybe.of`accepts both an array of arrays or a Matrix
+
+````
+const a = Maybe.of([[1, 2], [2, 3]])  // returns a Matrix
+const b = Maybe.of(a) // returns a flattened Matrix from Matrix a
+```` 
+
+### Maybe.fromArray()
+`fromArray` returns an Matrix with a clone of the provided array 
+
+```
+Maybe.fromArray([[1, 2], [2, 3]])
+```
+
+
+## Higher order functions
+
+* map
+* fold
+* ap
+* concat
+
+## Methods and properties
+
+* add
+* additiveinverse
+* clone
+* combine
+* dimension
+* dot
+* empty
+* equals
+* fromArray
+* getCols
+* getRows
+* getShape
+* hadamard
+* identity
+* inverse
+* isOrthogonal
+* isSymmetric
+* lsq
+* lu
+* multiply
+* ones
+* precision
+* random
+* rank
+* rref
+* setPrecision
+* solve (for b)
+* toArray
+* transpose
+* zeros
+
