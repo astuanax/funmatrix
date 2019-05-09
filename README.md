@@ -31,19 +31,19 @@ if(m.dot(I).equals(m)) {
 
 There are 2 ways to instantiate a Matrix, though you should not use the new keyword.
 
-### Maybe.of()
+### Matrix.of()
 `Maybe.of`accepts both an array of arrays or a Matrix
 
 ````
-const a = Maybe.of([[1, 2], [2, 3]])  // returns a Matrix
-const b = Maybe.of(a) // returns a flattened Matrix from Matrix a
+const a = Matrix.of([[1, 2], [2, 3]])  // returns a Matrix
+const b = Matrix.of(a) // returns a flattened Matrix from Matrix a
 ```` 
 
-### Maybe.fromArray()
+### Matrix.fromArray()
 `fromArray` returns an Matrix with a clone of the provided array 
 
 ```
-Maybe.fromArray([[1, 2], [2, 3]])
+Matrix.fromArray([[1, 2], [2, 3]])
 ```
 
 
