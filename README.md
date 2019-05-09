@@ -56,18 +56,18 @@ Maybe.fromArray([[1, 2], [2, 3]])
 
 ## Methods and properties
 
-* add
-* additiveinverse
-* clone
-* combine
-* dimension
-* dot
-* empty
-* equals
-* fromArray
-* getCols
-* getRows
-* getShape
+* add -  a scalar or a Matrix
+* additiveinverse - multiply by  -1
+* clone - clone a Matrix
+* combine - combine 2 Matrices together
+* dimension - get the rank
+* dot - Calculate dotproduct of 2 Matrices
+* empty - Return an empty Matrix
+* equals - check if the Matrix deep equals another Matrix
+* fromArray - Creates a Matrix from an Array
+* getCols - Get the columns of the Matrix
+* getRows - Get the rows of a Matrix
+* getShape - Get the shape of a Matrix
 * hadamard
 * identity
 * inverse
