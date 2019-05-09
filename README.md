@@ -68,8 +68,8 @@ Matrix.fromArray([[1, 2], [2, 3]])
 * getCols - Get the columns of the Matrix
 * getRows - Get the rows of a Matrix
 * getShape - Get the shape of a Matrix
-* hadamard
-* identity
+* hadamard - Multiply a matrix witha  scalar or another matrix
+* identity - Retuns an identity matrix
 * inverse
 * isOrthogonal
 * isSymmetric
