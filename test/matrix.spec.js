@@ -311,3 +311,12 @@ describe('Matrix properties: isSymmetric, isOrthogonal', function () {
     chai.expect(A.isOrthogonal()).to.be.true
   })
 })
+
+describe('Matrix decomposition', function () {
+  it('LU', function () {
+    const result = [[3, -7, -2, 2], [-3, 5, 1, 0], [6, -4, 0, -5], [-9, 5, -5, 12]]
+    const A = Matrix.fromArray(result)
+    const lu = A.lu()
+    chai.expect(Matrix.dot(lu[0], lu[1])).to.deep.equal(A)
+  })
+})

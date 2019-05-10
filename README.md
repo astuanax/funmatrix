@@ -69,21 +69,21 @@ Matrix.fromArray([[1, 2], [2, 3]])
 * getRows - Get the rows of a Matrix
 * getShape - Get the shape of a Matrix
 * hadamard - Multiply a matrix witha  scalar or another matrix
-* identity - Retuns an identity matrix
-* inverse
-* isOrthogonal
-* isSymmetric
-* lsq
-* lu
-* multiply
-* ones
-* precision
-* random
-* rank
-* rref
-* setPrecision
-* solve (for b)
-* toArray
-* transpose
-* zeros
+* identity - Returns an identity Matrix
+* inverse - Returns theinverse of a Matrix
+* isOrthogonal - Boolean indicating orhogonality
+* isSymmetric - Boolean indicating symmetry
+* lsq - Returns least square solution
+* lu - Returns 2 Matrices, Lower and Upper Matrix decomposition
+* multiply - Multiplies a Matrix with a scalar or another Matrix
+* ones - Fills a Matrix with 1 values
+* precision - REturns the precision of the calculations used in dot product
+* random - Fills a Matrix with random values (accepts a function)
+* rank - Returns the rank of a Matrix
+* rref - Returns the Row Reduced Echelon form
+* setPrecision - Allows to set the precision
+* solve (for b) - Solves the equation ax = b
+* toArray - Returns an array 
+* transpose - Returns a tranposed Matrix
+* zeros - Fills the Matrix with 0 values
 
