@@ -50,6 +50,11 @@ Matrix.prototype.precision = 4
  * @instance
  * @member setPrecision
  * @param precision {number} Set the number of decimals for rounding
+ * @example
+ *
+ * const m =  Matrix.of([[1,2],[2,3],[4,5]])
+ * m.setPrecision(10)
+ * m.precision === 10
  */
 Matrix.prototype.setPrecision = function (precision) {
   this.precision = precision
@@ -60,6 +65,11 @@ Matrix.prototype.setPrecision = function (precision) {
  * @instance
  * @member isSymmetric
  * @returns {boolean}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [1, 1]])
+ * true === A.isSymmetric()
+ *
  */
 Matrix.prototype.isSymmetric = function () {
   const a = this.__value
@@ -73,6 +83,11 @@ Matrix.prototype.isSymmetric = function () {
  * @member isOrthogonal
  * @param M {Matrix|array}
  * @returns {boolean}
+ * @example
+ *
+ * const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]
+ * const A = Matrix.fromArray(result)
+ * true  === A.isOrthogonal()
  */
 Matrix.prototype.isOrthogonal = function () {
   const AxAt = this.dot(this.transpose())
@@ -84,7 +99,12 @@ Matrix.prototype.isOrthogonal = function () {
  * @memberOf Matrix
  * @instance
  * @member getCols
- * @returns {*}
+ * @returns {number}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [1, 1]])
+ * A.getCols()  === 2
+ *
  */
 Matrix.prototype.getCols = function () {
   return this.__value[0].length
@@ -96,6 +116,12 @@ Matrix.prototype.getCols = function () {
  * @member equals
  * @param M {Matrix|array}
  * @returns {Boolean}
+ * @example
+ *
+ * const arr = [[1, 1], [1, 1]]
+ * const A = Matrix.of(a)
+ * const B = Matrix.of(a)
+ * true  === A.equals(B)
  */
 Matrix.prototype.equals = function (M) {
   return equals(this.__value, M.__value || M)
@@ -105,7 +131,11 @@ Matrix.prototype.equals = function (M) {
  * @memberOf Matrix
  * @instance
  * @member getRows
- * @returns {*}
+ * @returns {number}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [1, 1]])
+ * A.getRows()  === 2
  */
 Matrix.prototype.getRows = function () {
   return this.__value.length
@@ -116,6 +146,10 @@ Matrix.prototype.getRows = function () {
  * @instance
  * @member getShape
  * @returns {array}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [1, 1]])
+ * A.getShape()  === [2, 2]
  */
 Matrix.prototype.getShape = function () {
   return [this.getRows(), this.getCols()]
@@ -126,7 +160,7 @@ Matrix.prototype.getShape = function () {
  * @static
  * @function of
  * @desc Creates a Matrix object and flattens the Matrix
- * @param val {array|function}
+ * @param val {array|function} An array of arrays
  * @returns {Matrix}
  * @example
   *
@@ -147,8 +181,13 @@ Matrix.of = function (val) {
  * @instance
  * @member map
  * @description Maps over the rows of the matrix using a map function
- * @param f {function}
+ * @param f {function} An iterator function
  * @returns {Matrix}
+ * @example
+ *
+ * const m = Matrix.of([[1, 1], [1, 1]])
+ * [[2, 2], [2, 2]] == m.map(x= > map(y => y+ 1)()x)
+ *
  */
 Matrix.prototype.map = function (f) {
   return Matrix.of(map(f)(this.__value))
@@ -159,8 +198,8 @@ Matrix.prototype.map = function (f) {
  * @static
  * @function map
  * @description Static function that maps over the rows of the matrix using a map function
- * @param f {function}
- * @param M {Matrix}
+ * @param f {function} An iterator function
+ * @param M {Matrix|array} Matrix or array to map
  * @returns {Matrix}
  */
 Matrix.map = curry(function (f, M) {
@@ -172,7 +211,7 @@ Matrix.map = curry(function (f, M) {
  * @instance
  * @member fold
  * @description Reduce the matrix rows using a reduce function
- * @param f {function}
+ * @param f {function} A reduce/fold function
  * @returns {Matrix}
  */
 Matrix.prototype.fold = function (f) {
@@ -184,8 +223,8 @@ Matrix.prototype.fold = function (f) {
  * @static
  * @function fold
  * @description Static function to reduce the matrix rows using a reduce function
- * @param f {function}
- * @param M {Matrix}
+ * @param f {function} A reduce/fold function
+ * @param M {Matrix} The Matrix to reduce
  * @returns {Matrix}
  */
 Matrix.fold = curry(function (f, M) {
@@ -412,8 +451,8 @@ Matrix.prototype.clone = function () {
 /**
  * @memberOf Matrix
  * @instance
- * @member clone
- * @desc Returns a clone Matrix from an array
+ * @member fromArray
+ * @desc Returns a Matrix from an array
  * @returns {array}
  */
 Matrix.fromArray = function (arr) {
@@ -523,7 +562,7 @@ Matrix.prototype.additiveinverse = function () {
  * @memberOf Matrix
  * @member hadamard
  * @instance
- * @see mumtiply
+ * @see multiply
  * @param M
  * @returns {Matrix}
  */

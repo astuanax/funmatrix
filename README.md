@@ -32,7 +32,7 @@ if(m.dot(I).equals(m)) {
 There are 2 ways to instantiate a Matrix, though you should not use the new keyword.
 
 ### Matrix.of()
-`Maybe.of`accepts both an array of arrays or a Matrix
+`Matrix.of`accepts both an array of arrays or a Matrix
 
 ````
 const a = Matrix.of([[1, 2], [2, 3]])  // returns a Matrix
