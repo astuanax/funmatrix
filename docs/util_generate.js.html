@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/concat.js - Documentation</title>
+    <title>util/generate.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/concat.js</h1>
+    <h1 class="page-title">util/generate.js</h1>
     
 
     
@@ -39,19 +39,14 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import curry from 'fun.js/src/curry'
-import concat from 'fun.js/src/concat'
-
-/**
- * @function concat
- * @param M {Matrix}
- * @param m {Array}
- * @param idx {number}
- * @returns {Array}
+            <pre class="prettyprint source linenums"><code>/**
+ * @function generate
+ * @desc Generator function for a matrix array, values are set to undefined
+ * @param rows {number}
+ * @param cols {number}
+ * @returns {any[][]}
  */
-export default curry(function (M, m, idx) {
-  return concat(m, M.__value[idx])
-})
+export default (rows, cols) => Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
 </code></pre>
         </article>
     </section>

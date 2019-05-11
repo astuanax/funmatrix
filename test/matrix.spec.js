@@ -359,3 +359,16 @@ describe('Matrix decomposition', function () {
     chai.expect(A.__value).to.deep.equal([ [ 2, -0.5 ], [ -1, 0.5 ] ])
   })
 })
+
+describe('Matrix values', function () {
+  it('ones and zeros', function () {
+    const one = Matrix.ones(2, 2)
+    const zero = Matrix.zeros(2, 2)
+
+    chai.expect(one.__value).to.deep.equal([[1, 1], [1, 1]])
+    chai.expect(zero.__value).to.deep.equal([[0, 0], [0, 0]])
+
+    chai.expect(one.zeros().__value).to.deep.equal([[0, 0], [0, 0]])
+    chai.expect(zero.ones().__value).to.deep.equal([[1, 1], [1, 1]])
+  })
+})

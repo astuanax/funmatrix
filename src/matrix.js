@@ -7,6 +7,7 @@ import empty from 'util/empty'
 import dot from 'util/dot'
 import identity from 'util/identity'
 import transpose from 'util/transpose'
+import generate from 'util/generate'
 
 /**
  * @class Matrix
@@ -292,6 +293,15 @@ Matrix.ap = curry(function (f, M) {
  * @description Concatenates 2 Matrices using a function as operator
  * @param M {Matrix}
  * @returns {Matrix}
+ * @example
+ *
+ * const a = [[0, 1, 1], [2, 3, 4]]
+ * const b = [[2, 2, 2], [3, 3, 3]]
+ * const A = Matrix.of(a)
+ * const B = Matrix.of(b)
+ * const M = A.concat(B)
+ * // [[0, 1, 1, 2, 2, 2], [2, 3, 4, 3, 3, 3]]
+ *
  */
 Matrix.prototype.concat = function (M, f = concat) {
   return Matrix.of(this).map(f(M))
@@ -305,6 +315,15 @@ Matrix.prototype.concat = function (M, f = concat) {
  * @param A {Matrix}
  * @param B {Matrix}
  * @returns {Matrix}
+ * @example
+ *
+ * const a = [[0, 1, 1], [2, 3, 4]]
+ * const b = [[2, 2, 2], [3, 3, 3]]
+ * const A = Matrix.of(a)
+ * const B = Matrix.of(b)
+ * const M = Matrix.concat(A, B)
+ * // [[0, 1, 1, 2, 2, 2], [2, 3, 4, 3, 3, 3]]
+ *
  */
 Matrix.concat = curry(function (A, B, f = concat) {
   return Matrix.of(A).map(f(B))
@@ -331,7 +350,7 @@ Matrix.prototype.empty = function () {
  * @returns {Matrix}
  */
 Matrix.empty = curry(function (rows = 0, cols = 0) {
-  const m = Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
+  const m = generate(rows, cols) // Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
   return Matrix.of(m).map(empty)
 })
 
@@ -343,7 +362,14 @@ Matrix.empty = curry(function (rows = 0, cols = 0) {
  * @member identity
  * @desc Returns an identity matrix
  * @returns {Matrix}
- */
+ * @example
+ *
+ * const a = [[1, 2, 3], [4, 5, 6]]
+ * const A = Matrix.of(a)
+ * const Aidentity = A.identity()
+ * // [[1, 0, 0], [0, 1, 0]]
+ *
+*/
 Matrix.prototype.identity = function () {
   return Matrix.of(identity).ap(this)
 }
@@ -354,9 +380,14 @@ Matrix.prototype.identity = function () {
  * @function identity
  * @desc Returns an identity matrix
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.identity(3, 2)
+ * // [[1, 0, 0], [0, 1, 0]]
+ *
  */
 Matrix.identity = function (rows, cols) {
-  const m = Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
+  const m = generate(rows, cols) // Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
   return Matrix.of(identity).ap(m)
 }
 
@@ -392,6 +423,18 @@ Matrix.combine = function (A, B) {
  * @param M
  * @param f
  * @returns {Matrix}
+ * @example
+ *
+ * // Create matrix
+ * const m = Matrix.of([[1, 2], [3, 4]])
+ *
+ * // Generate identity matrix
+ * const I  = m.identity() // [[1, 0], [0, 1]]
+ *
+ * if(m.dot(I).equals(m)) {
+ *    console.log('Dot product with identity matrix returns the same matrix')
+ * }
+ *
  */
 Matrix.prototype.dot = function (M) {
   return Matrix.of(this).concat(Matrix.of(M), dot(this.precision))
@@ -404,6 +447,15 @@ Matrix.prototype.dot = function (M) {
  * @description Returns the dot product between 2 matrices
  * @param M
  * @returns {Matrix}
+ * @example
+ * const a = [[1, 2, 3], [4, 5, 6]]
+ * const b = [[7, 8], [9, 10], [11, 12]]
+ *
+ * const A = Matrix.of(a)
+ * const B = Matrix.of(b)
+ *
+ * Matrix.dot(A, B) // [[58, 64], [139, 154]]
+ *
  */
 Matrix.dot = function (A, B) {
   return Matrix.of(A).dot(Matrix.of(B))
@@ -434,6 +486,19 @@ Matrix.prototype.zeros = function () {
 
 /**
  * @memberOf Matrix
+ * @function zeros
+ * @desc Fill up an empty matrix with zeros
+ * @param rows {number} Defines the rows of the matrix
+ * @param cols {number} Defines the columns of the matrix
+ * @returns {Matrix}
+ */
+Matrix.zeros = function (rows, cols) {
+  const m = generate(rows, cols)
+  return Matrix.of(m).fill(x => 0)
+}
+
+/**
+ * @memberOf Matrix
  * @instance
  * @member ones
  * @desc Fill up an empty matrix with ones
@@ -441,6 +506,19 @@ Matrix.prototype.zeros = function () {
  */
 Matrix.prototype.ones = function () {
   return Matrix.of(this).fill(x => 1)
+}
+
+/**
+ * @memberOf Matrix
+ * @function ones
+ * @desc Fill up an empty matrix with ones
+ * @param rows {number} Defines the rows of the matrix
+ * @param cols {number} Defines the columns of the matrix
+ * @returns {Matrix}
+ */
+Matrix.ones = function (rows, cols) {
+  const m = generate(rows, cols)
+  return Matrix.of(m).fill(x => 1)
 }
 
 /**
@@ -453,6 +531,20 @@ Matrix.prototype.ones = function () {
  */
 Matrix.prototype.random = function (f = e => Math.random() * 2 - 1) {
   return Matrix.of(this).fill(f)
+}
+
+/**
+ * @memberOf Matrix
+ * @function random
+ * @desc Fill up an empty matrix with random numbers
+ * @param f {function} Function which returns random values. Default random values are between -1 and 1
+ * @param rows {number} Defines the rows of the matrix
+ * @param cols {number} Defines the columns of the matrix
+ * @returns {Matrix}
+ */
+Matrix.random = function (f = e => (Math.random() * 2 - 1), rows, cols) {
+  const m = generate(rows, cols)
+  return Matrix.of(m).fill(f)
 }
 
 /**
