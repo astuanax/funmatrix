@@ -118,9 +118,9 @@ Matrix.prototype.getCols = function () {
  * @returns {Boolean}
  * @example
  *
- * const arr = [[1, 1], [1, 1]]
- * const A = Matrix.of(a)
- * const B = Matrix.of(a)
+ * var a = [[1, 1], [1, 1]]
+ * var A = Matrix.of(a)
+ * var B = Matrix.of(a)
  * true  === A.equals(B)
  */
 Matrix.prototype.equals = function (M) {
@@ -135,7 +135,7 @@ Matrix.prototype.equals = function (M) {
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
- * A.getRows()  === 2
+ * A.getRows()  // 2
  */
 Matrix.prototype.getRows = function () {
   return this.__value.length
@@ -149,7 +149,7 @@ Matrix.prototype.getRows = function () {
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
- * A.getShape()  === [2, 2]
+ * A.getShape()  // [2, 2]
  */
 Matrix.prototype.getShape = function () {
   return [this.getRows(), this.getCols()]
@@ -186,7 +186,8 @@ Matrix.of = function (val) {
  * @example
  *
  * const m = Matrix.of([[1, 1], [1, 1]])
- * [[2, 2], [2, 2]] == m.map(x= > map(y => y+ 1)()x)
+ * m.map(x => x.map(y => y+ 1))
+ * // [[2, 2], [2, 2]]
  *
  */
 Matrix.prototype.map = function (f) {
@@ -201,6 +202,11 @@ Matrix.prototype.map = function (f) {
  * @param f {function} An iterator function
  * @param M {Matrix|array} Matrix or array to map
  * @returns {Matrix}
+ * @example
+ *
+ * const m = Matrix.map(x= > x.map(y => y+ 1), [[1, 1], [1, 1]])
+ * // [[2, 2], [2, 2]]
+ *
  */
 Matrix.map = curry(function (f, M) {
   return Matrix.of(M).map(f)
@@ -213,6 +219,11 @@ Matrix.map = curry(function (f, M) {
  * @description Reduce the matrix rows using a reduce function
  * @param f {function} A reduce/fold function
  * @returns {Matrix}
+ * @example
+ *
+ * // Flatten Matrix
+ * Matrix.of([[1, 1], [1, 1]]).fold((prev, next) => prev.concat(next))
+ * // [1, 1, 1, 1]
  */
 Matrix.prototype.fold = function (f) {
   return Matrix.of(fold(f, [])(this.__value))
@@ -226,6 +237,13 @@ Matrix.prototype.fold = function (f) {
  * @param f {function} A reduce/fold function
  * @param M {Matrix} The Matrix to reduce
  * @returns {Matrix}
+ * @example
+
+ * // Sum of all matrix values
+ * const reducer = (prev, next) => Number(prev) + next.reduce((acc, x) => acc + x, 0)
+ * const A = Matrix.of([[1, 1], [1, 1]]
+ * Matrix.fold(reducer, A)
+ * // 4
  */
 Matrix.fold = curry(function (f, M) {
   return Matrix.of(M).fold(f)
@@ -238,6 +256,12 @@ Matrix.fold = curry(function (f, M) {
  * @description Applies a Matrix to a function
  * @param M {Matrix}
  * @returns {Matrix}
+ * @example
+ *
+ * const f = x => x.reduce((prev, next) => prev + next)
+ * const A = Matrix.of([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+ * Matrix.of(f).ap(M)
+ * // [[6], [15], [24]
  */
 Matrix.prototype.ap = function (M) {
   return Matrix.of(M).map(this.__value)
@@ -249,8 +273,13 @@ Matrix.prototype.ap = function (M) {
  * @function ap
  * @description Applies a Matrix to a function
  * @param f {function}
- * @param M {Matrix}
+ * @param M {Matrix|array}
  * @returns {Matrix}
+ * @example
+ *
+ * const f = x => x.reduce((prev, next) => prev + next)
+ * Matrix.ap(f, [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+ * // [[6], [15], [24]
  */
 Matrix.ap = curry(function (f, M) {
   return Matrix.of(f).ap(M)

@@ -11,7 +11,7 @@
     "test": "mocha --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js",
     "test:cover": "cross-env NODE_ENV=test nyc mocha --require babel-register --colors test/*.spec.js",
-    "repl": "node -i -e \"$(< ./lib/matrix.js)\"",
+    "repl": "node -i -e \"$(< ./lib/@astuanax/funmatrix.js)\"",
     "size": "size-limit",
     "jsdocs": "jsdoc ./src -r -t ./node_modules/minami -d ./docs/ -R README.md",
     "jsdocs-json": "jsdoc -X ./src -r > docs.json"
