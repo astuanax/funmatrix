@@ -281,7 +281,6 @@ describe('Matrix operations addition', function () {
     const B = Matrix.fromArray([[1, 1], [1, 1]])
     chai.expect(B.subtract(B).__value).to.deep.equal([[0, 0], [0, 0]])
   })
-
 })
 
 describe('Matrix operations multiplication', function () {
@@ -329,5 +328,34 @@ describe('Matrix decomposition', function () {
     const A = Matrix.fromArray(result)
     const lu = A.lu()
     chai.expect(Matrix.dot(lu[0], lu[1])).to.deep.equal(A)
+  })
+
+  it('rref', function () {
+    const A = Matrix.of([[-1, 1], [-1, 0], [0, -1], [-1, -2]])
+    const rrefA = A.rref()
+    chai.expect(rrefA.__value).to.deep.equal([ [ 1, 0 ], [ -0, 1 ], [ 0, 0 ], [ 0, 0 ] ])
+
+    const B = Matrix.of([[-1, 1], [-1, 2], [-3, 2]])
+    const rrefB = B.rref()
+    chai.expect(rrefB.__value).to.deep.equal([ [ 1, 0 ], [ 0, 1 ], [ 0, 0 ] ])
+
+    const C = Matrix.of([[-3, 3, -2], [2, 2, 3], [1, 1, 0]])
+    const rrefC = C.rref()
+    chai.expect(rrefC.__value).to.deep.equal([ [ 1, 0, 0 ], [ 0, 1, 0 ], [ -0, -0, 1 ] ])
+  })
+
+  it('solves xA = b', function () {
+    const A = Matrix.of([[1, -1], [1, 1]])
+    const solveA = A.solve([5, 1])
+    chai.expect(solveA).to.deep.equal([3, -2])
+
+    const B = Matrix.of([[5, 1], [3, -4]])
+    const solveB = B.solve([7, 18])
+    chai.expect(solveB).to.deep.equal([ 2, -3.0000000000000004 ])
+  })
+
+  it('calculates the inverse', function () {
+    const A = Matrix.of([[1, 1], [2, 4]]).inverse()
+    chai.expect(A.__value).to.deep.equal([ [ 2, -0.5 ], [ -1, 0.5 ] ])
   })
 })

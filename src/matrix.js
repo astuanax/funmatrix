@@ -676,6 +676,10 @@ Matrix.prototype.lu = function () {
  * @instance
  * @member rref
  * @returns {Matrix|array}
+ * @example
+ *
+ * var A = Matrix.of([[-1, 1], [-1, 0], [0, -1], [-1, -2]])
+ * A.rref() //  [ [ 1, 0 ], [ -0, 1 ], [ 0, 0 ], [ 0, 0 ] ]
  */
 Matrix.prototype.rref = function () {
   let lead = 0
@@ -724,6 +728,18 @@ Matrix.prototype.rref = function () {
  * @member solve
  * @param b
  * @returns {Array}
+ * @example
+ *
+ * // Solve xA = b
+ * // 5x + y  = 7
+ * // 3x - 4y = 18
+ * // Solution for x and y:
+ * // x = 2
+ * // y = -3
+ *
+ * const A = Matrix.of([[5, 1], [3, -4]])
+ * const solveA = A.solve([7, 18]) // [2, -3]
+ *
  */
 Matrix.prototype.solve = function (b) {
   const A = this.clone()
@@ -757,6 +773,11 @@ Matrix.prototype.solve = function (b) {
  * @member inverse
  * @instance
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [2, 4]]).inverse()
+ * // [ [ 2, -0.5 ], [ -1, 0.5 ] ]
+ *
  */
 Matrix.prototype.inverse = function () {
   const A = this.clone()
@@ -769,23 +790,6 @@ Matrix.prototype.inverse = function () {
     return result
   }, [])
   return Matrix.of(result)
-}
-
-/**
- * @memberOf Matrix
- * @member lsq
- * @instance
- * @returns {array}
- */
-Matrix.prototype.lsq = function (b) {
-  const A = this.clone()
-  const At = Matrix.transpose(A)
-  const x = Matrix.dot(At, A).solve(Matrix.dot(At, b).__value)
-
-  const X = Matrix.of(x.map(x => [x]))
-  const P = Matrix.dot(A, X)
-  const E = Matrix.subtract(b, P)
-  return [x, P, E]
 }
 
 /**
