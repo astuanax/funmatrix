@@ -223,6 +223,14 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const A = Matrix.of([[5, 4]])
+A.add(1) // [[6, 5]]
+const B = Matrix.of([[5, 5]])
+B.add(B) // [[10, 10]]</code></pre>
+
+
 </div>
 
         
@@ -270,7 +278,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line579">line 579</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line600">line 600</a>
     </li></ul></dd>
     
 
@@ -285,6 +293,13 @@
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const A = Matrix.of([[5,-5], [-4, 4]])
+const minusA = A.additiveinverse()
+// [[-5, 5], [4, -4]]</code></pre>
 
 
 </div>
@@ -597,7 +612,7 @@ Matrix.of(f).ap(M)
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line764">line 764</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line806">line 806</a>
     </li></ul></dd>
     
 
@@ -1257,7 +1272,7 @@ A.getShape()  // [2, 2]</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line590">line 590</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line616">line 616</a>
     </li></ul></dd>
     
 
@@ -1279,6 +1294,14 @@ A.getShape()  // [2, 2]</code></pre>
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const A = Matrix.of([[5, 4]])
+A.hadamard(2) // [[10, 8]]
+const B = Matrix.of([[5, 5]])
+B.hadamard(B) // [[25, 25]]</code></pre>
 
 
 </div>
@@ -1388,7 +1411,7 @@ A.getShape()  // [2, 2]</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line713">line 713</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line755">line 755</a>
     </li></ul></dd>
     
 
@@ -1581,7 +1604,7 @@ true === A.isSymmetric()</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line732">line 732</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line774">line 774</a>
     </li></ul></dd>
     
 
@@ -1645,7 +1668,7 @@ true === A.isSymmetric()</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line602">line 602</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line635">line 635</a>
     </li></ul></dd>
     
 
@@ -1660,6 +1683,16 @@ true === A.isSymmetric()</code></pre>
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const result = [[3, -7, -2, 2], [-3, 5, 1, 0], [6, -4, 0, -5], [-9, 5, -5, 12]]
+const A = Matrix.fromArray(result)
+const lu = A.lu()
+// L.__value = [ [ 1, 0, 0, 0 ], [ -1, 1, 0, 0 ], [ 2, -5, 1, 0 ], [ -3, 8, 3, 1 ] ]
+// U.__value =  [ [ 3, -7, -2, 2 ], [ 0, -2, -1, 2 ], [ 0, 0, -1, 1 ], [ 0, 0, 0, -1 ] ]
+Matrix.dot(lu[0], lu[1]) // returns clone of A</code></pre>
 
 
 </div>
@@ -1744,7 +1777,7 @@ m.map(x => x.map(y => y+ 1))
 
 
 <div class="description">
-    Mutliplw a scalar or a mtraix with a matrix. Throws an error if the multiplication is not possible.
+    Mutliply a scalar or a mtraix with a matrix. Throws an error if the multiplication is not possible.
 </div>
 
 
@@ -1780,7 +1813,7 @@ m.map(x => x.map(y => y+ 1))
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line559">line 559</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line573">line 573</a>
     </li></ul></dd>
     
 
@@ -1795,6 +1828,14 @@ m.map(x => x.map(y => y+ 1))
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const A = Matrix.of([[5, 4]])
+A.multiply(2) // [[10, 8]]
+const B = Matrix.of([[5, 5]])
+B.multiply(B) // [[25, 25]]</code></pre>
 
 
 </div>
@@ -2098,7 +2139,7 @@ m.precision === 4</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line749">line 749</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line791">line 791</a>
     </li></ul></dd>
     
 
@@ -2158,7 +2199,7 @@ m.precision === 4</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line632">line 632</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line674">line 674</a>
     </li></ul></dd>
     
 
@@ -2285,7 +2326,7 @@ m.precision === 10</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line679">line 679</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line721">line 721</a>
     </li></ul></dd>
     
 
@@ -2345,7 +2386,7 @@ m.precision === 10</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line541">line 541</a>
+        <a href="matrix.js.html">matrix.js</a>, <a href="matrix.js.html#line548">line 548</a>
     </li></ul></dd>
     
 
@@ -2360,6 +2401,14 @@ m.precision === 10</code></pre>
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const A = Matrix.of([[5, 4]])
+A.subtract(1) // [[4, 2]]
+const B = Matrix.of([[5, 5]])
+B.subtract(B) // [[0, 0]]</code></pre>
 
 
 </div>
@@ -4404,7 +4453,7 @@ const b = Matrix.transpose(a).toArray()
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat May 11 2019 08:55:27 GMT+0200 (Central European Summer Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat May 11 2019 10:17:15 GMT+0200 (Central European Summer Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

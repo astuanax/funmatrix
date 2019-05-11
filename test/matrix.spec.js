@@ -271,6 +271,17 @@ describe('Matrix operations addition', function () {
     const B = Matrix.fromArray([[1, 1], [1, 1]])
     chai.expect(A.add(B).__value).to.deep.equal([[1, 1], [1, 1]])
   })
+
+  it('subtract a scalar', function () {
+    const A = Matrix.fromArray([[1, 1], [1, 1]])
+    chai.expect(A.subtract(1).__value).to.deep.equal([[0, 0], [0, 0]])
+  })
+
+  it('subtract a matrix', function () {
+    const B = Matrix.fromArray([[1, 1], [1, 1]])
+    chai.expect(B.subtract(B).__value).to.deep.equal([[0, 0], [0, 0]])
+  })
+
 })
 
 describe('Matrix operations multiplication', function () {
