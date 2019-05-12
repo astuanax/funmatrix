@@ -939,6 +939,7 @@ Matrix.prototype.dimension = function () {
 /**
  * @memberOf Matrix
  * @member diag
+ * @instance
  * @desc Returns an array containing the values on the diagonal
  * @returns {Array}
  * @example
@@ -964,11 +965,8 @@ Matrix.prototype.diag = function () {
  * @returns {Array}
  * @example
  *
- * const diag1 = Matrix.ones(3, 3).diag()
- * // [1, 1]
- *
- * const diag0 = Matrix.zeros(5, 5).diag()
- * // [0, 0, 0, 0, 0]
+ * const diag1 = Matrix.diag([[2, 1], [1, 5]])
+ * // [2, 5]
  *
  */
 Matrix.diag = function (M) {

@@ -4864,7 +4864,7 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @member diag\n * @desc Returns an array containing the values on the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diag()\n * // [1, 1, 1]\n *\n * const diag0 = Matrix.zeros(5, 5).diag()\n * // [0, 0, 0, 0, 0]\n *\n */",
+        "comment": "/**\n * @memberOf Matrix\n * @member diag\n * @instance\n * @desc Returns an array containing the values on the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diag()\n * // [1, 1, 1]\n *\n * const diag0 = Matrix.zeros(5, 5).diag()\n * // [0, 0, 0, 0, 0]\n *\n */",
         "meta": {
             "filename": "matrix.js",
             "lineno": 939,
@@ -4875,6 +4875,7 @@
         "memberof": "Matrix",
         "kind": "member",
         "name": "diag",
+        "scope": "instance",
         "description": "Returns an array containing the values on the diagonal",
         "returns": [
             {
@@ -4888,18 +4889,17 @@
         "examples": [
             "const diag1 = Matrix.ones(3, 3).diag()\n// [1, 1, 1]\n\nconst diag0 = Matrix.zeros(5, 5).diag()\n// [0, 0, 0, 0, 0]"
         ],
-        "scope": "static",
-        "longname": "Matrix.diag"
+        "longname": "Matrix#diag"
     },
     {
         "comment": "",
         "meta": {
             "range": [
-                21124,
-                21249
+                21137,
+                21262
             ],
             "filename": "matrix.js",
-            "lineno": 953,
+            "lineno": 954,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
@@ -4920,10 +4920,10 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @function diag\n * @desc Returns an array containing the values on the diagonal\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diag()\n * // [1, 1, 1]\n *\n * const diag0 = Matrix.zeros(5, 5).diag()\n * // [0, 0, 0, 0, 0]\n *\n */",
+        "comment": "/**\n * @memberOf Matrix\n * @function diag\n * @desc Returns an array containing the values on the diagonal\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.diag([[2, 1], [1, 5]])\n * // [2, 5]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 959,
+            "lineno": 960,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4954,7 +4954,7 @@
             }
         ],
         "examples": [
-            "const diag1 = Matrix.ones(3, 3).diag()\n// [1, 1, 1]\n\nconst diag0 = Matrix.zeros(5, 5).diag()\n// [0, 0, 0, 0, 0]"
+            "const diag1 = Matrix.diag([[2, 1], [1, 5]])\n// [2, 5]"
         ],
         "scope": "static",
         "longname": "Matrix.diag"
@@ -4963,11 +4963,11 @@
         "comment": "",
         "meta": {
             "range": [
-                21593,
-                21652
+                21540,
+                21599
             ],
             "filename": "matrix.js",
-            "lineno": 974,
+            "lineno": 972,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
@@ -4990,11 +4990,11 @@
         "comment": "",
         "meta": {
             "range": [
-                21654,
-                21675
+                21601,
+                21622
             ],
             "filename": "matrix.js",
-            "lineno": 978,
+            "lineno": 976,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
