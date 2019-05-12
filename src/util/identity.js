@@ -3,7 +3,7 @@ import map from 'fun.js/src/map'
 /**
  * @function identity
  * @desc Creates an identiy matrix from an empty array
- * @param m {array}
+ * @param m {Array}
  * @param idx {number}
  * @return {Matrix}
  */

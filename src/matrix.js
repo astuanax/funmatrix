@@ -100,7 +100,7 @@ Matrix.prototype.isOrthogonal = function () {
  * @memberOf Matrix
  * @instance
  * @member getCols
- * @returns {number}
+ * @returns {Number}
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
@@ -132,7 +132,7 @@ Matrix.prototype.equals = function (M) {
  * @memberOf Matrix
  * @instance
  * @member getRows
- * @returns {number}
+ * @returns {Number}
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
@@ -146,7 +146,7 @@ Matrix.prototype.getRows = function () {
  * @memberOf Matrix
  * @instance
  * @member getShape
- * @returns {array}
+ * @returns {Array}
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
@@ -578,7 +578,7 @@ Matrix.random = function (f = e => (Math.random() * 2 - 1), rows, cols) {
  * @instance
  * @member toArray
  * @desc Returns the array from the matrix
- * @returns {array}
+ * @returns {Array}
  */
 Matrix.prototype.toArray = function () {
   return this.__value.map(row => row.map(col => col))
@@ -600,7 +600,7 @@ Matrix.prototype.clone = function () {
  * @instance
  * @member fromArray
  * @desc Returns a Matrix from an array
- * @returns {array}
+ * @returns {Array}
  */
 Matrix.fromArray = function (arr) {
   return Matrix.of(map(row => map(col => col)(row))(arr))
@@ -914,7 +914,7 @@ Matrix.prototype.inverse = function () {
  * @memberOf Matrix
  * @member rank
  * @instance
- * @returns {number}
+ * @returns {Number}
  */
 Matrix.prototype.rank = function () {
   const rref = this.rref()
@@ -930,10 +930,49 @@ Matrix.prototype.rank = function () {
  * @member dimension
  * @instance
  * @see rank
- * @returns {number}
+ * @returns {Number}
  */
 Matrix.prototype.dimension = function () {
   return this.rank()
+}
+
+/**
+ * @memberOf Matrix
+ * @member diag
+ * @desc Returns an array containing the values on the diagonal
+ * @returns {Array}
+ * @example
+ *
+ * const diag1 = Matrix.ones(3, 3).diag()
+ * // [1, 1, 1]
+ *
+ * const diag0 = Matrix.zeros(5, 5).diag()
+ * // [0, 0, 0, 0, 0]
+ *
+ */
+Matrix.prototype.diag = function () {
+  return fold((acc, x, idx) => {
+    return acc.concat(x[idx])
+  })([])(this.__value)
+}
+
+/**
+ * @memberOf Matrix
+ * @function diag
+ * @desc Returns an array containing the values on the diagonal
+ * @param M {Matrix|Array} Matrix from which to return the diagonal
+ * @returns {Array}
+ * @example
+ *
+ * const diag1 = Matrix.ones(3, 3).diag()
+ * // [1, 1]
+ *
+ * const diag0 = Matrix.zeros(5, 5).diag()
+ * // [0, 0, 0, 0, 0]
+ *
+ */
+Matrix.diag = function (M) {
+  return Matrix.of(M).diag()
 }
 
 export default Matrix

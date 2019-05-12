@@ -372,3 +372,10 @@ describe('Matrix values', function () {
     chai.expect(zero.ones().__value).to.deep.equal([[1, 1], [1, 1]])
   })
 })
+
+describe('Matrix diagonal', function () {
+  it('returns an array with diagonal values', function () {
+    const diag = Matrix.ones(2, 2).diag()
+    chai.expect(diag).to.deep.equal([1, 1])
+  })
+})

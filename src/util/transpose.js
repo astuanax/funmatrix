@@ -4,7 +4,7 @@ import curry from 'fun.js/src/curry'
 /**
  * @function transpose
  * @desc Transposes a array of arrays using the Matrix.map function
- * @param m {array}
+ * @param m {Array}
  * @param idx {number}
  * @return {Matrix}
  */
