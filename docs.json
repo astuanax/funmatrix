@@ -4987,18 +4987,168 @@
         "scope": "static"
     },
     {
-        "comment": "",
+        "comment": "/**\n * @memberOf Matrix\n * @member diagproduct\n * @instance\n * @desc Returns the product of the value son the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diagproduct()\n * // 1\n *\n * const diag0 = Matrix.zeros(5, 5).diagproduct()\n * // 0\n *\n */",
         "meta": {
-            "range": [
-                21601,
-                21622
-            ],
             "filename": "matrix.js",
             "lineno": 976,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "kind": "member",
+        "name": "diagproduct",
+        "scope": "instance",
+        "description": "Returns the product of the value son the diagonal",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const diag1 = Matrix.ones(3, 3).diagproduct()\n// 1\n\nconst diag0 = Matrix.zeros(5, 5).diagproduct()\n// 0"
+        ],
+        "longname": "Matrix#diagproduct"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21881,
+                22020
+            ],
+            "filename": "matrix.js",
+            "lineno": 991,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001973",
+                "id": "astnode100001974",
+                "name": "Matrix.prototype.diagproduct",
+                "type": "FunctionExpression",
+                "paramnames": []
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "undocumented": true,
+        "name": "diagproduct",
+        "longname": "Matrix#diagproduct",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                21963,
+                21981
+            ],
+            "filename": "matrix.js",
+            "lineno": 993,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100001993",
+                "name": "acc",
+                "type": "BinaryExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "acc",
+        "longname": "<anonymous>~acc",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @function diagproduct\n * @desc Returns the product of the values on the diagonal\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.diagproduct([[2, 1], [1, 5]])\n * // 10\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 998,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "kind": "function",
+        "name": "diagproduct",
+        "description": "Returns the product of the values on the diagonal",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix",
+                        "Array"
+                    ]
+                },
+                "description": "Matrix from which to return the diagonal",
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const diag1 = Matrix.diagproduct([[2, 1], [1, 5]])\n// 10"
+        ],
+        "scope": "static",
+        "longname": "Matrix.diagproduct"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22304,
+                22377
+            ],
+            "filename": "matrix.js",
+            "lineno": 1010,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002007",
+                "name": "Matrix.diagproduct",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "M"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "diagproduct",
+        "longname": "Matrix.diagproduct",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22379,
+                22400
+            ],
+            "filename": "matrix.js",
+            "lineno": 1014,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002023",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -5022,7 +5172,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100001985",
+                "id": "astnode100002035",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5046,7 +5196,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002024",
+                "id": "astnode100002074",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5119,7 +5269,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002051",
+                "id": "astnode100002101",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5184,7 +5334,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002086",
+                "id": "astnode100002136",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5208,7 +5358,7 @@
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002110",
+                "id": "astnode100002160",
                 "name": "acc",
                 "type": "CallExpression",
                 "funcscope": "<anonymous>",
@@ -5235,7 +5385,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002139",
+                "id": "astnode100002189",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5301,7 +5451,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002147",
+                "id": "astnode100002197",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
@@ -5374,7 +5524,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002178",
+                "id": "astnode100002228",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
@@ -5446,7 +5596,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002196",
+                "id": "astnode100002246",
                 "name": "module.exports",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -5474,7 +5624,7 @@
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002197",
+                "id": "astnode100002247",
                 "name": "round",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -5544,7 +5694,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002228",
+                "id": "astnode100002278",
                 "name": "module.exports",
                 "type": "CallExpression"
             }

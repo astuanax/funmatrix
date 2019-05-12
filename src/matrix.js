@@ -973,4 +973,42 @@ Matrix.diag = function (M) {
   return Matrix.of(M).diag()
 }
 
+/**
+ * @memberOf Matrix
+ * @member diagproduct
+ * @instance
+ * @desc Returns the product of the value son the diagonal
+ * @returns {Number}
+ * @example
+ *
+ * const diag1 = Matrix.ones(3, 3).diagproduct()
+ * // 1
+ *
+ * const diag0 = Matrix.zeros(5, 5).diagproduct()
+ * // 0
+ *
+ */
+Matrix.prototype.diagproduct = function () {
+  return fold((acc, x, idx) => {
+    acc = acc * x[idx]
+    return acc
+  })(1)(this.__value)
+}
+
+/**
+ * @memberOf Matrix
+ * @function diagproduct
+ * @desc Returns the product of the values on the diagonal
+ * @param M {Matrix|Array} Matrix from which to return the diagonal
+ * @returns {Number}
+ * @example
+ *
+ * const diag1 = Matrix.diagproduct([[2, 1], [1, 5]])
+ * // 10
+ *
+ */
+Matrix.diagproduct = function (M) {
+  return Matrix.of(M).diagproduct()
+}
+
 export default Matrix

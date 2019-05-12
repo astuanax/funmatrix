@@ -379,3 +379,10 @@ describe('Matrix diagonal', function () {
     chai.expect(diag).to.deep.equal([1, 1])
   })
 })
+
+describe('Matrix diagonal product', function () {
+  it('returns an array with diagonal values', function () {
+    const diag = Matrix.diagproduct([[2, 1], [1, 5]])
+    chai.expect(diag).to.equal(10)
+  })
+})
