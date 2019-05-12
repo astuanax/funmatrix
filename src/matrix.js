@@ -468,6 +468,11 @@ Matrix.dot = function (A, B) {
  * @desc Fill up an empty matrix with the provided map function
  * @param f
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).fill(x => 42)
+ * // [[42,42,42], [42,42,42], [42,42,42]]
+ *
  */
 Matrix.prototype.fill = function (f) {
   return Matrix.of(this).map(map(x => f(x)))
@@ -479,6 +484,12 @@ Matrix.prototype.fill = function (f) {
  * @member zeros
  * @desc Fill up an empty matrix with zeros
  * @returns {Matrix}
+ *
+ * @example
+ *
+ * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).zeros()
+ * // [[0,0,0], [0,0,0], [0,0,0]]
+ *
  */
 Matrix.prototype.zeros = function () {
   return Matrix.of(this).fill(x => 0)
@@ -491,6 +502,11 @@ Matrix.prototype.zeros = function () {
  * @param rows {number} Defines the rows of the matrix
  * @param cols {number} Defines the columns of the matrix
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.zeros(3, 3)
+ * // [[0,0,0], [0,0,0], [0,0,0]]
+ *
  */
 Matrix.zeros = function (rows, cols) {
   const m = generate(rows, cols)
@@ -503,6 +519,11 @@ Matrix.zeros = function (rows, cols) {
  * @member ones
  * @desc Fill up an empty matrix with ones
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).ones()
+ * // [[1,1,1], [1,1,1], [1,1,1]]
+ *
  */
 Matrix.prototype.ones = function () {
   return Matrix.of(this).fill(x => 1)
@@ -515,6 +536,11 @@ Matrix.prototype.ones = function () {
  * @param rows {number} Defines the rows of the matrix
  * @param cols {number} Defines the columns of the matrix
  * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.ones(1, 1)
+ * // [[1,1,1], [1,1,1], [1,1,1]]
+ *
  */
 Matrix.ones = function (rows, cols) {
   const m = generate(rows, cols)
