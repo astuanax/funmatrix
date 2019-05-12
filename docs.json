@@ -4987,7 +4987,7 @@
         "scope": "static"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @member diagproduct\n * @instance\n * @desc Returns the product of the value son the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diagproduct()\n * // 1\n *\n * const diag0 = Matrix.zeros(5, 5).diagproduct()\n * // 0\n *\n */",
+        "comment": "/**\n * @memberOf Matrix\n * @member diagproduct\n * @instance\n * @desc Returns the product of the values on the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diagproduct()\n * // 1\n *\n * const diag0 = Matrix.zeros(5, 5).diagproduct()\n * // 0\n *\n */",
         "meta": {
             "filename": "matrix.js",
             "lineno": 976,
@@ -4999,7 +4999,7 @@
         "kind": "member",
         "name": "diagproduct",
         "scope": "instance",
-        "description": "Returns the product of the value son the diagonal",
+        "description": "Returns the product of the values on the diagonal",
         "returns": [
             {
                 "type": {
@@ -5019,7 +5019,7 @@
         "meta": {
             "range": [
                 21881,
-                22020
+                22015
             ],
             "filename": "matrix.js",
             "lineno": 991,
@@ -5047,7 +5047,7 @@
         "meta": {
             "range": [
                 21963,
-                21981
+                21976
             ],
             "filename": "matrix.js",
             "lineno": 993,
@@ -5056,9 +5056,9 @@
             "code": {
                 "id": "astnode100001993",
                 "name": "acc",
-                "type": "BinaryExpression",
+                "type": "MemberExpression",
                 "funcscope": "<anonymous>",
-                "value": "",
+                "value": "x[undefined]",
                 "paramnames": []
             }
         },
@@ -5113,15 +5113,15 @@
         "comment": "",
         "meta": {
             "range": [
-                22304,
-                22377
+                22299,
+                22372
             ],
             "filename": "matrix.js",
             "lineno": 1010,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002007",
+                "id": "astnode100002005",
                 "name": "Matrix.diagproduct",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5137,18 +5137,168 @@
         "scope": "static"
     },
     {
-        "comment": "",
+        "comment": "/**\n * @memberOf Matrix\n * @member sum\n * @instance\n * @desc Returns the sum of the values in the Matrix\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).sum()\n * // 9\n *\n * const diag0 = Matrix.zeros(5, 5).sum()\n * // 0\n *\n */",
         "meta": {
-            "range": [
-                22379,
-                22400
-            ],
             "filename": "matrix.js",
             "lineno": 1014,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "kind": "member",
+        "name": "sum",
+        "scope": "instance",
+        "description": "Returns the sum of the values in the Matrix",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const diag1 = Matrix.ones(3, 3).sum()\n// 9\n\nconst diag0 = Matrix.zeros(5, 5).sum()\n// 0"
+        ],
+        "longname": "Matrix#sum"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22624,
+                22778
+            ],
+            "filename": "matrix.js",
+            "lineno": 1029,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002023",
+                "id": "astnode100002022",
+                "name": "Matrix.prototype.sum",
+                "type": "FunctionExpression",
+                "paramnames": []
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "undocumented": true,
+        "name": "sum",
+        "longname": "Matrix#sum",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                22693,
+                22739
+            ],
+            "filename": "matrix.js",
+            "lineno": 1031,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002040",
+                "name": "acc",
+                "type": "CallExpression",
+                "funcscope": "<anonymous>",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "acc",
+        "longname": "<anonymous>~acc",
+        "kind": "member",
+        "memberof": "<anonymous>",
+        "scope": "inner"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @function sum\n * @desc Returns the sum of the values in the Matrix\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.sum([[2, 1], [1, 5]])\n * // 9\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 1036,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "kind": "function",
+        "name": "sum",
+        "description": "Returns the sum of the values in the Matrix",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix",
+                        "Array"
+                    ]
+                },
+                "description": "Matrix from which to return the diagonal",
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const diag1 = Matrix.sum([[2, 1], [1, 5]])\n// 9"
+        ],
+        "scope": "static",
+        "longname": "Matrix.sum"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23039,
+                23096
+            ],
+            "filename": "matrix.js",
+            "lineno": 1048,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002061",
+                "name": "Matrix.sum",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "M"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "sum",
+        "longname": "Matrix.sum",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                23098,
+                23119
+            ],
+            "filename": "matrix.js",
+            "lineno": 1052,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002077",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -5172,7 +5322,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002035",
+                "id": "astnode100002089",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5196,7 +5346,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002074",
+                "id": "astnode100002128",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5269,7 +5419,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002101",
+                "id": "astnode100002155",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5334,7 +5484,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002136",
+                "id": "astnode100002190",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5358,7 +5508,7 @@
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002160",
+                "id": "astnode100002214",
                 "name": "acc",
                 "type": "CallExpression",
                 "funcscope": "<anonymous>",
@@ -5385,7 +5535,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002189",
+                "id": "astnode100002243",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5451,7 +5601,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002197",
+                "id": "astnode100002251",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
@@ -5524,7 +5674,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002228",
+                "id": "astnode100002282",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
@@ -5596,7 +5746,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002246",
+                "id": "astnode100002300",
                 "name": "module.exports",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -5624,7 +5774,7 @@
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002247",
+                "id": "astnode100002301",
                 "name": "round",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -5694,7 +5844,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002278",
+                "id": "astnode100002332",
                 "name": "module.exports",
                 "type": "CallExpression"
             }

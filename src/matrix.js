@@ -977,7 +977,7 @@ Matrix.diag = function (M) {
  * @memberOf Matrix
  * @member diagproduct
  * @instance
- * @desc Returns the product of the value son the diagonal
+ * @desc Returns the product of the values on the diagonal
  * @returns {Number}
  * @example
  *
@@ -990,7 +990,7 @@ Matrix.diag = function (M) {
  */
 Matrix.prototype.diagproduct = function () {
   return fold((acc, x, idx) => {
-    acc = acc * x[idx]
+    acc *= x[idx]
     return acc
   })(1)(this.__value)
 }
@@ -1009,6 +1009,44 @@ Matrix.prototype.diagproduct = function () {
  */
 Matrix.diagproduct = function (M) {
   return Matrix.of(M).diagproduct()
+}
+
+/**
+ * @memberOf Matrix
+ * @member sum
+ * @instance
+ * @desc Returns the sum of the values in the Matrix
+ * @returns {Number}
+ * @example
+ *
+ * const diag1 = Matrix.ones(3, 3).sum()
+ * // 9
+ *
+ * const diag0 = Matrix.zeros(5, 5).sum()
+ * // 0
+ *
+ */
+Matrix.prototype.sum = function () {
+  return fold((acc, x) => {
+    acc += fold((prev, next) => prev + next)(0)(x)
+    return acc
+  })(0)(this.__value)
+}
+
+/**
+ * @memberOf Matrix
+ * @function sum
+ * @desc Returns the sum of the values in the Matrix
+ * @param M {Matrix|Array} Matrix from which to return the diagonal
+ * @returns {Number}
+ * @example
+ *
+ * const diag1 = Matrix.sum([[2, 1], [1, 5]])
+ * // 9
+ *
+ */
+Matrix.sum = function (M) {
+  return Matrix.of(M).sum()
 }
 
 export default Matrix

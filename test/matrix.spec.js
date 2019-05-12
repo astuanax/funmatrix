@@ -386,3 +386,13 @@ describe('Matrix diagonal product', function () {
     chai.expect(diag).to.equal(10)
   })
 })
+
+describe('Matrix sum of all elements', function () {
+  it('returns the sum', function () {
+    const diag = Matrix.sum([[2, 1], [1, 5]])
+    chai.expect(diag).to.equal(9)
+
+    const diag1 = Matrix.ones(3, 3).sum()
+    chai.expect(diag1).to.equal(9)
+  })
+})
