@@ -81,6 +81,22 @@ Matrix.prototype.isSymmetric = function () {
 /**
  * @memberOf Matrix
  * @instance
+ * @member isSquare
+ * @desc Boolean indicating whether this contains a square Matrix
+ * @returns {boolean}
+ * @example
+ *
+ * const A = Matrix.of([[1, 1], [1, 1]])
+ * true === A.isSquare()
+ *
+ */
+Matrix.prototype.isSquare = function () {
+  return equals(this.getCols(), this.getRows())
+}
+
+/**
+ * @memberOf Matrix
+ * @instance
  * @member isOrthogonal
  * @param M {Matrix|array}
  * @returns {boolean}
@@ -1047,6 +1063,49 @@ Matrix.prototype.sum = function () {
  */
 Matrix.sum = function (M) {
   return Matrix.of(M).sum()
+}
+
+/**
+ * @memberOf Matrix
+ * @member kronecker
+ * @instance
+ * @desc The Kronecker product is an operation on two matrices of arbitrary size resulting in a block matrix.
+ * @param M {Matrix} The right side Matrix of the product (this ⊗ M)
+ * @returns {Matrix}
+ */
+Matrix.prototype.kronecker = function (M) {
+  const m = this.getRows()
+  const n = this.getCols()
+  const p = M.getRows()
+  const q = M.getCols()
+
+  const left = this.__value
+  const right = M.__value
+
+  const frame = generate(m * p, n * q)
+
+  for (var i = 0; i < m; i++) {
+    for (var j = 0; j < n; j++) {
+      for (var k = 0; k < p; k++) {
+        for (var l = 0; l < q; l++) {
+          frame[p * i + k][q * j + l] = left[i][j] * right[k][l]
+        }
+      }
+    }
+  }
+  return Matrix.of(frame)
+}
+
+/**
+ * @memberOf Matrix
+ * @function kronecker
+ * @desc The Kronecker product is an operation on two matrices of arbitrary size resulting in a block matrix.
+ * @param A {Matrix} The left side Matrix of the product (A ⊗ B)
+ * @param B {Matrix} The right side Matrix of the product (A ⊗ B)
+ * @returns {Matrix}
+ */
+Matrix.kronecker = function (A, B) {
+  return Matrix.of(A).kronecker(B)
 }
 
 export default Matrix

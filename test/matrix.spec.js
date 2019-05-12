@@ -308,7 +308,7 @@ describe('Matrix operations additive inverse', function () {
   })
 })
 
-describe('Matrix properties: isSymmetric, isOrthogonal', function () {
+describe('Matrix properties: isSymmetric, isOrthogonal, isSquare', function () {
   it('isSymmetric', function () {
     const result = [[1, 7, 3], [7, 4, -5], [3, -5, 6]]
     const A = Matrix.fromArray(result)
@@ -319,6 +319,16 @@ describe('Matrix properties: isSymmetric, isOrthogonal', function () {
     const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]
     const A = Matrix.fromArray(result)
     chai.expect(A.isOrthogonal()).to.be.true
+  })
+
+  it('isOrthogonal', function () {
+    const a = [[-0.3092, -0.9510], [-0.9510, 0.3092]]
+    const A = Matrix.fromArray(a)
+    chai.expect(A.isSquare()).to.be.true
+
+    const b = [[-0.3092, -0.9510, 0], [-0.9510, 0.3092, 1]]
+    const B = Matrix.of(b)
+    chai.expect(B.isSquare()).to.be.false
   })
 })
 
@@ -394,5 +404,14 @@ describe('Matrix sum of all elements', function () {
 
     const diag1 = Matrix.ones(3, 3).sum()
     chai.expect(diag1).to.equal(9)
+  })
+})
+
+describe('Matrix kronecker product', function () {
+  it('returns the kronecker product', function () {
+    const A = Matrix.of([[1, 2], [3, 4]])
+    const B = Matrix.of([[0, 5], [6, 7]])
+    const kronecker = A.kronecker(B)
+    chai.expect(kronecker.__value).to.deep.equal([[0, 5, 0, 10], [6, 7, 12, 14], [0, 15, 0, 20], [18, 21, 24, 28]])
   })
 })
