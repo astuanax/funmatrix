@@ -415,3 +415,14 @@ describe('Matrix kronecker product', function () {
     chai.expect(kronecker.__value).to.deep.equal([[0, 5, 0, 10], [6, 7, 12, 14], [0, 15, 0, 20], [18, 21, 24, 28]])
   })
 })
+
+describe('Matrix map on gpu', function () {
+  it('maps on gpu', function () {
+    const A = Matrix.of([[1, 2], [3, 4]])
+    const B = Matrix.of([[0, 5], [6, 7]])
+
+    function mapF (a) { return a[this.thread.y][this.thread.x] }
+    chai.expect(A.gpumap(mapF).__value).to.deep.equal([Float32Array.of(1, 2), Float32Array.of(3, 4)])
+    chai.expect(B.gpumap(mapF).__value).to.deep.equal([Float32Array.of(0, 5), Float32Array.of(6, 7)])
+  })
+})

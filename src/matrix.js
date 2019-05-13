@@ -1,3 +1,4 @@
+import { GPU } from 'gpu.js'
 import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
@@ -8,6 +9,7 @@ import dot from 'util/dot'
 import identity from 'util/identity'
 import transpose from 'util/transpose'
 import generate from 'util/generate'
+import gpumap from 'util/gpumap'
 
 /**
  * @class Matrix
@@ -22,6 +24,28 @@ import generate from 'util/generate'
  */
 let Matrix = function (val) {
   this.__value = val
+  this.gpu = new GPU()
+}
+
+/**
+ * @memberOf Matrix
+ * @static
+ * @function of
+ * @desc Creates a Matrix object and flattens the Matrix
+ * @param val {array|function} An array of arrays
+ * @returns {Matrix}
+ * @example
+ *
+ * const m =  Matrix.of([[1,2],[2,3],[4,5]])
+ *
+ */
+Matrix.of = function (val) {
+  if (val instanceof Matrix) return val
+  if (this instanceof Matrix) {
+    this.__value = val
+    return this
+  }
+  return new Matrix(val)
 }
 
 /**
@@ -174,27 +198,6 @@ Matrix.prototype.getShape = function () {
 
 /**
  * @memberOf Matrix
- * @static
- * @function of
- * @desc Creates a Matrix object and flattens the Matrix
- * @param val {array|function} An array of arrays
- * @returns {Matrix}
- * @example
- *
- * const m =  Matrix.of([[1,2],[2,3],[4,5]])
- *
- */
-Matrix.of = function (val) {
-  if (val instanceof Matrix) return val
-  if (this instanceof Matrix) {
-    this.__value = val
-    return this
-  }
-  return new Matrix(val)
-}
-
-/**
- * @memberOf Matrix
  * @instance
  * @member map
  * @description Maps over the rows of the matrix using a map function
@@ -227,6 +230,44 @@ Matrix.prototype.map = function (f) {
  */
 Matrix.map = curry(function (f, M) {
   return Matrix.of(M).map(f)
+})
+
+/**
+ * @memberOf Matrix
+ * @instance
+ * @member map
+ * @description Maps over the rows of the matrix using a map function
+ * @param f {function} An iterator function
+ * @returns {Matrix}
+ * @example
+ *
+ * const m = Matrix.of([[1, 1], [1, 1]])
+ * m.map(x => x.map(y => y+ 1))
+ * // [[2, 2], [2, 2]]
+ *
+ */
+Matrix.prototype.gpumap = function (f) {
+  const res = gpumap(this.gpu, f, this.__value)
+  console.log(res)
+  return Matrix.of(res)
+}
+
+/**
+ * @memberOf Matrix
+ * @static
+ * @function map
+ * @description Static function that maps over the rows of the matrix using a map function
+ * @param f {function} An iterator function
+ * @param M {Matrix|array} Matrix or array to map
+ * @returns {Matrix}
+ * @example
+ *
+ * const m = Matrix.map(x= > x.map(y => y+ 1), [[1, 1], [1, 1]])
+ * // [[2, 2], [2, 2]]
+ *
+ */
+Matrix.gpumap = curry(function (f, M) {
+  return Matrix.of(M).gpumap(f)
 })
 
 /**
@@ -1093,6 +1134,7 @@ Matrix.prototype.kronecker = function (M) {
       }
     }
   }
+
   return Matrix.of(frame)
 }
 
