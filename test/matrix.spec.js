@@ -1,5 +1,7 @@
 import chai from 'chai'
 import Matrix from '../lib/@astuanax/funmatrix'
+// import { GPU } from 'gpu.js'
+import generate from '../src/util/generate'
 
 describe('create a Matrix', function () {
   it('it returns type Matrix', function () {
@@ -425,4 +427,19 @@ describe('Matrix map on gpu', function () {
     chai.expect(A.gpumap(mapF).__value).to.deep.equal([Float32Array.of(1, 2), Float32Array.of(3, 4)])
     chai.expect(B.gpumap(mapF).__value).to.deep.equal([Float32Array.of(0, 5), Float32Array.of(6, 7)])
   })
+
+  const nm = 9999
+  const A = Matrix.identity(nm, nm)
+  const test = A.map(x => new Float32Array(x))
+
+  it('maps large arrays on gpu', function (A, test) {
+    function mapF (a) { return a[this.thread.y][this.thread.x] }
+    chai.expect(A.gpumap(mapF)).to.deep.equal(test)
+  })
+  // it('maps large arrays on gpu', function () {
+  //   const A = Matrix.identity(10000, 10000)
+  //   const test = Matrix.of(generate(10000, 10000)).identity()
+  //
+  //   chai.expect(A.map(x => x).toArray()).to.deep.equal(test.__value.map(x => x))
+  // })
 })

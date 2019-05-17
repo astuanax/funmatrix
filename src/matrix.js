@@ -248,7 +248,6 @@ Matrix.map = curry(function (f, M) {
  */
 Matrix.prototype.gpumap = function (f) {
   const res = gpumap(this.gpu, f, this.__value)
-  console.log(res)
   return Matrix.of(res)
 }
 
