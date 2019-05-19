@@ -1,5 +1,4 @@
-import curry from 'fun.js/src/curry'
-import concat from 'fun.js/src/concat'
+import { concat, curry } from 'fun.js'
 
 /**
  * @function concat
