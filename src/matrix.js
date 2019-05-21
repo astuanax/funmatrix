@@ -26,7 +26,7 @@ import gpuproduct from 'util/gpuproduct'
 let Matrix = function (val, GPUJS) {
   this.__value = val
   if (GPUJS) {
-    this.gpujs = GPUJS ? new GPUJS() : null
+    this.gpujs = GPUJS || null
   }
 }
 
@@ -42,14 +42,14 @@ let Matrix = function (val, GPUJS) {
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
  *
  */
-Matrix.of = function (val, GPUJS = null) {
+Matrix.of = function (val) {
   if (val instanceof Matrix) return val
   if (this instanceof Matrix) {
     this.__value = val
     this.gpujs = GPUJS
     return this
   }
-  return new Matrix(val, GPUJS)
+  return new Matrix(val)
 }
 
 /**
@@ -62,13 +62,6 @@ Matrix.of = function (val, GPUJS = null) {
  * m.type === 'Matrix'
  */
 Matrix.prototype.type = 'Matrix'
-
-/**
- * @memberOf Matrix
- * @property {Object} gpu
- * @type {Object}
- */
-Matrix.prototype.gpu = {}
 
 /**
  * @memberOf Matrix
@@ -1184,8 +1177,17 @@ Matrix.prototype.gpuFold = function (f, output) {
   return Matrix.of(gpufold(this.gpujs, f, output, this.__value))
 }
 
+/**
+ * @memberOf Matrix
+ * @function Matrix#gpuProduct
+ * @param f
+ * @param output
+ * @param M
+ * @returns {Matrix}
+ */
 Matrix.prototype.gpuProduct = function (f, output, M) {
-  return Matrix.of(gpuproduct(this.gpujs, f, output, this.__value, M))
+  // (gpu, f, output, a, b, constants = {}
+  return Matrix.of(gpuproduct(this.gpujs, f, output, this.__value, M.__value))
 }
 
 export default Matrix

@@ -8,7 +8,7 @@
     "build": "./node_modules/.bin/eslint ./src --fix && npm run compile && npm run test && npm run jsdocs-json && npm run jsdocs && npm run size",
     "dev": "webpack --progress --colors --watch --env dev",
     "compile": "webpack --env dev && webpack --env build",
-    "test": "mocha --require babel-register --colors ./test/*.spec.js",
+    "test": "mocha --max_old_space_size=4096 --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js",
     "test:cover": "cross-env NODE_ENV=test nyc mocha --require babel-register --colors test/*.spec.js",
     "repl": "node -i -e \"$(< ./lib/@astuanax/funmatrix.js)\"",
