@@ -1,3 +1,2 @@
-import curry from 'fun.js/src/curry'
-
+import { curry } from 'fun.js'
 export default curry(m => [])

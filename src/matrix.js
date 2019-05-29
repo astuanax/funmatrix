@@ -2,12 +2,15 @@ import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
 import equals from 'fun.js/src/equals'
-import concat from 'util/concat'
-import empty from 'util/empty'
-import dot from 'util/dot'
-import identity from 'util/identity'
-import transpose from 'util/transpose'
-import generate from 'util/generate'
+import concat from './util/concat'
+import empty from './util/empty'
+import dot from './util/dot'
+import identity from './util/identity'
+import transpose from './util/transpose'
+import generate from './util/generate'
+// import gpumap from 'util/gpumap'
+// import gpufold from 'util/gpufold'
+// import gpuproduct from 'util/gpuproduct'
 
 /**
  * @class Matrix
@@ -22,6 +25,27 @@ import generate from 'util/generate'
  */
 let Matrix = function (val) {
   this.__value = val
+}
+
+/**
+ * @memberOf Matrix
+ * @static
+ * @function of
+ * @desc Creates a Matrix object and flattens the Matrix
+ * @param val {array|function} An array of arrays
+ * @returns {Matrix}
+ * @example
+ *
+ * const m =  Matrix.of([[1,2],[2,3],[4,5]])
+ *
+ */
+Matrix.of = function (val) {
+  if (val instanceof Matrix) return val
+  if (this instanceof Matrix) {
+    this.__value = val
+    return this
+  }
+  return new Matrix(val)
 }
 
 /**
@@ -170,27 +194,6 @@ Matrix.prototype.getRows = function () {
  */
 Matrix.prototype.getShape = function () {
   return [this.getRows(), this.getCols()]
-}
-
-/**
- * @memberOf Matrix
- * @static
- * @function of
- * @desc Creates a Matrix object and flattens the Matrix
- * @param val {array|function} An array of arrays
- * @returns {Matrix}
- * @example
- *
- * const m =  Matrix.of([[1,2],[2,3],[4,5]])
- *
- */
-Matrix.of = function (val) {
-  if (val instanceof Matrix) return val
-  if (this instanceof Matrix) {
-    this.__value = val
-    return this
-  }
-  return new Matrix(val)
 }
 
 /**
@@ -656,7 +659,7 @@ Matrix.transpose = function (M) {
 
 /**
  * @memberOf Matrix
- * @member add
+ * @function add
  * @instance
  * @param M {Matrix|number} Add a Matrix or a number
  * @returns {Matrix}
@@ -1084,15 +1087,16 @@ Matrix.prototype.kronecker = function (M) {
 
   const frame = generate(m * p, n * q)
 
-  for (var i = 0; i < m; i++) {
-    for (var j = 0; j < n; j++) {
-      for (var k = 0; k < p; k++) {
-        for (var l = 0; l < q; l++) {
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      for (let k = 0; k < p; k++) {
+        for (let l = 0; l < q; l++) {
           frame[p * i + k][q * j + l] = left[i][j] * right[k][l]
         }
       }
     }
   }
+
   return Matrix.of(frame)
 }
 

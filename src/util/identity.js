@@ -1,4 +1,4 @@
-import map from 'fun.js/src/map'
+import { map } from 'fun.js'
 
 /**
  * @function identity

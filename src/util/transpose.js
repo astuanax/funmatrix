@@ -1,5 +1,4 @@
-import map from 'fun.js/src/map'
-import curry from 'fun.js/src/curry'
+import { map, curry } from 'fun.js'
 
 /**
  * @function transpose

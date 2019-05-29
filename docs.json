@@ -1,9 +1,550 @@
 [
     {
+        "comment": "/**\n * @class GpuMatrix\n * @classdesc GpuMatrix applicative providing standard matrix operations\n * @summary The GpuMatrix class should not be instantiated with the new keyword. Instead use the Matrix.of syntax to create a new Matrix. Unfortunatly jsdocs does not allow for the constructor to be hidden.\n * @hidecontructor\n * @see of\n * @example\n *\n * const gpu = new GPU()\n * const m =  GpuMatrix.of([[1,2],[2,3],[4,5]], gpu)\n *\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 7,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "kind": "class",
+        "name": "GpuMatrix",
+        "classdesc": "GpuMatrix applicative providing standard matrix operations",
+        "summary": "The GpuMatrix class should not be instantiated with the new keyword. Instead use the Matrix.of syntax to create a new Matrix. Unfortunatly jsdocs does not allow for the constructor to be hidden.",
+        "tags": [
+            {
+                "originalTitle": "hidecontructor",
+                "title": "hidecontructor",
+                "text": ""
+            }
+        ],
+        "see": [
+            "of"
+        ],
+        "examples": [
+            "const gpu = new GPU()\nconst m =  GpuMatrix.of([[1,2],[2,3],[4,5]], gpu)"
+        ],
+        "longname": "GpuMatrix",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                611,
+                746
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 19,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000022",
+                "name": "GpuMatrix",
+                "type": "ClassDeclaration",
+                "paramnames": [
+                    "val",
+                    "GPUJS"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "GpuMatrix",
+        "longname": "GpuMatrix",
+        "kind": "class",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                646,
+                744
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 20,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000026",
+                "name": "GpuMatrix",
+                "type": "MethodDefinition",
+                "paramnames": [
+                    "val",
+                    "GPUJS"
+                ]
+            },
+            "vars": {
+                "": null
+            }
+        },
+        "undocumented": true,
+        "name": "GpuMatrix",
+        "longname": "GpuMatrix",
+        "kind": "class",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                708,
+                734
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 23,
+            "columnno": 6,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000039",
+                "name": "this.gpujs",
+                "type": "LogicalExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gpujs",
+        "longname": "GpuMatrix#gpujs",
+        "kind": "member",
+        "memberof": "GpuMatrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf GpuMatrix\n * @static\n * @function GpuMatrix.of\n * @desc Creates a GpuMatrix object and flattens the GpuMatrix\n * @param val {array|function} An array of arrays\n * @param GPUJS {Object}\n * @returns {GpuMatrix}\n * @example\n *\n * const m =  GpuMatrix.of([[1,2],[2,3],[4,5]], gpu)\n *\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 28,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "GpuMatrix",
+        "scope": "static",
+        "kind": "function",
+        "name": "of",
+        "description": "Creates a GpuMatrix object and flattens the GpuMatrix",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "array",
+                        "function"
+                    ]
+                },
+                "description": "An array of arrays",
+                "name": "val"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Object"
+                    ]
+                },
+                "name": "GPUJS"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const m =  GpuMatrix.of([[1,2],[2,3],[4,5]], gpu)"
+        ],
+        "longname": "GpuMatrix.of"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1049,
+                1275
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 41,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000047",
+                "name": "GpuMatrix.of",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "val",
+                    "GPUJS"
+                ]
+            },
+            "vars": {
+                "this.__value": "GpuMatrix.of#__value",
+                "this.gpujs": "GpuMatrix.of#gpujs"
+            }
+        },
+        "undocumented": true,
+        "name": "of",
+        "longname": "GpuMatrix.of",
+        "kind": "function",
+        "memberof": "GpuMatrix",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1177,
+                1195
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 44,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000069",
+                "name": "this.__value",
+                "type": "Identifier",
+                "value": "val",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "__value",
+        "longname": "GpuMatrix.of#__value",
+        "kind": "member",
+        "memberof": "GpuMatrix.of",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1200,
+                1218
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 45,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000075",
+                "name": "this.gpujs",
+                "type": "Identifier",
+                "value": "GPUJS",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gpujs",
+        "longname": "GpuMatrix.of#gpujs",
+        "kind": "member",
+        "memberof": "GpuMatrix.of",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf GpuMatrix\n * @instance\n * @member gpuMap\n * @description Maps over the rows of the GpuMatrix using a map function using the GPU\n * @param f {function} An GPU.js enabled iterator function\n * @returns {GpuMatrix}\n * @example\n *\n * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\n * const m = GpuMatrix.of([[2, 2], [2, 2]], GPUJS)\n * m.gpuMap(gpuMapper)\n * // [Float32Array(2,2), Float32Array(2,2)]\n *\n *\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 55,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "GpuMatrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "gpuMap",
+        "description": "Maps over the rows of the GpuMatrix using a map function using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An GPU.js enabled iterator function",
+                "name": "f"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\nconst m = GpuMatrix.of([[2, 2], [2, 2]], GPUJS)\nm.gpuMap(gpuMapper)\n// [Float32Array(2,2), Float32Array(2,2)]"
+        ],
+        "longname": "GpuMatrix#gpuMap"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                1794,
+                1898
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 71,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000088",
+                "name": "GpuMatrix.prototype.gpuMap",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuMap",
+        "longname": "GpuMatrix#gpuMap",
+        "kind": "function",
+        "memberof": "GpuMatrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf GpuMatrix\n * @static\n * @function gpuMap\n * @description Static function that maps over the rows of the GpuMatrix using a map function using the GPU\n * @param f {function} An GPU.js enabled iterator function\n * @param M {GpuMatrix|array} GpuMatrix or array to map\n * @returns {GpuMatrix}\n * @example\n *\n * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\n * const m = GpuMatrix.gpuMap(GPUJS, gpuMapper, [[2, 2], [2, 2]])\n * // [Float32Array(2,2), Float32Array(2,2)]\n *\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 75,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "GpuMatrix",
+        "scope": "static",
+        "kind": "function",
+        "name": "gpuMap",
+        "description": "Static function that maps over the rows of the GpuMatrix using a map function using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An GPU.js enabled iterator function",
+                "name": "f"
+            },
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix",
+                        "array"
+                    ]
+                },
+                "description": "GpuMatrix or array to map",
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\nconst m = GpuMatrix.gpuMap(GPUJS, gpuMapper, [[2, 2], [2, 2]])\n// [Float32Array(2,2), Float32Array(2,2)]"
+        ],
+        "longname": "GpuMatrix.gpuMap"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2407,
+                2497
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 90,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000112",
+                "name": "GpuMatrix.gpuMap",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gpuMap",
+        "longname": "GpuMatrix.gpuMap",
+        "kind": "member",
+        "memberof": "GpuMatrix",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * @memberOf GpuMatrix\n * @instance\n * @member gpuFold\n * @description Folds the rows of the GpuMatrix using a GPUS.js enqbled reduce function, using the GPU\n * @param f {function} An iterator function\n * @returns {GpuMatrix}\n * @example\n *\n * const m = GpuMatrix.of([[1, 1], [1, 1]])\n * m.map(x => x.map(y => y+ 1))\n * // [[2, 2], [2, 2]]\n *\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 94,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "GpuMatrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "gpuFold",
+        "description": "Folds the rows of the GpuMatrix using a GPUS.js enqbled reduce function, using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An iterator function",
+                "name": "f"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const m = GpuMatrix.of([[1, 1], [1, 1]])\nm.map(x => x.map(y => y+ 1))\n// [[2, 2], [2, 2]]"
+        ],
+        "longname": "GpuMatrix#gpuFold"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2850,
+                2972
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 108,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000135",
+                "name": "GpuMatrix.prototype.gpuFold",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f",
+                    "output"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuFold",
+        "longname": "GpuMatrix#gpuFold",
+        "kind": "function",
+        "memberof": "GpuMatrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf GpuMatrix\n * @function GpuMatrix#gpuProduct\n * @param f\n * @param output\n * @param M\n * @returns {GpuMatrix}\n */",
+        "meta": {
+            "filename": "gpumatrix.js",
+            "lineno": 112,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "GpuMatrix",
+        "kind": "function",
+        "name": "gpuProduct",
+        "params": [
+            {
+                "name": "f"
+            },
+            {
+                "name": "output"
+            },
+            {
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "GpuMatrix"
+                    ]
+                }
+            }
+        ],
+        "longname": "GpuMatrix#gpuProduct",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3104,
+                3289
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 120,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000161",
+                "name": "GpuMatrix.prototype.gpuProduct",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f",
+                    "output",
+                    "M"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuProduct",
+        "longname": "GpuMatrix#gpuProduct",
+        "kind": "function",
+        "memberof": "GpuMatrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3291,
+                3315
+            ],
+            "filename": "gpumatrix.js",
+            "lineno": 125,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000190",
+                "name": "module.exports",
+                "type": "Identifier"
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "member",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
         "comment": "/**\n * @class Matrix\n * @classdesc Matrix applicative providing standard matrix operations\n * @summary The Matrix class should not be instantiated with the new keyword. Instead use the Matrix.of syntax to create a new Matrix. Unfortunatly jsdocs does not allow for the constructor to be hidden.\n * @hidecontructor\n * @see of\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 12,
+            "lineno": 15,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -32,20 +573,21 @@
         "comment": "",
         "meta": {
             "range": [
-                745,
-                793
+                854,
+                959
             ],
             "filename": "matrix.js",
-            "lineno": 23,
+            "lineno": 26,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000043",
+                "id": "astnode100000247",
                 "name": "Matrix",
                 "type": "FunctionExpression"
             },
             "vars": {
-                "this.__value": null
+                "this.__value": null,
+                "this.gpujs": null
             }
         },
         "undocumented": true,
@@ -59,15 +601,15 @@
         "comment": "",
         "meta": {
             "range": [
-                773,
-                791
+                889,
+                907
             ],
             "filename": "matrix.js",
-            "lineno": 24,
+            "lineno": 27,
             "columnno": 2,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000049",
+                "id": "astnode100000254",
                 "name": "this.__value",
                 "type": "Identifier",
                 "value": "val",
@@ -81,682 +623,35 @@
         "scope": "global"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @property {string} type\n * @type {string}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.type === 'Matrix'\n */",
-        "meta": {
-            "range": [
-                951,
-                983
-            ],
-            "filename": "matrix.js",
-            "lineno": 36,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000055",
-                "name": "Matrix.prototype.type",
-                "type": "Literal",
-                "value": "Matrix",
-                "paramnames": []
-            }
-        },
-        "memberof": "Matrix",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "string"
-                    ]
-                },
-                "name": "type"
-            }
-        ],
-        "type": {
-            "names": [
-                "string"
-            ]
-        },
-        "examples": [
-            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.type === 'Matrix'"
-        ],
-        "name": "type",
-        "longname": "Matrix#type",
-        "kind": "member",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @property {number} precision\n * @type {number}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.precision === 4\n */",
-        "meta": {
-            "range": [
-                1144,
-                1174
-            ],
-            "filename": "matrix.js",
-            "lineno": 47,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000063",
-                "name": "Matrix.prototype.precision",
-                "type": "Literal",
-                "value": 4,
-                "paramnames": []
-            }
-        },
-        "memberof": "Matrix",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "number"
-                    ]
-                },
-                "name": "precision"
-            }
-        ],
-        "type": {
-            "names": [
-                "number"
-            ]
-        },
-        "examples": [
-            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.precision === 4"
-        ],
-        "name": "precision",
-        "longname": "Matrix#precision",
-        "kind": "member",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member setPrecision\n * @param precision {number} Set the number of decimals for rounding\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.setPrecision(10)\n * m.precision === 10\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 49,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "setPrecision",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "number"
-                    ]
-                },
-                "description": "Set the number of decimals for rounding",
-                "name": "precision"
-            }
-        ],
-        "examples": [
-            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.setPrecision(10)\nm.precision === 10"
-        ],
-        "longname": "Matrix#setPrecision"
-    },
-    {
         "comment": "",
         "meta": {
             "range": [
-                1414,
-                1499
+                927,
+                953
             ],
             "filename": "matrix.js",
-            "lineno": 60,
-            "columnno": 0,
+            "lineno": 29,
+            "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000071",
-                "name": "Matrix.prototype.setPrecision",
-                "type": "FunctionExpression",
-                "paramnames": [
-                    "precision"
-                ]
-            },
-            "vars": {
-                "this.precision": "Matrix#setPrecision#precision"
-            }
-        },
-        "undocumented": true,
-        "name": "setPrecision",
-        "longname": "Matrix#setPrecision",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                1471,
-                1497
-            ],
-            "filename": "matrix.js",
-            "lineno": 61,
-            "columnno": 2,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000081",
-                "name": "this.precision",
-                "type": "Identifier",
-                "value": "precision",
+                "id": "astnode100000263",
+                "name": "this.gpujs",
+                "type": "LogicalExpression",
+                "value": "",
                 "paramnames": []
             }
         },
         "undocumented": true,
-        "name": "precision",
-        "longname": "Matrix#setPrecision#precision",
+        "name": "gpujs",
+        "longname": "gpujs",
         "kind": "member",
-        "memberof": "Matrix#setPrecision",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isSymmetric\n * @returns {boolean}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * true === A.isSymmetric()\n *\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 64,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "isSymmetric",
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "boolean"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const A = Matrix.of([[1, 1], [1, 1]])\ntrue === A.isSymmetric()"
-        ],
-        "longname": "Matrix#isSymmetric"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                1674,
-                1810
-            ],
-            "filename": "matrix.js",
-            "lineno": 75,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000087",
-                "name": "Matrix.prototype.isSymmetric",
-                "type": "FunctionExpression",
-                "paramnames": []
-            },
-            "vars": {
-                "a": "Matrix#isSymmetric~a",
-                "b": "Matrix#isSymmetric~b"
-            }
-        },
-        "undocumented": true,
-        "name": "isSymmetric",
-        "longname": "Matrix#isSymmetric",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                1727,
-                1743
-            ],
-            "filename": "matrix.js",
-            "lineno": 76,
-            "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000096",
-                "name": "a",
-                "type": "MemberExpression",
-                "value": "this.__value"
-            }
-        },
-        "undocumented": true,
-        "name": "a",
-        "longname": "Matrix#isSymmetric~a",
-        "kind": "constant",
-        "memberof": "Matrix#isSymmetric",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                1752,
-                1786
-            ],
-            "filename": "matrix.js",
-            "lineno": 77,
-            "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000102",
-                "name": "b",
-                "type": "MemberExpression",
-                "value": ".__value"
-            }
-        },
-        "undocumented": true,
-        "name": "b",
-        "longname": "Matrix#isSymmetric~b",
-        "kind": "constant",
-        "memberof": "Matrix#isSymmetric",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isSquare\n * @desc Boolean indicating whether this contains a square Matrix\n * @returns {boolean}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * true === A.isSquare()\n *\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 81,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "isSquare",
-        "description": "Boolean indicating whether this contains a square Matrix",
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "boolean"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const A = Matrix.of([[1, 1], [1, 1]])\ntrue === A.isSquare()"
-        ],
-        "longname": "Matrix#isSquare"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2045,
-                2136
-            ],
-            "filename": "matrix.js",
-            "lineno": 93,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000117",
-                "name": "Matrix.prototype.isSquare",
-                "type": "FunctionExpression",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "isSquare",
-        "longname": "Matrix#isSquare",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isOrthogonal\n * @param M {Matrix|array}\n * @returns {boolean}\n * @example\n *\n * const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]\n * const A = Matrix.fromArray(result)\n * true  === A.isOrthogonal()\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 97,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "isOrthogonal",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "Matrix",
-                        "array"
-                    ]
-                },
-                "name": "M"
-            }
-        ],
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "boolean"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]\nconst A = Matrix.fromArray(result)\ntrue  === A.isOrthogonal()"
-        ],
-        "longname": "Matrix#isOrthogonal"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2393,
-                2535
-            ],
-            "filename": "matrix.js",
-            "lineno": 109,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000137",
-                "name": "Matrix.prototype.isOrthogonal",
-                "type": "FunctionExpression",
-                "paramnames": []
-            },
-            "vars": {
-                "AxAt": "Matrix#isOrthogonal~AxAt",
-                "I": "Matrix#isOrthogonal~I"
-            }
-        },
-        "undocumented": true,
-        "name": "isOrthogonal",
-        "longname": "Matrix#isOrthogonal",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2447,
-                2480
-            ],
-            "filename": "matrix.js",
-            "lineno": 110,
-            "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000146",
-                "name": "AxAt",
-                "type": "CallExpression",
-                "value": ""
-            }
-        },
-        "undocumented": true,
-        "name": "AxAt",
-        "longname": "Matrix#isOrthogonal~AxAt",
-        "kind": "constant",
-        "memberof": "Matrix#isOrthogonal",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2489,
-                2508
-            ],
-            "filename": "matrix.js",
-            "lineno": 111,
-            "columnno": 8,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000157",
-                "name": "I",
-                "type": "CallExpression",
-                "value": ""
-            }
-        },
-        "undocumented": true,
-        "name": "I",
-        "longname": "Matrix#isOrthogonal~I",
-        "kind": "constant",
-        "memberof": "Matrix#isOrthogonal",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getCols\n * @returns {Number}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getCols()  === 2\n *\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 115,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "getCols",
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "Number"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getCols()  === 2"
-        ],
-        "longname": "Matrix#getCols"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2699,
-                2773
-            ],
-            "filename": "matrix.js",
-            "lineno": 126,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000169",
-                "name": "Matrix.prototype.getCols",
-                "type": "FunctionExpression",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "getCols",
-        "longname": "Matrix#getCols",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member equals\n * @param M {Matrix|array}\n * @returns {Boolean}\n * @example\n *\n * var a = [[1, 1], [1, 1]]\n * var A = Matrix.of(a)\n * var B = Matrix.of(a)\n * true  === A.equals(B)\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 130,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "equals",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "Matrix",
-                        "array"
-                    ]
-                },
-                "name": "M"
-            }
-        ],
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "Boolean"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "var a = [[1, 1], [1, 1]]\nvar A = Matrix.of(a)\nvar B = Matrix.of(a)\ntrue  === A.equals(B)"
-        ],
-        "longname": "Matrix#equals"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2999,
-                3087
-            ],
-            "filename": "matrix.js",
-            "lineno": 143,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000186",
-                "name": "Matrix.prototype.equals",
-                "type": "FunctionExpression",
-                "paramnames": [
-                    "M"
-                ]
-            }
-        },
-        "undocumented": true,
-        "name": "equals",
-        "longname": "Matrix#equals",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getRows\n * @returns {Number}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getRows()  // 2\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 147,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "getRows",
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "Number"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getRows()  // 2"
-        ],
-        "longname": "Matrix#getRows"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3247,
-                3318
-            ],
-            "filename": "matrix.js",
-            "lineno": 157,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000207",
-                "name": "Matrix.prototype.getRows",
-                "type": "FunctionExpression",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "getRows",
-        "longname": "Matrix#getRows",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getShape\n * @returns {Array}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getShape()  // [2, 2]\n */",
-        "meta": {
-            "filename": "matrix.js",
-            "lineno": 161,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {}
-        },
-        "memberof": "Matrix",
-        "scope": "instance",
-        "kind": "member",
-        "name": "getShape",
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "Array"
-                    ]
-                }
-            }
-        ],
-        "examples": [
-            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getShape()  // [2, 2]"
-        ],
-        "longname": "Matrix#getShape"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3484,
-                3569
-            ],
-            "filename": "matrix.js",
-            "lineno": 171,
-            "columnno": 0,
-            "path": "/Volumes/BigOne/github/funMatrix/src",
-            "code": {
-                "id": "astnode100000222",
-                "name": "Matrix.prototype.getShape",
-                "type": "FunctionExpression",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "getShape",
-        "longname": "Matrix#getShape",
-        "kind": "function",
-        "memberof": "Matrix",
-        "scope": "instance"
+        "scope": "global"
     },
     {
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function of\n * @desc Creates a Matrix object and flattens the Matrix\n * @param val {array|function} An array of arrays\n * @returns {Matrix}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 175,
+            "lineno": 33,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -796,15 +691,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3817,
-                3987
+                1207,
+                1400
             ],
             "filename": "matrix.js",
-            "lineno": 187,
+            "lineno": 45,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000241",
+                "id": "astnode100000271",
                 "name": "Matrix.of",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -812,7 +707,8 @@
                 ]
             },
             "vars": {
-                "this.__value": "Matrix.of#__value"
+                "this.__value": "Matrix.of#__value",
+                "this.gpujs": "Matrix.of#gpujs"
             }
         },
         "undocumented": true,
@@ -826,15 +722,15 @@
         "comment": "",
         "meta": {
             "range": [
-                3922,
-                3940
+                1312,
+                1330
             ],
             "filename": "matrix.js",
-            "lineno": 190,
+            "lineno": 48,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000260",
+                "id": "astnode100000290",
                 "name": "this.__value",
                 "type": "Identifier",
                 "value": "val",
@@ -849,10 +745,708 @@
         "scope": "instance"
     },
     {
+        "comment": "",
+        "meta": {
+            "range": [
+                1335,
+                1353
+            ],
+            "filename": "matrix.js",
+            "lineno": 49,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000296",
+                "name": "this.gpujs",
+                "type": "Identifier",
+                "value": "GPUJS",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gpujs",
+        "longname": "Matrix.of#gpujs",
+        "kind": "member",
+        "memberof": "Matrix.of",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @property {string} type\n * @type {string}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.type === 'Matrix'\n */",
+        "meta": {
+            "range": [
+                1558,
+                1590
+            ],
+            "filename": "matrix.js",
+            "lineno": 64,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000308",
+                "name": "Matrix.prototype.type",
+                "type": "Literal",
+                "value": "Matrix",
+                "paramnames": []
+            }
+        },
+        "memberof": "Matrix",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "type"
+            }
+        ],
+        "type": {
+            "names": [
+                "string"
+            ]
+        },
+        "examples": [
+            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.type === 'Matrix'"
+        ],
+        "name": "type",
+        "longname": "Matrix#type",
+        "kind": "member",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @property {number} precision\n * @type {number}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.precision === 4\n */",
+        "meta": {
+            "range": [
+                1751,
+                1781
+            ],
+            "filename": "matrix.js",
+            "lineno": 75,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000316",
+                "name": "Matrix.prototype.precision",
+                "type": "Literal",
+                "value": 4,
+                "paramnames": []
+            }
+        },
+        "memberof": "Matrix",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "precision"
+            }
+        ],
+        "type": {
+            "names": [
+                "number"
+            ]
+        },
+        "examples": [
+            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.precision === 4"
+        ],
+        "name": "precision",
+        "longname": "Matrix#precision",
+        "kind": "member",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member setPrecision\n * @param precision {number} Set the number of decimals for rounding\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.setPrecision(10)\n * m.precision === 10\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 77,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "setPrecision",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Set the number of decimals for rounding",
+                "name": "precision"
+            }
+        ],
+        "examples": [
+            "const m =  Matrix.of([[1,2],[2,3],[4,5]])\nm.setPrecision(10)\nm.precision === 10"
+        ],
+        "longname": "Matrix#setPrecision"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2021,
+                2106
+            ],
+            "filename": "matrix.js",
+            "lineno": 88,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000324",
+                "name": "Matrix.prototype.setPrecision",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "precision"
+                ]
+            },
+            "vars": {
+                "this.precision": "Matrix#setPrecision#precision"
+            }
+        },
+        "undocumented": true,
+        "name": "setPrecision",
+        "longname": "Matrix#setPrecision",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2078,
+                2104
+            ],
+            "filename": "matrix.js",
+            "lineno": 89,
+            "columnno": 2,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000334",
+                "name": "this.precision",
+                "type": "Identifier",
+                "value": "precision",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "precision",
+        "longname": "Matrix#setPrecision#precision",
+        "kind": "member",
+        "memberof": "Matrix#setPrecision",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isSymmetric\n * @returns {boolean}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * true === A.isSymmetric()\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 92,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "isSymmetric",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const A = Matrix.of([[1, 1], [1, 1]])\ntrue === A.isSymmetric()"
+        ],
+        "longname": "Matrix#isSymmetric"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2281,
+                2417
+            ],
+            "filename": "matrix.js",
+            "lineno": 103,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000340",
+                "name": "Matrix.prototype.isSymmetric",
+                "type": "FunctionExpression",
+                "paramnames": []
+            },
+            "vars": {
+                "a": "Matrix#isSymmetric~a",
+                "b": "Matrix#isSymmetric~b"
+            }
+        },
+        "undocumented": true,
+        "name": "isSymmetric",
+        "longname": "Matrix#isSymmetric",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2334,
+                2350
+            ],
+            "filename": "matrix.js",
+            "lineno": 104,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000349",
+                "name": "a",
+                "type": "MemberExpression",
+                "value": "this.__value"
+            }
+        },
+        "undocumented": true,
+        "name": "a",
+        "longname": "Matrix#isSymmetric~a",
+        "kind": "constant",
+        "memberof": "Matrix#isSymmetric",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2359,
+                2393
+            ],
+            "filename": "matrix.js",
+            "lineno": 105,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000355",
+                "name": "b",
+                "type": "MemberExpression",
+                "value": ".__value"
+            }
+        },
+        "undocumented": true,
+        "name": "b",
+        "longname": "Matrix#isSymmetric~b",
+        "kind": "constant",
+        "memberof": "Matrix#isSymmetric",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isSquare\n * @desc Boolean indicating whether this contains a square Matrix\n * @returns {boolean}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * true === A.isSquare()\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 109,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "isSquare",
+        "description": "Boolean indicating whether this contains a square Matrix",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const A = Matrix.of([[1, 1], [1, 1]])\ntrue === A.isSquare()"
+        ],
+        "longname": "Matrix#isSquare"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                2652,
+                2743
+            ],
+            "filename": "matrix.js",
+            "lineno": 121,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000370",
+                "name": "Matrix.prototype.isSquare",
+                "type": "FunctionExpression",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "isSquare",
+        "longname": "Matrix#isSquare",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member isOrthogonal\n * @param M {Matrix|array}\n * @returns {boolean}\n * @example\n *\n * const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]\n * const A = Matrix.fromArray(result)\n * true  === A.isOrthogonal()\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 125,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "isOrthogonal",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix",
+                        "array"
+                    ]
+                },
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]\nconst A = Matrix.fromArray(result)\ntrue  === A.isOrthogonal()"
+        ],
+        "longname": "Matrix#isOrthogonal"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3000,
+                3142
+            ],
+            "filename": "matrix.js",
+            "lineno": 137,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000390",
+                "name": "Matrix.prototype.isOrthogonal",
+                "type": "FunctionExpression",
+                "paramnames": []
+            },
+            "vars": {
+                "AxAt": "Matrix#isOrthogonal~AxAt",
+                "I": "Matrix#isOrthogonal~I"
+            }
+        },
+        "undocumented": true,
+        "name": "isOrthogonal",
+        "longname": "Matrix#isOrthogonal",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3054,
+                3087
+            ],
+            "filename": "matrix.js",
+            "lineno": 138,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000399",
+                "name": "AxAt",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "AxAt",
+        "longname": "Matrix#isOrthogonal~AxAt",
+        "kind": "constant",
+        "memberof": "Matrix#isOrthogonal",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3096,
+                3115
+            ],
+            "filename": "matrix.js",
+            "lineno": 139,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000410",
+                "name": "I",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "I",
+        "longname": "Matrix#isOrthogonal~I",
+        "kind": "constant",
+        "memberof": "Matrix#isOrthogonal",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getCols\n * @returns {Number}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getCols()  === 2\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 143,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "getCols",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getCols()  === 2"
+        ],
+        "longname": "Matrix#getCols"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3306,
+                3380
+            ],
+            "filename": "matrix.js",
+            "lineno": 154,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000422",
+                "name": "Matrix.prototype.getCols",
+                "type": "FunctionExpression",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "getCols",
+        "longname": "Matrix#getCols",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member equals\n * @param M {Matrix|array}\n * @returns {Boolean}\n * @example\n *\n * var a = [[1, 1], [1, 1]]\n * var A = Matrix.of(a)\n * var B = Matrix.of(a)\n * true  === A.equals(B)\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 158,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "equals",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix",
+                        "array"
+                    ]
+                },
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Boolean"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "var a = [[1, 1], [1, 1]]\nvar A = Matrix.of(a)\nvar B = Matrix.of(a)\ntrue  === A.equals(B)"
+        ],
+        "longname": "Matrix#equals"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3606,
+                3694
+            ],
+            "filename": "matrix.js",
+            "lineno": 171,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000439",
+                "name": "Matrix.prototype.equals",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "M"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "equals",
+        "longname": "Matrix#equals",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getRows\n * @returns {Number}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getRows()  // 2\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 175,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "getRows",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Number"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getRows()  // 2"
+        ],
+        "longname": "Matrix#getRows"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                3854,
+                3925
+            ],
+            "filename": "matrix.js",
+            "lineno": 185,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000460",
+                "name": "Matrix.prototype.getRows",
+                "type": "FunctionExpression",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "getRows",
+        "longname": "Matrix#getRows",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member getShape\n * @returns {Array}\n * @example\n *\n * const A = Matrix.of([[1, 1], [1, 1]])\n * A.getShape()  // [2, 2]\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 189,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "getShape",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const A = Matrix.of([[1, 1], [1, 1]])\nA.getShape()  // [2, 2]"
+        ],
+        "longname": "Matrix#getShape"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                4091,
+                4176
+            ],
+            "filename": "matrix.js",
+            "lineno": 199,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100000475",
+                "name": "Matrix.prototype.getShape",
+                "type": "FunctionExpression",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "getShape",
+        "longname": "Matrix#getShape",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member map\n * @description Maps over the rows of the matrix using a map function\n * @param f {function} An iterator function\n * @returns {Matrix}\n * @example\n *\n * const m = Matrix.of([[1, 1], [1, 1]])\n * m.map(x => x.map(y => y+ 1))\n * // [[2, 2], [2, 2]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 196,
+            "lineno": 203,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -891,15 +1485,15 @@
         "comment": "",
         "meta": {
             "range": [
-                4294,
-                4374
+                4483,
+                4563
             ],
             "filename": "matrix.js",
-            "lineno": 210,
+            "lineno": 217,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000272",
+                "id": "astnode100000494",
                 "name": "Matrix.prototype.map",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -918,7 +1512,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function map\n * @description Static function that maps over the rows of the matrix using a map function\n * @param f {function} An iterator function\n * @param M {Matrix|array} Matrix or array to map\n * @returns {Matrix}\n * @example\n *\n * const m = Matrix.map(x= > x.map(y => y+ 1), [[1, 1], [1, 1]])\n * // [[2, 2], [2, 2]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 214,
+            "lineno": 221,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -967,15 +1561,15 @@
         "comment": "",
         "meta": {
             "range": [
-                4744,
-                4812
+                4933,
+                5001
             ],
             "filename": "matrix.js",
-            "lineno": 228,
+            "lineno": 235,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000294",
+                "id": "astnode100000516",
                 "name": "Matrix.map",
                 "type": "CallExpression",
                 "value": "",
@@ -993,7 +1587,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member fold\n * @description Reduce the matrix rows using a reduce function\n * @param f {function} A reduce/fold function\n * @returns {Matrix}\n * @example\n *\n * // Flatten Matrix\n * Matrix.of([[1, 1], [1, 1]]).fold((prev, next) => prev.concat(next))\n * // [1, 1, 1, 1]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 232,
+            "lineno": 239,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1032,15 +1626,15 @@
         "comment": "",
         "meta": {
             "range": [
-                5127,
-                5213
+                5316,
+                5402
             ],
             "filename": "matrix.js",
-            "lineno": 245,
+            "lineno": 252,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000315",
+                "id": "astnode100000537",
                 "name": "Matrix.prototype.fold",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1059,7 +1653,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function fold\n * @description Static function to reduce the matrix rows using a reduce function\n * @param f {function} A reduce/fold function\n * @param M {Matrix} The Matrix to reduce\n * @returns {Matrix}\n * @example\n\n * // Sum of all matrix values\n * const reducer = (prev, next) => Number(prev) + next.reduce((acc, x) => acc + x, 0)\n * const A = Matrix.of([[1, 1], [1, 1]]\n * Matrix.fold(reducer, A)\n * // 4\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 249,
+            "lineno": 256,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1107,15 +1701,15 @@
         "comment": "",
         "meta": {
             "range": [
-                5668,
-                5738
+                5857,
+                5927
             ],
             "filename": "matrix.js",
-            "lineno": 265,
+            "lineno": 272,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000338",
+                "id": "astnode100000560",
                 "name": "Matrix.fold",
                 "type": "CallExpression",
                 "value": "",
@@ -1133,7 +1727,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member ap\n * @description Applies a Matrix to a function\n * @param M {Matrix}\n * @returns {Matrix}\n * @example\n *\n * const f = x => x.reduce((prev, next) => prev + next)\n * const A = Matrix.of([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\n * Matrix.of(f).ap(M)\n * // [[6], [15], [24]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 269,
+            "lineno": 276,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1171,15 +1765,15 @@
         "comment": "",
         "meta": {
             "range": [
-                6058,
-                6136
+                6247,
+                6325
             ],
             "filename": "matrix.js",
-            "lineno": 283,
+            "lineno": 290,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000359",
+                "id": "astnode100000581",
                 "name": "Matrix.prototype.ap",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1198,7 +1792,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function ap\n * @description Applies a Matrix to a function\n * @param f {function}\n * @param M {Matrix|array}\n * @returns {Matrix}\n * @example\n *\n * const f = x => x.reduce((prev, next) => prev + next)\n * Matrix.ap(f, [[1, 2, 3], [4, 5, 6], [7, 8, 9]])\n * // [[6], [15], [24]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 287,
+            "lineno": 294,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1245,15 +1839,15 @@
         "comment": "",
         "meta": {
             "range": [
-                6456,
-                6522
+                6645,
+                6711
             ],
             "filename": "matrix.js",
-            "lineno": 301,
+            "lineno": 308,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000381",
+                "id": "astnode100000603",
                 "name": "Matrix.ap",
                 "type": "CallExpression",
                 "value": "",
@@ -1271,7 +1865,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member concat\n * @description Concatenates 2 Matrices using a function as operator\n * @param M {Matrix}\n * @returns {Matrix}\n * @example\n *\n * const a = [[0, 1, 1], [2, 3, 4]]\n * const b = [[2, 2, 2], [3, 3, 3]]\n * const A = Matrix.of(a)\n * const B = Matrix.of(b)\n * const M = A.concat(B)\n * // [[0, 1, 1, 2, 2, 2], [2, 3, 4, 3, 3, 3]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 305,
+            "lineno": 312,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1309,15 +1903,15 @@
         "comment": "",
         "meta": {
             "range": [
-                6908,
-                6997
+                7097,
+                7186
             ],
             "filename": "matrix.js",
-            "lineno": 322,
+            "lineno": 329,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000402",
+                "id": "astnode100000624",
                 "name": "Matrix.prototype.concat",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1337,7 +1931,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function concat\n * @description Concatenates 2 Matrices using a function as operator\n * @param A {Matrix}\n * @param B {Matrix}\n * @returns {Matrix}\n * @example\n *\n * const a = [[0, 1, 1], [2, 3, 4]]\n * const b = [[2, 2, 2], [3, 3, 3]]\n * const A = Matrix.of(a)\n * const B = Matrix.of(b)\n * const M = Matrix.concat(A, B)\n * // [[0, 1, 1, 2, 2, 2], [2, 3, 4, 3, 3, 3]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 326,
+            "lineno": 333,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1383,15 +1977,15 @@
         "comment": "",
         "meta": {
             "range": [
-                7412,
-                7498
+                7601,
+                7687
             ],
             "filename": "matrix.js",
-            "lineno": 344,
+            "lineno": 351,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000427",
+                "id": "astnode100000649",
                 "name": "Matrix.concat",
                 "type": "CallExpression",
                 "value": "",
@@ -1409,7 +2003,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member empty\n * @description Return an empty Matrix from an existing Matrix\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 348,
+            "lineno": 355,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1434,15 +2028,15 @@
         "comment": "",
         "meta": {
             "range": [
-                7642,
-                7718
+                7831,
+                7907
             ],
             "filename": "matrix.js",
-            "lineno": 355,
+            "lineno": 362,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000453",
+                "id": "astnode100000675",
                 "name": "Matrix.prototype.empty",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -1459,7 +2053,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function empty\n * @description Return an empty Matrix from an existing Matrix\n * @param rows {number}\n * @param cols {number}\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 359,
+            "lineno": 366,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1502,15 +2096,15 @@
         "comment": "",
         "meta": {
             "range": [
-                7910,
-                8106
+                8099,
+                8295
             ],
             "filename": "matrix.js",
-            "lineno": 368,
+            "lineno": 375,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000472",
+                "id": "astnode100000694",
                 "name": "Matrix.empty",
                 "type": "CallExpression",
                 "value": "",
@@ -1528,15 +2122,15 @@
         "comment": "",
         "meta": {
             "range": [
-                7971,
-                7995
+                8160,
+                8184
             ],
             "filename": "matrix.js",
-            "lineno": 369,
+            "lineno": 376,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000487",
+                "id": "astnode100000709",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -1554,7 +2148,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member identity\n * @desc Returns an identity matrix\n * @returns {Matrix}\n * @example\n *\n * const a = [[1, 2, 3], [4, 5, 6]]\n * const A = Matrix.of(a)\n * const Aidentity = A.identity()\n * // [[1, 0, 0], [0, 1, 0]]\n *\n*/",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 375,
+            "lineno": 382,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1582,15 +2176,15 @@
         "comment": "",
         "meta": {
             "range": [
-                8390,
-                8471
+                8579,
+                8660
             ],
             "filename": "matrix.js",
-            "lineno": 389,
+            "lineno": 396,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000504",
+                "id": "astnode100000726",
                 "name": "Matrix.prototype.identity",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -1607,7 +2201,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function identity\n * @desc Returns an identity matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.identity(3, 2)\n * // [[1, 0, 0], [0, 1, 0]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 393,
+            "lineno": 400,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1635,15 +2229,15 @@
         "comment": "",
         "meta": {
             "range": [
-                8673,
-                8859
+                8862,
+                9048
             ],
             "filename": "matrix.js",
-            "lineno": 405,
+            "lineno": 412,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000523",
+                "id": "astnode100000745",
                 "name": "Matrix.identity",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1666,15 +2260,15 @@
         "comment": "",
         "meta": {
             "range": [
-                8723,
-                8747
+                8912,
+                8936
             ],
             "filename": "matrix.js",
-            "lineno": 406,
+            "lineno": 413,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000532",
+                "id": "astnode100000754",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -1692,7 +2286,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member combine\n * @see Matrix.concat\n * @param M\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 410,
+            "lineno": 417,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1724,15 +2318,15 @@
         "comment": "",
         "meta": {
             "range": [
-                8976,
-                9073
+                9165,
+                9262
             ],
             "filename": "matrix.js",
-            "lineno": 418,
+            "lineno": 425,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000549",
+                "id": "astnode100000771",
                 "name": "Matrix.prototype.combine",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1751,7 +2345,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function combine\n * @see Matrix.concat\n * @param M\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 422,
+            "lineno": 429,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1783,15 +2377,15 @@
         "comment": "",
         "meta": {
             "range": [
-                9190,
-                9277
+                9379,
+                9466
             ],
             "filename": "matrix.js",
-            "lineno": 430,
+            "lineno": 437,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000574",
+                "id": "astnode100000796",
                 "name": "Matrix.combine",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1811,7 +2405,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member dot\n * @description Returns the dot product between 2 matrices\n * @param M\n * @param f\n * @returns {Matrix}\n * @example\n *\n * // Create matrix\n * const m = Matrix.of([[1, 2], [3, 4]])\n *\n * // Generate identity matrix\n * const I  = m.identity() // [[1, 0], [0, 1]]\n *\n * if(m.dot(I).equals(m)) {\n *    console.log('Dot product with identity matrix returns the same matrix')\n * }\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 434,
+            "lineno": 441,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1847,15 +2441,15 @@
         "comment": "",
         "meta": {
             "range": [
-                9713,
-                9819
+                9902,
+                10008
             ],
             "filename": "matrix.js",
-            "lineno": 455,
+            "lineno": 462,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000598",
+                "id": "astnode100000820",
                 "name": "Matrix.prototype.dot",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1874,7 +2468,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @static\n * @function dot\n * @description Returns the dot product between 2 matrices\n * @param M\n * @returns {Matrix}\n * @example\n * const a = [[1, 2, 3], [4, 5, 6]]\n * const b = [[7, 8], [9, 10], [11, 12]]\n *\n * const A = Matrix.of(a)\n * const B = Matrix.of(b)\n *\n * Matrix.dot(A, B) // [[58, 64], [139, 154]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 459,
+            "lineno": 466,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1907,15 +2501,15 @@
         "comment": "",
         "meta": {
             "range": [
-                10165,
-                10237
+                10354,
+                10426
             ],
             "filename": "matrix.js",
-            "lineno": 476,
+            "lineno": 483,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000627",
+                "id": "astnode100000849",
                 "name": "Matrix.dot",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1935,7 +2529,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member fill\n * @desc Fill up an empty matrix with the provided map function\n * @param f\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).fill(x => 42)\n * // [[42,42,42], [42,42,42], [42,42,42]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 480,
+            "lineno": 487,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -1968,15 +2562,15 @@
         "comment": "",
         "meta": {
             "range": [
-                10520,
-                10605
+                10709,
+                10794
             ],
             "filename": "matrix.js",
-            "lineno": 493,
+            "lineno": 500,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000650",
+                "id": "astnode100000872",
                 "name": "Matrix.prototype.fill",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -1998,7 +2592,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member zeros\n * @desc Fill up an empty matrix with zeros\n * @returns {Matrix}\n *\n * @example\n *\n * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).zeros()\n * // [[0,0,0], [0,0,0], [0,0,0]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 497,
+            "lineno": 504,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2026,15 +2620,15 @@
         "comment": "",
         "meta": {
             "range": [
-                10845,
-                10923
+                11034,
+                11112
             ],
             "filename": "matrix.js",
-            "lineno": 510,
+            "lineno": 517,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000676",
+                "id": "astnode100000898",
                 "name": "Matrix.prototype.zeros",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -2054,7 +2648,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function zeros\n * @desc Fill up an empty matrix with zeros\n * @param rows {number} Defines the rows of the matrix\n * @param cols {number} Defines the columns of the matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.zeros(3, 3)\n * // [[0,0,0], [0,0,0], [0,0,0]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 514,
+            "lineno": 521,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2102,15 +2696,15 @@
         "comment": "",
         "meta": {
             "range": [
-                11234,
-                11342
+                11423,
+                11531
             ],
             "filename": "matrix.js",
-            "lineno": 527,
+            "lineno": 534,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000697",
+                "id": "astnode100000919",
                 "name": "Matrix.zeros",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2134,15 +2728,15 @@
         "comment": "",
         "meta": {
             "range": [
-                11281,
-                11305
+                11470,
+                11494
             ],
             "filename": "matrix.js",
-            "lineno": 528,
+            "lineno": 535,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000706",
+                "id": "astnode100000928",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -2160,7 +2754,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member ones\n * @desc Fill up an empty matrix with ones\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[1,2,3], [3,2,1], [4,5,6]]).ones()\n * // [[1,1,1], [1,1,1], [1,1,1]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 532,
+            "lineno": 539,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2188,15 +2782,15 @@
         "comment": "",
         "meta": {
             "range": [
-                11576,
-                11653
+                11765,
+                11842
             ],
             "filename": "matrix.js",
-            "lineno": 544,
+            "lineno": 551,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000725",
+                "id": "astnode100000947",
                 "name": "Matrix.prototype.ones",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -2216,7 +2810,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function ones\n * @desc Fill up an empty matrix with ones\n * @param rows {number} Defines the rows of the matrix\n * @param cols {number} Defines the columns of the matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.ones(1, 1)\n * // [[1,1,1], [1,1,1], [1,1,1]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 548,
+            "lineno": 555,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2264,15 +2858,15 @@
         "comment": "",
         "meta": {
             "range": [
-                11961,
-                12068
+                12150,
+                12257
             ],
             "filename": "matrix.js",
-            "lineno": 561,
+            "lineno": 568,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000746",
+                "id": "astnode100000968",
                 "name": "Matrix.ones",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2296,15 +2890,15 @@
         "comment": "",
         "meta": {
             "range": [
-                12007,
-                12031
+                12196,
+                12220
             ],
             "filename": "matrix.js",
-            "lineno": 562,
+            "lineno": 569,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000755",
+                "id": "astnode100000977",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -2322,7 +2916,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member random\n * @desc Fill up an empty matrix with random values\n * @param {function} [f = e => Math.random() * 2 - 1]\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 566,
+            "lineno": 573,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2359,15 +2953,15 @@
         "comment": "",
         "meta": {
             "range": [
-                12256,
-                12360
+                12445,
+                12549
             ],
             "filename": "matrix.js",
-            "lineno": 574,
+            "lineno": 581,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000774",
+                "id": "astnode100000996",
                 "name": "Matrix.prototype.random",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2389,7 +2983,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function random\n * @desc Fill up an empty matrix with random numbers\n * @param f {function} Function which returns random values. Default random values are between -1 and 1\n * @param rows {number} Defines the rows of the matrix\n * @param cols {number} Defines the columns of the matrix\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 578,
+            "lineno": 585,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2443,15 +3037,15 @@
         "comment": "",
         "meta": {
             "range": [
-                12701,
-                12839
+                12890,
+                13028
             ],
             "filename": "matrix.js",
-            "lineno": 587,
+            "lineno": 594,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000805",
+                "id": "astnode100001027",
                 "name": "Matrix.random",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2476,15 +3070,15 @@
         "comment": "",
         "meta": {
             "range": [
-                12783,
-                12807
+                12972,
+                12996
             ],
             "filename": "matrix.js",
-            "lineno": 588,
+            "lineno": 595,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000826",
+                "id": "astnode100001048",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -2502,7 +3096,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member toArray\n * @desc Returns the array from the matrix\n * @returns {Array}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 592,
+            "lineno": 599,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2527,15 +3121,15 @@
         "comment": "",
         "meta": {
             "range": [
-                12964,
-                13060
+                13153,
+                13249
             ],
             "filename": "matrix.js",
-            "lineno": 599,
+            "lineno": 606,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000843",
+                "id": "astnode100001065",
                 "name": "Matrix.prototype.toArray",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -2555,7 +3149,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member clone\n * @desc Returns a clone of the matrix\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 603,
+            "lineno": 610,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2580,15 +3174,15 @@
         "comment": "",
         "meta": {
             "range": [
-                13180,
-                13260
+                13369,
+                13449
             ],
             "filename": "matrix.js",
-            "lineno": 610,
+            "lineno": 617,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000868",
+                "id": "astnode100001090",
                 "name": "Matrix.prototype.clone",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -2605,7 +3199,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member fromArray\n * @desc Returns a Matrix from an array\n * @returns {Array}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 614,
+            "lineno": 621,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2630,15 +3224,15 @@
         "comment": "",
         "meta": {
             "range": [
-                13384,
-                13479
+                13573,
+                13668
             ],
             "filename": "matrix.js",
-            "lineno": 621,
+            "lineno": 628,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000885",
+                "id": "astnode100001107",
                 "name": "Matrix.fromArray",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2660,7 +3254,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member transpose\n * @desc Returns a transposed Matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([-1, 2], [3, 4], [-8, 2])\n * const b = A.transpose().toArray()\n * // returns [[-1, 3,-8], [2, 4, 2]]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 625,
+            "lineno": 632,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2688,15 +3282,15 @@
         "comment": "",
         "meta": {
             "range": [
-                13740,
-                13838
+                13929,
+                14027
             ],
             "filename": "matrix.js",
-            "lineno": 637,
+            "lineno": 644,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000911",
+                "id": "astnode100001133",
                 "name": "Matrix.prototype.transpose",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -2713,7 +3307,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function transpose\n * @desc Returns a transposed Matrix\n * @param M {Matrix|array} A Matrix or a matrix array\n * @returns {Matrix}\n * @example\n *\n * const a = [-1, 2], [3, 4], [-8, 2]\n * const b = Matrix.transpose(a).toArray()\n * // returns [[-1, 3,-8], [2, 4, 2]]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 641,
+            "lineno": 648,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2753,15 +3347,15 @@
         "comment": "",
         "meta": {
             "range": [
-                14137,
-                14206
+                14326,
+                14395
             ],
             "filename": "matrix.js",
-            "lineno": 653,
+            "lineno": 660,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000932",
+                "id": "astnode100001154",
                 "name": "Matrix.transpose",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2777,16 +3371,16 @@
         "scope": "static"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @member add\n * @instance\n * @param M {Matrix|number} Add a Matrix or a number\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.add(1) // [[6, 5]]\n * const B = Matrix.of([[5, 5]])\n * B.add(B) // [[10, 10]]\n *\n */",
+        "comment": "/**\n * @memberOf Matrix\n * @function add\n * @instance\n * @param M {Matrix|number} Add a Matrix or a number\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.add(1) // [[6, 5]]\n * const B = Matrix.of([[5, 5]])\n * B.add(B) // [[10, 10]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 657,
+            "lineno": 664,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
         },
         "memberof": "Matrix",
-        "kind": "member",
+        "kind": "function",
         "name": "add",
         "scope": "instance",
         "params": [
@@ -2819,15 +3413,15 @@
         "comment": "",
         "meta": {
             "range": [
-                14472,
-                14818
+                14663,
+                15009
             ],
             "filename": "matrix.js",
-            "lineno": 671,
+            "lineno": 678,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100000949",
+                "id": "astnode100001171",
                 "name": "Matrix.prototype.add",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2849,7 +3443,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member subtract\n * @instance\n * @param M {Matrix|number} Subtract a Matrix or a number\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.subtract(1) // [[4, 2]]\n * const B = Matrix.of([[5, 5]])\n * B.subtract(B) // [[0, 0]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 682,
+            "lineno": 689,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2888,15 +3482,15 @@
         "comment": "",
         "meta": {
             "range": [
-                15102,
-                15458
+                15293,
+                15649
             ],
             "filename": "matrix.js",
-            "lineno": 696,
+            "lineno": 703,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001026",
+                "id": "astnode100001248",
                 "name": "Matrix.prototype.subtract",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2918,7 +3512,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member multiply\n * @instance\n * @desc Mutliply a scalar or a mtraix with a matrix. Throws an error if the multiplication is not possible.\n * @param M {Matrix|number}\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.multiply(2) // [[10, 8]]\n * const B = Matrix.of([[5, 5]])\n * B.multiply(B) // [[25, 25]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 707,
+            "lineno": 714,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -2957,15 +3551,15 @@
         "comment": "",
         "meta": {
             "range": [
-                15824,
-                16270
+                16015,
+                16461
             ],
             "filename": "matrix.js",
-            "lineno": 722,
+            "lineno": 729,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001103",
+                "id": "astnode100001325",
                 "name": "Matrix.prototype.multiply",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -2987,7 +3581,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member additiveinverse\n * @instance\n * @desc Function that returns the matrix obtained by changing the sign of every matrix element. The additive inverse of matrix A is written –A.\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5,-5], [-4, 4]])\n * const minusA = A.additiveinverse()\n * // [[-5, 5], [4, -4]]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 734,
+            "lineno": 741,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -3015,15 +3609,15 @@
         "comment": "",
         "meta": {
             "range": [
-                16626,
-                16714
+                16817,
+                16905
             ],
             "filename": "matrix.js",
-            "lineno": 746,
+            "lineno": 753,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001186",
+                "id": "astnode100001408",
                 "name": "Matrix.prototype.additiveinverse",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -3040,7 +3634,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member hadamard\n * @instance\n * @see multiply\n * @param M\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.hadamard(2) // [[10, 8]]\n * const B = Matrix.of([[5, 5]])\n * B.hadamard(B) // [[25, 25]]\n\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 750,
+            "lineno": 757,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -3075,15 +3669,15 @@
         "comment": "",
         "meta": {
             "range": [
-                16970,
-                17051
+                17161,
+                17242
             ],
             "filename": "matrix.js",
-            "lineno": 765,
+            "lineno": 772,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001206",
+                "id": "astnode100001428",
                 "name": "Matrix.prototype.hadamard",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -3102,7 +3696,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member lu\n * @desc Calculates LU decomposition of the current Matrix\n * @returns {Matrix[]}\n * @example\n *\n * const result = [[3, -7, -2, 2], [-3, 5, 1, 0], [6, -4, 0, -5], [-9, 5, -5, 12]]\n * const A = Matrix.fromArray(result)\n * const lu = A.lu()\n * // L.__value = [ [ 1, 0, 0, 0 ], [ -1, 1, 0, 0 ], [ 2, -5, 1, 0 ], [ -3, 8, 3, 1 ] ]\n * // U.__value =  [ [ 3, -7, -2, 2 ], [ 0, -2, -1, 2 ], [ 0, 0, -1, 1 ], [ 0, 0, 0, -1 ] ]\n * Matrix.dot(lu[0], lu[1]) // returns clone of A\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 769,
+            "lineno": 776,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -3130,15 +3724,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17580,
-                18217
+                17771,
+                18408
             ],
             "filename": "matrix.js",
-            "lineno": 785,
+            "lineno": 792,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001226",
+                "id": "astnode100001448",
                 "name": "Matrix.prototype.lu",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -3169,15 +3763,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17624,
-                17642
+                17815,
+                17833
             ],
             "filename": "matrix.js",
-            "lineno": 786,
+            "lineno": 793,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001235",
+                "id": "astnode100001457",
                 "name": "n",
                 "type": "CallExpression",
                 "value": ""
@@ -3195,15 +3789,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17651,
-                17661
+                17842,
+                17852
             ],
             "filename": "matrix.js",
-            "lineno": 787,
+            "lineno": 794,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001242",
+                "id": "astnode100001464",
                 "name": "tol",
                 "type": "Literal",
                 "value": 0.000001
@@ -3221,15 +3815,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17670,
-                17686
+                17861,
+                17877
             ],
             "filename": "matrix.js",
-            "lineno": 788,
+            "lineno": 795,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001246",
+                "id": "astnode100001468",
                 "name": "A",
                 "type": "CallExpression",
                 "value": ""
@@ -3247,15 +3841,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17695,
-                17711
+                17886,
+                17902
             ],
             "filename": "matrix.js",
-            "lineno": 789,
+            "lineno": 796,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001253",
+                "id": "astnode100001475",
                 "name": "L",
                 "type": "CallExpression",
                 "value": ""
@@ -3273,15 +3867,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17720,
-                17736
+                17911,
+                17927
             ],
             "filename": "matrix.js",
-            "lineno": 790,
+            "lineno": 797,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001260",
+                "id": "astnode100001482",
                 "name": "U",
                 "type": "CallExpression",
                 "value": ""
@@ -3299,15 +3893,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17749,
-                17754
+                17940,
+                17945
             ],
             "filename": "matrix.js",
-            "lineno": 792,
+            "lineno": 799,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001268",
+                "id": "astnode100001490",
                 "name": "k",
                 "type": "Literal",
                 "value": 0
@@ -3325,15 +3919,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17868,
-                17887
+                18059,
+                18078
             ],
             "filename": "matrix.js",
-            "lineno": 794,
+            "lineno": 801,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001296",
+                "id": "astnode100001518",
                 "name": "L.__value[undefined][undefined]",
                 "type": "Literal",
                 "funcscope": "Matrix#lu",
@@ -3352,15 +3946,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17901,
-                17910
+                18092,
+                18101
             ],
             "filename": "matrix.js",
-            "lineno": 795,
+            "lineno": 802,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001307",
+                "id": "astnode100001529",
                 "name": "i",
                 "type": "BinaryExpression",
                 "value": ""
@@ -3378,15 +3972,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17932,
-                17983
+                18123,
+                18174
             ],
             "filename": "matrix.js",
-            "lineno": 796,
+            "lineno": 803,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001319",
+                "id": "astnode100001541",
                 "name": "L.__value[undefined][undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#lu",
@@ -3405,15 +3999,15 @@
         "comment": "",
         "meta": {
             "range": [
-                17999,
-                18008
+                18190,
+                18199
             ],
             "filename": "matrix.js",
-            "lineno": 797,
+            "lineno": 804,
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001344",
+                "id": "astnode100001566",
                 "name": "j",
                 "type": "BinaryExpression",
                 "value": ""
@@ -3431,15 +4025,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18032,
-                18101
+                18223,
+                18292
             ],
             "filename": "matrix.js",
-            "lineno": 798,
+            "lineno": 805,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001356",
+                "id": "astnode100001578",
                 "name": "A.__value[undefined][undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#lu",
@@ -3458,15 +4052,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18129,
-                18134
+                18320,
+                18325
             ],
             "filename": "matrix.js",
-            "lineno": 801,
+            "lineno": 808,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001389",
+                "id": "astnode100001611",
                 "name": "l",
                 "type": "Identifier",
                 "value": "k"
@@ -3484,15 +4078,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18156,
-                18189
+                18347,
+                18380
             ],
             "filename": "matrix.js",
-            "lineno": 802,
+            "lineno": 809,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001399",
+                "id": "astnode100001621",
                 "name": "U.__value[undefined][undefined]",
                 "type": "MemberExpression",
                 "funcscope": "Matrix#lu",
@@ -3511,7 +4105,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member rref\n * @returns {Matrix|array}\n * @example\n *\n * var A = Matrix.of([[-1, 1], [-1, 0], [0, -1], [-1, -2]])\n * A.rref() //  [ [ 1, 0 ], [ -0, 1 ], [ 0, 0 ], [ 0, 0 ] ]\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 808,
+            "lineno": 815,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -3539,15 +4133,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18438,
-                19424
+                18629,
+                19615
             ],
             "filename": "matrix.js",
-            "lineno": 818,
+            "lineno": 825,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001419",
+                "id": "astnode100001641",
                 "name": "Matrix.prototype.rref",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -3575,15 +4169,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18482,
-                18490
+                18673,
+                18681
             ],
             "filename": "matrix.js",
-            "lineno": 819,
+            "lineno": 826,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001428",
+                "id": "astnode100001650",
                 "name": "lead",
                 "type": "Literal",
                 "value": 0
@@ -3601,15 +4195,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18499,
-                18526
+                18690,
+                18717
             ],
             "filename": "matrix.js",
-            "lineno": 820,
+            "lineno": 827,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001432",
+                "id": "astnode100001654",
                 "name": "resultMatrix",
                 "type": "CallExpression",
                 "value": ""
@@ -3627,15 +4221,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18539,
-                18544
+                18730,
+                18735
             ],
             "filename": "matrix.js",
-            "lineno": 822,
+            "lineno": 829,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001440",
+                "id": "astnode100001662",
                 "name": "r",
                 "type": "Literal",
                 "value": 0
@@ -3653,15 +4247,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18647,
-                18652
+                18838,
+                18843
             ],
             "filename": "matrix.js",
-            "lineno": 826,
+            "lineno": 833,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001463",
+                "id": "astnode100001685",
                 "name": "i",
                 "type": "Identifier",
                 "value": "r"
@@ -3679,15 +4273,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18755,
-                18760
+                18946,
+                18951
             ],
             "filename": "matrix.js",
-            "lineno": 830,
+            "lineno": 837,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001489",
+                "id": "astnode100001711",
                 "name": "i",
                 "type": "Identifier",
                 "funcscope": "Matrix#rref",
@@ -3706,15 +4300,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18878,
-                18907
+                19069,
+                19098
             ],
             "filename": "matrix.js",
-            "lineno": 838,
+            "lineno": 845,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001506",
+                "id": "astnode100001728",
                 "name": "tmp",
                 "type": "MemberExpression",
                 "value": "resultMatrix.__value[undefined]"
@@ -3732,15 +4326,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18912,
-                18961
+                19103,
+                19152
             ],
             "filename": "matrix.js",
-            "lineno": 839,
+            "lineno": 846,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001514",
+                "id": "astnode100001736",
                 "name": "resultMatrix.__value[undefined]",
                 "type": "MemberExpression",
                 "funcscope": "Matrix#rref",
@@ -3759,15 +4353,15 @@
         "comment": "",
         "meta": {
             "range": [
-                18966,
-                18995
+                19157,
+                19186
             ],
             "filename": "matrix.js",
-            "lineno": 840,
+            "lineno": 847,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001526",
+                "id": "astnode100001748",
                 "name": "resultMatrix.__value[undefined]",
                 "type": "Identifier",
                 "funcscope": "Matrix#rref",
@@ -3786,15 +4380,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19005,
-                19040
+                19196,
+                19231
             ],
             "filename": "matrix.js",
-            "lineno": 842,
+            "lineno": 849,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001534",
+                "id": "astnode100001756",
                 "name": "val",
                 "type": "MemberExpression",
                 "value": "resultMatrix.__value[undefined][undefined]"
@@ -3812,15 +4406,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19054,
-                19059
+                19245,
+                19250
             ],
             "filename": "matrix.js",
-            "lineno": 843,
+            "lineno": 850,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001545",
+                "id": "astnode100001767",
                 "name": "j",
                 "type": "Literal",
                 "value": 0
@@ -3838,15 +4432,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19094,
-                19127
+                19285,
+                19318
             ],
             "filename": "matrix.js",
-            "lineno": 844,
+            "lineno": 851,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001558",
+                "id": "astnode100001780",
                 "name": "resultMatrix.__value[undefined][undefined]",
                 "type": "Identifier",
                 "funcscope": "Matrix#rref",
@@ -3865,15 +4459,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19148,
-                19153
+                19339,
+                19344
             ],
             "filename": "matrix.js",
-            "lineno": 847,
+            "lineno": 854,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001569",
+                "id": "astnode100001791",
                 "name": "i",
                 "type": "Literal",
                 "value": 0
@@ -3891,15 +4485,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19216,
-                19251
+                19407,
+                19442
             ],
             "filename": "matrix.js",
-            "lineno": 849,
+            "lineno": 856,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001587",
+                "id": "astnode100001809",
                 "name": "val",
                 "type": "MemberExpression",
                 "funcscope": "Matrix#rref",
@@ -3918,15 +4512,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19267,
-                19272
+                19458,
+                19463
             ],
             "filename": "matrix.js",
-            "lineno": 850,
+            "lineno": 857,
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001598",
+                "id": "astnode100001820",
                 "name": "j",
                 "type": "Literal",
                 "value": 0
@@ -3944,15 +4538,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19309,
-                19371
+                19500,
+                19562
             ],
             "filename": "matrix.js",
-            "lineno": 851,
+            "lineno": 858,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001611",
+                "id": "astnode100001833",
                 "name": "resultMatrix.__value[undefined][undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#rref",
@@ -3971,7 +4565,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member solve\n * @param b\n * @returns {Array}\n * @example\n *\n * // Solve xA = b\n * // 5x + y  = 7\n * // 3x - 4y = 18\n * // Solution for x and y:\n * // x = 2\n * // y = -3\n *\n * const A = Matrix.of([[5, 1], [3, -4]])\n * const solveA = A.solve([7, 18]) // [2, -3]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 859,
+            "lineno": 866,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4003,15 +4597,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19734,
-                20256
+                19925,
+                20447
             ],
             "filename": "matrix.js",
-            "lineno": 878,
+            "lineno": 885,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001634",
+                "id": "astnode100001856",
                 "name": "Matrix.prototype.solve",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -4047,15 +4641,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19782,
-                19798
+                19973,
+                19989
             ],
             "filename": "matrix.js",
-            "lineno": 879,
+            "lineno": 886,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001644",
+                "id": "astnode100001866",
                 "name": "A",
                 "type": "CallExpression",
                 "value": ""
@@ -4073,15 +4667,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19807,
-                19818
+                19998,
+                20009
             ],
             "filename": "matrix.js",
-            "lineno": 880,
+            "lineno": 887,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001651",
+                "id": "astnode100001873",
                 "name": "LU",
                 "type": "CallExpression",
                 "value": ""
@@ -4099,15 +4693,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19827,
-                19836
+                20018,
+                20027
             ],
             "filename": "matrix.js",
-            "lineno": 881,
+            "lineno": 888,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001658",
+                "id": "astnode100001880",
                 "name": "L",
                 "type": "MemberExpression",
                 "value": "LU[0]"
@@ -4125,15 +4719,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19845,
-                19854
+                20036,
+                20045
             ],
             "filename": "matrix.js",
-            "lineno": 882,
+            "lineno": 889,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001664",
+                "id": "astnode100001886",
                 "name": "U",
                 "type": "MemberExpression",
                 "value": "LU[1]"
@@ -4151,15 +4745,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19863,
-                19881
+                20054,
+                20072
             ],
             "filename": "matrix.js",
-            "lineno": 883,
+            "lineno": 890,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001670",
+                "id": "astnode100001892",
                 "name": "n",
                 "type": "CallExpression",
                 "value": ""
@@ -4177,15 +4771,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19888,
-                19893
+                20079,
+                20084
             ],
             "filename": "matrix.js",
-            "lineno": 884,
+            "lineno": 891,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001677",
+                "id": "astnode100001899",
                 "name": "s",
                 "type": "Literal",
                 "value": 0
@@ -4203,15 +4797,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19902,
-                19908
+                20093,
+                20099
             ],
             "filename": "matrix.js",
-            "lineno": 885,
+            "lineno": 892,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001681",
+                "id": "astnode100001903",
                 "name": "c",
                 "type": "ArrayExpression",
                 "value": "[]"
@@ -4229,15 +4823,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19917,
-                19923
+                20108,
+                20114
             ],
             "filename": "matrix.js",
-            "lineno": 886,
+            "lineno": 893,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001685",
+                "id": "astnode100001907",
                 "name": "x",
                 "type": "ArrayExpression",
                 "value": "[]"
@@ -4255,15 +4849,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19936,
-                19941
+                20127,
+                20132
             ],
             "filename": "matrix.js",
-            "lineno": 888,
+            "lineno": 895,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001690",
+                "id": "astnode100001912",
                 "name": "k",
                 "type": "Literal",
                 "value": 0
@@ -4281,15 +4875,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19970,
-                19975
+                20161,
+                20166
             ],
             "filename": "matrix.js",
-            "lineno": 889,
+            "lineno": 896,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001701",
+                "id": "astnode100001923",
                 "name": "j",
                 "type": "Literal",
                 "value": 0
@@ -4307,15 +4901,15 @@
         "comment": "",
         "meta": {
             "range": [
-                19997,
-                20027
+                20188,
+                20218
             ],
             "filename": "matrix.js",
-            "lineno": 890,
+            "lineno": 897,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001711",
+                "id": "astnode100001933",
                 "name": "s",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#solve",
@@ -4334,15 +4928,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20038,
-                20053
+                20229,
+                20244
             ],
             "filename": "matrix.js",
-            "lineno": 892,
+            "lineno": 899,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001727",
+                "id": "astnode100001949",
                 "name": "c[undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#solve",
@@ -4361,15 +4955,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20058,
-                20063
+                20249,
+                20254
             ],
             "filename": "matrix.js",
-            "lineno": 893,
+            "lineno": 900,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001737",
+                "id": "astnode100001959",
                 "name": "s",
                 "type": "Literal",
                 "funcscope": "Matrix#solve",
@@ -4388,15 +4982,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20079,
-                20088
+                20270,
+                20279
             ],
             "filename": "matrix.js",
-            "lineno": 895,
+            "lineno": 902,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001742",
+                "id": "astnode100001964",
                 "name": "a",
                 "type": "BinaryExpression",
                 "value": ""
@@ -4414,15 +5008,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20113,
-                20118
+                20304,
+                20309
             ],
             "filename": "matrix.js",
-            "lineno": 896,
+            "lineno": 903,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001755",
+                "id": "astnode100001977",
                 "name": "t",
                 "type": "Literal",
                 "value": 0
@@ -4440,15 +5034,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20132,
-                20141
+                20323,
+                20332
             ],
             "filename": "matrix.js",
-            "lineno": 897,
+            "lineno": 904,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001760",
+                "id": "astnode100001982",
                 "name": "b",
                 "type": "BinaryExpression",
                 "value": ""
@@ -4466,15 +5060,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20163,
-                20193
+                20354,
+                20384
             ],
             "filename": "matrix.js",
-            "lineno": 898,
+            "lineno": 905,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001772",
+                "id": "astnode100001994",
                 "name": "t",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#solve",
@@ -4493,15 +5087,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20204,
-                20239
+                20395,
+                20430
             ],
             "filename": "matrix.js",
-            "lineno": 900,
+            "lineno": 907,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001788",
+                "id": "astnode100002010",
                 "name": "x[undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#solve",
@@ -4520,7 +5114,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member inverse\n * @instance\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[1, 1], [2, 4]]).inverse()\n * // [ [ 2, -0.5 ], [ -1, 0.5 ] ]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 905,
+            "lineno": 912,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4547,15 +5141,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20443,
-                20752
+                20634,
+                20943
             ],
             "filename": "matrix.js",
-            "lineno": 916,
+            "lineno": 923,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001808",
+                "id": "astnode100002030",
                 "name": "Matrix.prototype.inverse",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -4579,15 +5173,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20492,
-                20508
+                20683,
+                20699
             ],
             "filename": "matrix.js",
-            "lineno": 917,
+            "lineno": 924,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001817",
+                "id": "astnode100002039",
                 "name": "A",
                 "type": "CallExpression",
                 "value": ""
@@ -4605,15 +5199,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20517,
-                20533
+                20708,
+                20724
             ],
             "filename": "matrix.js",
-            "lineno": 918,
+            "lineno": 925,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001824",
+                "id": "astnode100002046",
                 "name": "I",
                 "type": "CallExpression",
                 "value": ""
@@ -4631,15 +5225,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20542,
-                20566
+                20733,
+                20757
             ],
             "filename": "matrix.js",
-            "lineno": 919,
+            "lineno": 926,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001831",
+                "id": "astnode100002053",
                 "name": "Inv",
                 "type": "CallExpression",
                 "value": ""
@@ -4657,15 +5251,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20576,
-                20723
+                20767,
+                20914
             ],
             "filename": "matrix.js",
-            "lineno": 921,
+            "lineno": 928,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001842",
+                "id": "astnode100002064",
                 "name": "result",
                 "type": "CallExpression",
                 "value": ""
@@ -4683,15 +5277,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20636,
-                20655
+                20827,
+                20846
             ],
             "filename": "matrix.js",
-            "lineno": 922,
+            "lineno": 929,
             "columnno": 10,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001856",
+                "id": "astnode100002078",
                 "name": "half",
                 "type": "BinaryExpression",
                 "value": ""
@@ -4709,7 +5303,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member rank\n * @instance\n * @returns {Number}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 929,
+            "lineno": 936,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4733,15 +5327,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20832,
-                21013
+                21023,
+                21204
             ],
             "filename": "matrix.js",
-            "lineno": 935,
+            "lineno": 942,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001886",
+                "id": "astnode100002108",
                 "name": "Matrix.prototype.rank",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -4763,15 +5357,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20878,
-                20896
+                21069,
+                21087
             ],
             "filename": "matrix.js",
-            "lineno": 936,
+            "lineno": 943,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001895",
+                "id": "astnode100002117",
                 "name": "rref",
                 "type": "CallExpression",
                 "value": ""
@@ -4789,15 +5383,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20903,
-                20913
+                21094,
+                21104
             ],
             "filename": "matrix.js",
-            "lineno": 937,
+            "lineno": 944,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001902",
+                "id": "astnode100002124",
                 "name": "result",
                 "type": "Literal",
                 "value": 0
@@ -4815,15 +5409,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20925,
-                20930
+                21116,
+                21121
             ],
             "filename": "matrix.js",
-            "lineno": 938,
+            "lineno": 945,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001907",
+                "id": "astnode100002129",
                 "name": "i",
                 "type": "Literal",
                 "value": 0
@@ -4841,15 +5435,15 @@
         "comment": "",
         "meta": {
             "range": [
-                20963,
-                20991
+                21154,
+                21182
             ],
             "filename": "matrix.js",
-            "lineno": 939,
+            "lineno": 946,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001920",
+                "id": "astnode100002142",
                 "name": "result",
                 "type": "MemberExpression",
                 "funcscope": "Matrix#rank",
@@ -4868,7 +5462,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member dimension\n * @instance\n * @see rank\n * @returns {Number}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 944,
+            "lineno": 951,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4895,15 +5489,15 @@
         "comment": "",
         "meta": {
             "range": [
-                21111,
-                21176
+                21302,
+                21367
             ],
             "filename": "matrix.js",
-            "lineno": 951,
+            "lineno": 958,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001932",
+                "id": "astnode100002154",
                 "name": "Matrix.prototype.dimension",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -4920,7 +5514,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member diag\n * @instance\n * @desc Returns an array containing the values on the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diag()\n * // [1, 1, 1]\n *\n * const diag0 = Matrix.zeros(5, 5).diag()\n * // [0, 0, 0, 0, 0]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 955,
+            "lineno": 962,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -4948,15 +5542,15 @@
         "comment": "",
         "meta": {
             "range": [
-                21463,
-                21588
+                21654,
+                21779
             ],
             "filename": "matrix.js",
-            "lineno": 970,
+            "lineno": 977,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001946",
+                "id": "astnode100002168",
                 "name": "Matrix.prototype.diag",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -4976,7 +5570,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function diag\n * @desc Returns an array containing the values on the diagonal\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Array}\n * @example\n *\n * const diag1 = Matrix.diag([[2, 1], [1, 5]])\n * // [2, 5]\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 976,
+            "lineno": 983,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5016,15 +5610,15 @@
         "comment": "",
         "meta": {
             "range": [
-                21866,
-                21925
+                22057,
+                22116
             ],
             "filename": "matrix.js",
-            "lineno": 988,
+            "lineno": 995,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001977",
+                "id": "astnode100002199",
                 "name": "Matrix.diag",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5043,7 +5637,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member diagproduct\n * @instance\n * @desc Returns the product of the values on the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).diagproduct()\n * // 1\n *\n * const diag0 = Matrix.zeros(5, 5).diagproduct()\n * // 0\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 992,
+            "lineno": 999,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5071,15 +5665,15 @@
         "comment": "",
         "meta": {
             "range": [
-                22207,
-                22341
+                22398,
+                22532
             ],
             "filename": "matrix.js",
-            "lineno": 1007,
+            "lineno": 1014,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100001994",
+                "id": "astnode100002216",
                 "name": "Matrix.prototype.diagproduct",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -5099,15 +5693,15 @@
         "comment": "",
         "meta": {
             "range": [
-                22289,
-                22302
+                22480,
+                22493
             ],
             "filename": "matrix.js",
-            "lineno": 1009,
+            "lineno": 1016,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002013",
+                "id": "astnode100002235",
                 "name": "acc",
                 "type": "MemberExpression",
                 "funcscope": "<anonymous>",
@@ -5126,7 +5720,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function diagproduct\n * @desc Returns the product of the values on the diagonal\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.diagproduct([[2, 1], [1, 5]])\n * // 10\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 1014,
+            "lineno": 1021,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5166,15 +5760,15 @@
         "comment": "",
         "meta": {
             "range": [
-                22625,
-                22698
+                22816,
+                22889
             ],
             "filename": "matrix.js",
-            "lineno": 1026,
+            "lineno": 1033,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002025",
+                "id": "astnode100002247",
                 "name": "Matrix.diagproduct",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5193,7 +5787,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member sum\n * @instance\n * @desc Returns the sum of the values in the Matrix\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.ones(3, 3).sum()\n * // 9\n *\n * const diag0 = Matrix.zeros(5, 5).sum()\n * // 0\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 1030,
+            "lineno": 1037,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5221,15 +5815,15 @@
         "comment": "",
         "meta": {
             "range": [
-                22950,
-                23104
+                23141,
+                23295
             ],
             "filename": "matrix.js",
-            "lineno": 1045,
+            "lineno": 1052,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002042",
+                "id": "astnode100002264",
                 "name": "Matrix.prototype.sum",
                 "type": "FunctionExpression",
                 "paramnames": []
@@ -5249,15 +5843,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23019,
-                23065
+                23210,
+                23256
             ],
             "filename": "matrix.js",
-            "lineno": 1047,
+            "lineno": 1054,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002060",
+                "id": "astnode100002282",
                 "name": "acc",
                 "type": "CallExpression",
                 "funcscope": "<anonymous>",
@@ -5276,7 +5870,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function sum\n * @desc Returns the sum of the values in the Matrix\n * @param M {Matrix|Array} Matrix from which to return the diagonal\n * @returns {Number}\n * @example\n *\n * const diag1 = Matrix.sum([[2, 1], [1, 5]])\n * // 9\n *\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 1052,
+            "lineno": 1059,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5316,15 +5910,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23365,
-                23422
+                23556,
+                23613
             ],
             "filename": "matrix.js",
-            "lineno": 1064,
+            "lineno": 1071,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002081",
+                "id": "astnode100002303",
                 "name": "Matrix.sum",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5343,7 +5937,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @member kronecker\n * @instance\n * @desc The Kronecker product is an operation on two matrices of arbitrary size resulting in a block matrix.\n * @param M {Matrix} The right side Matrix of the product (this ⊗ M)\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 1068,
+            "lineno": 1075,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5379,15 +5973,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23686,
-                24188
+                23877,
+                24380
             ],
             "filename": "matrix.js",
-            "lineno": 1076,
+            "lineno": 1083,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002098",
+                "id": "astnode100002320",
                 "name": "Matrix.prototype.kronecker",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5420,15 +6014,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23738,
-                23756
+                23929,
+                23947
             ],
             "filename": "matrix.js",
-            "lineno": 1077,
+            "lineno": 1084,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002108",
+                "id": "astnode100002330",
                 "name": "m",
                 "type": "CallExpression",
                 "value": ""
@@ -5446,15 +6040,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23765,
-                23783
+                23956,
+                23974
             ],
             "filename": "matrix.js",
-            "lineno": 1078,
+            "lineno": 1085,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002115",
+                "id": "astnode100002337",
                 "name": "n",
                 "type": "CallExpression",
                 "value": ""
@@ -5472,15 +6066,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23792,
-                23807
+                23983,
+                23998
             ],
             "filename": "matrix.js",
-            "lineno": 1079,
+            "lineno": 1086,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002122",
+                "id": "astnode100002344",
                 "name": "p",
                 "type": "CallExpression",
                 "value": ""
@@ -5498,15 +6092,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23816,
-                23831
+                24007,
+                24022
             ],
             "filename": "matrix.js",
-            "lineno": 1080,
+            "lineno": 1087,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002129",
+                "id": "astnode100002351",
                 "name": "q",
                 "type": "CallExpression",
                 "value": ""
@@ -5524,15 +6118,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23841,
-                23860
+                24032,
+                24051
             ],
             "filename": "matrix.js",
-            "lineno": 1082,
+            "lineno": 1089,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002136",
+                "id": "astnode100002358",
                 "name": "left",
                 "type": "MemberExpression",
                 "value": "this.__value"
@@ -5550,15 +6144,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23869,
-                23886
+                24060,
+                24077
             ],
             "filename": "matrix.js",
-            "lineno": 1083,
+            "lineno": 1090,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002142",
+                "id": "astnode100002364",
                 "name": "right",
                 "type": "MemberExpression",
                 "value": "M.__value"
@@ -5576,15 +6170,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23896,
-                23926
+                24087,
+                24117
             ],
             "filename": "matrix.js",
-            "lineno": 1085,
+            "lineno": 1092,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002148",
+                "id": "astnode100002370",
                 "name": "frame",
                 "type": "CallExpression",
                 "value": ""
@@ -5602,15 +6196,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23939,
-                23944
+                24130,
+                24135
             ],
             "filename": "matrix.js",
-            "lineno": 1087,
+            "lineno": 1094,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002160",
+                "id": "astnode100002382",
                 "name": "i",
                 "type": "Literal",
                 "value": 0
@@ -5628,15 +6222,15 @@
         "comment": "",
         "meta": {
             "range": [
-                23973,
-                23978
+                24164,
+                24169
             ],
             "filename": "matrix.js",
-            "lineno": 1088,
+            "lineno": 1095,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002171",
+                "id": "astnode100002393",
                 "name": "j",
                 "type": "Literal",
                 "value": 0
@@ -5654,15 +6248,15 @@
         "comment": "",
         "meta": {
             "range": [
-                24009,
-                24014
+                24200,
+                24205
             ],
             "filename": "matrix.js",
-            "lineno": 1089,
+            "lineno": 1096,
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002182",
+                "id": "astnode100002404",
                 "name": "k",
                 "type": "Literal",
                 "value": 0
@@ -5680,15 +6274,15 @@
         "comment": "",
         "meta": {
             "range": [
-                24047,
-                24052
+                24238,
+                24243
             ],
             "filename": "matrix.js",
-            "lineno": 1090,
+            "lineno": 1097,
             "columnno": 17,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002193",
+                "id": "astnode100002415",
                 "name": "l",
                 "type": "Literal",
                 "value": 0
@@ -5706,15 +6300,15 @@
         "comment": "",
         "meta": {
             "range": [
-                24078,
-                24132
+                24269,
+                24323
             ],
             "filename": "matrix.js",
-            "lineno": 1091,
+            "lineno": 1098,
             "columnno": 10,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002203",
+                "id": "astnode100002425",
                 "name": "frame[undefined][undefined]",
                 "type": "BinaryExpression",
                 "funcscope": "Matrix#kronecker",
@@ -5733,7 +6327,7 @@
         "comment": "/**\n * @memberOf Matrix\n * @function kronecker\n * @desc The Kronecker product is an operation on two matrices of arbitrary size resulting in a block matrix.\n * @param A {Matrix} The left side Matrix of the product (A ⊗ B)\n * @param B {Matrix} The right side Matrix of the product (A ⊗ B)\n * @returns {Matrix}\n */",
         "meta": {
             "filename": "matrix.js",
-            "lineno": 1099,
+            "lineno": 1107,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {}
@@ -5778,15 +6372,15 @@
         "comment": "",
         "meta": {
             "range": [
-                24503,
-                24576
+                24695,
+                24768
             ],
             "filename": "matrix.js",
-            "lineno": 1107,
+            "lineno": 1115,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002235",
+                "id": "astnode100002457",
                 "name": "Matrix.kronecker",
                 "type": "FunctionExpression",
                 "paramnames": [
@@ -5803,18 +6397,290 @@
         "scope": "static"
     },
     {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member gpuMap\n * @description Maps over the rows of the matrix using a map function using the GPU\n * @param f {function} An GPU.js enabled iterator function\n * @returns {Matrix}\n * @example\n *\n * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\n * const m = Matrix.of([[2, 2], [2, 2]], GPUJS)\n * m.gpuMap(gpuMapper)\n * // [Float32Array(2,2), Float32Array(2,2)]\n *\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 1123,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "gpuMap",
+        "description": "Maps over the rows of the matrix using a map function using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An GPU.js enabled iterator function",
+                "name": "f"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\nconst m = Matrix.of([[2, 2], [2, 2]], GPUJS)\nm.gpuMap(gpuMapper)\n// [Float32Array(2,2), Float32Array(2,2)]"
+        ],
+        "longname": "Matrix#gpuMap"
+    },
+    {
         "comment": "",
         "meta": {
             "range": [
-                24578,
-                24599
+                25275,
+                25373
             ],
             "filename": "matrix.js",
-            "lineno": 1111,
+            "lineno": 1139,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {
-                "id": "astnode100002253",
+                "id": "astnode100002476",
+                "name": "Matrix.prototype.gpuMap",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuMap",
+        "longname": "Matrix#gpuMap",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @static\n * @function gpuMap\n * @description Static function that maps over the rows of the matrix using a map function using the GPU\n * @param f {function} An GPU.js enabled iterator function\n * @param M {Matrix|array} Matrix or array to map\n * @returns {Matrix}\n * @example\n *\n * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\n * const m = Matrix.gpuMap(GPUJS, gpuMapper, [[2, 2], [2, 2]])\n * // [Float32Array(2,2), Float32Array(2,2)]\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 1143,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "static",
+        "kind": "function",
+        "name": "gpuMap",
+        "description": "Static function that maps over the rows of the matrix using a map function using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An GPU.js enabled iterator function",
+                "name": "f"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Matrix",
+                        "array"
+                    ]
+                },
+                "description": "Matrix or array to map",
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "function gpuMapper (a) { return a[this.thread.y][this.thread.x] }\nconst m = Matrix.gpuMap(GPUJS, gpuMapper, [[2, 2], [2, 2]])\n// [Float32Array(2,2), Float32Array(2,2)]"
+        ],
+        "longname": "Matrix.gpuMap"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                25864,
+                25948
+            ],
+            "filename": "matrix.js",
+            "lineno": 1158,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002500",
+                "name": "Matrix.gpuMap",
+                "type": "CallExpression",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "gpuMap",
+        "longname": "Matrix.gpuMap",
+        "kind": "member",
+        "memberof": "Matrix",
+        "scope": "static"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @instance\n * @member gpuFold\n * @description Folds the rows of the matrix using a GPUS.js enqbled reduce function, using the GPU\n * @param f {function} An iterator function\n * @returns {Matrix}\n * @example\n *\n * const m = Matrix.of([[1, 1], [1, 1]])\n * m.map(x => x.map(y => y+ 1))\n * // [[2, 2], [2, 2]]\n *\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 1162,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "scope": "instance",
+        "kind": "member",
+        "name": "gpuFold",
+        "description": "Folds the rows of the matrix using a GPUS.js enqbled reduce function, using the GPU",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "function"
+                    ]
+                },
+                "description": "An iterator function",
+                "name": "f"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix"
+                    ]
+                }
+            }
+        ],
+        "examples": [
+            "const m = Matrix.of([[1, 1], [1, 1]])\nm.map(x => x.map(y => y+ 1))\n// [[2, 2], [2, 2]]"
+        ],
+        "longname": "Matrix#gpuFold"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                26289,
+                26405
+            ],
+            "filename": "matrix.js",
+            "lineno": 1176,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002523",
+                "name": "Matrix.prototype.gpuFold",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f",
+                    "output"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuFold",
+        "longname": "Matrix#gpuFold",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "/**\n * @memberOf Matrix\n * @function Matrix#gpuProduct\n * @param f\n * @param output\n * @param M\n * @returns {Matrix}\n */",
+        "meta": {
+            "filename": "matrix.js",
+            "lineno": 1180,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {}
+        },
+        "memberof": "Matrix",
+        "kind": "function",
+        "name": "gpuProduct",
+        "params": [
+            {
+                "name": "f"
+            },
+            {
+                "name": "output"
+            },
+            {
+                "name": "M"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Matrix"
+                    ]
+                }
+            }
+        ],
+        "longname": "Matrix#gpuProduct",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                26528,
+                26707
+            ],
+            "filename": "matrix.js",
+            "lineno": 1188,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002549",
+                "name": "Matrix.prototype.gpuProduct",
+                "type": "FunctionExpression",
+                "paramnames": [
+                    "f",
+                    "output",
+                    "M"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuProduct",
+        "longname": "Matrix#gpuProduct",
+        "kind": "function",
+        "memberof": "Matrix",
+        "scope": "instance"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                26709,
+                26730
+            ],
+            "filename": "matrix.js",
+            "lineno": 1193,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src",
+            "code": {
+                "id": "astnode100002578",
                 "name": "module.exports",
                 "type": "Identifier"
             }
@@ -5830,15 +6696,15 @@
         "comment": "",
         "meta": {
             "range": [
-                71,
-                173
+                37,
+                139
             ],
             "filename": "addMatrix.js",
-            "lineno": 4,
+            "lineno": 3,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002265",
+                "id": "astnode100002588",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5854,15 +6720,15 @@
         "comment": "",
         "meta": {
             "range": [
-                71,
-                133
+                37,
+                99
             ],
             "filename": "addScalar.js",
-            "lineno": 4,
+            "lineno": 3,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002304",
+                "id": "astnode100002625",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5878,7 +6744,7 @@
         "comment": "/**\n * @function concat\n * @param M {Matrix}\n * @param m {Array}\n * @param idx {number}\n * @returns {Array}\n */",
         "meta": {
             "filename": "concat.js",
-            "lineno": 4,
+            "lineno": 3,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -5927,15 +6793,15 @@
         "comment": "",
         "meta": {
             "range": [
-                189,
-                270
+                152,
+                233
             ],
             "filename": "concat.js",
-            "lineno": 11,
+            "lineno": 10,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002331",
+                "id": "astnode100002650",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -5951,7 +6817,7 @@
         "comment": "/**\n * @function dot\n * @param B {Matrix}\n * @param a {Array}\n * @returns {Array}\n */",
         "meta": {
             "filename": "dot.js",
-            "lineno": 6,
+            "lineno": 4,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -5992,15 +6858,15 @@
         "comment": "",
         "meta": {
             "range": [
-                220,
-                402
+                157,
+                339
             ],
             "filename": "dot.js",
-            "lineno": 12,
+            "lineno": 10,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002366",
+                "id": "astnode100002681",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -6016,15 +6882,15 @@
         "comment": "",
         "meta": {
             "range": [
-                315,
-                358
+                252,
+                295
             ],
             "filename": "dot.js",
-            "lineno": 14,
+            "lineno": 12,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002390",
+                "id": "astnode100002705",
                 "name": "acc",
                 "type": "CallExpression",
                 "funcscope": "<anonymous>",
@@ -6043,15 +6909,15 @@
         "comment": "",
         "meta": {
             "range": [
-                38,
-                67
+                31,
+                60
             ],
             "filename": "empty.js",
-            "lineno": 3,
+            "lineno": 2,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002419",
+                "id": "astnode100002734",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -6067,7 +6933,7 @@
         "comment": "/**\n * @function generate\n * @desc Generator function for a matrix array, values are set to undefined\n * @param rows {number}\n * @param cols {number}\n * @returns {any[][]}\n */",
         "meta": {
             "filename": "generate.js",
-            "lineno": 1,
+            "lineno": 3,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -6109,23 +6975,26 @@
         "comment": "",
         "meta": {
             "range": [
-                176,
-                278
+                206,
+                376
             ],
             "filename": "generate.js",
-            "lineno": 8,
+            "lineno": 10,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002427",
+                "id": "astnode100002746",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
                     "rows",
-                    "cols"
+                    "cols",
+                    "value"
                 ]
             },
             "vars": {
+                "_cols": "module.exports~_cols",
+                "y": "module.exports~y",
                 "": null
             }
         },
@@ -6135,6 +7004,525 @@
         "kind": "function",
         "memberof": "module",
         "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                270,
+                290
+            ],
+            "filename": "generate.js",
+            "lineno": 11,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002757",
+                "name": "_cols",
+                "type": "LogicalExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "_cols",
+        "longname": "module.exports~_cols",
+        "kind": "constant",
+        "memberof": "module.exports",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                299,
+                336
+            ],
+            "filename": "generate.js",
+            "lineno": 12,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002763",
+                "name": "y",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "y",
+        "longname": "module.exports~y",
+        "kind": "constant",
+        "memberof": "module.exports",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                0,
+                169
+            ],
+            "filename": "gpudot.js",
+            "lineno": 1,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002786",
+                "name": "module.exports",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "a",
+                    "b"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "function",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15,
+                169
+            ],
+            "filename": "gpudot.js",
+            "lineno": 1,
+            "columnno": 15,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002787",
+                "name": "dot",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "a",
+                    "b"
+                ]
+            },
+            "vars": {
+                "sum": "dot~sum",
+                "i": "dot~i"
+            }
+        },
+        "undocumented": true,
+        "name": "dot",
+        "longname": "dot",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                43,
+                50
+            ],
+            "filename": "gpudot.js",
+            "lineno": 2,
+            "columnno": 6,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002793",
+                "name": "sum",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "sum",
+        "longname": "dot~sum",
+        "kind": "member",
+        "memberof": "dot",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                62,
+                67
+            ],
+            "filename": "gpudot.js",
+            "lineno": 3,
+            "columnno": 11,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002798",
+                "name": "i",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "i",
+        "longname": "dot~i",
+        "kind": "member",
+        "memberof": "dot",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                102,
+                150
+            ],
+            "filename": "gpudot.js",
+            "lineno": 4,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002812",
+                "name": "sum",
+                "type": "BinaryExpression",
+                "funcscope": "dot",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "sum",
+        "longname": "dot~sum",
+        "kind": "member",
+        "memberof": "dot",
+        "scope": "inner"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                0,
+                229
+            ],
+            "filename": "gpufold.js",
+            "lineno": 1,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002837",
+                "name": "module.exports",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "output",
+                    "matrix",
+                    "constants"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "function",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15,
+                229
+            ],
+            "filename": "gpufold.js",
+            "lineno": 1,
+            "columnno": 15,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002838",
+                "name": "gpufold",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "output",
+                    "matrix",
+                    "constants"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpufold",
+        "longname": "gpufold",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                111,
+                193
+            ],
+            "filename": "gpufold.js",
+            "lineno": 3,
+            "columnno": 23,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002858",
+                "name": "constants",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "constants",
+        "longname": "constants",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                142,
+                158
+            ],
+            "filename": "gpufold.js",
+            "lineno": 3,
+            "columnno": 54,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002865",
+                "name": "m",
+                "type": "MemberExpression",
+                "value": "matrix.length"
+            }
+        },
+        "undocumented": true,
+        "name": "m",
+        "longname": "m",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                160,
+                179
+            ],
+            "filename": "gpufold.js",
+            "lineno": 3,
+            "columnno": 72,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002869",
+                "name": "n",
+                "type": "MemberExpression",
+                "value": "matrix[0].length"
+            }
+        },
+        "undocumented": true,
+        "name": "n",
+        "longname": "n",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                41,
+                174
+            ],
+            "filename": "gpumap.js",
+            "lineno": 3,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002881",
+                "name": "module.exports",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "matrix"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "function",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                56,
+                174
+            ],
+            "filename": "gpumap.js",
+            "lineno": 3,
+            "columnno": 15,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002882",
+                "name": "gpumap",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "matrix"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpumap",
+        "longname": "gpumap",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                0,
+                218
+            ],
+            "filename": "gpuproduct.js",
+            "lineno": 1,
+            "columnno": 0,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002910",
+                "name": "module.exports",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "output",
+                    "a",
+                    "b",
+                    "constants"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "exports",
+        "longname": "module.exports",
+        "kind": "function",
+        "memberof": "module",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                15,
+                218
+            ],
+            "filename": "gpuproduct.js",
+            "lineno": 1,
+            "columnno": 15,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002911",
+                "name": "gpuproduct",
+                "type": "FunctionDeclaration",
+                "paramnames": [
+                    "gpu",
+                    "f",
+                    "output",
+                    "a",
+                    "b",
+                    "constants"
+                ]
+            }
+        },
+        "undocumented": true,
+        "name": "gpuproduct",
+        "longname": "gpuproduct",
+        "kind": "function",
+        "scope": "global",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                112,
+                184
+            ],
+            "filename": "gpuproduct.js",
+            "lineno": 3,
+            "columnno": 23,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002932",
+                "name": "constants",
+                "type": "CallExpression",
+                "value": ""
+            }
+        },
+        "undocumented": true,
+        "name": "constants",
+        "longname": "constants",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                143,
+                154
+            ],
+            "filename": "gpuproduct.js",
+            "lineno": 3,
+            "columnno": 54,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002939",
+                "name": "m",
+                "type": "MemberExpression",
+                "value": "b.length"
+            }
+        },
+        "undocumented": true,
+        "name": "m",
+        "longname": "m",
+        "kind": "member",
+        "scope": "global"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                156,
+                170
+            ],
+            "filename": "gpuproduct.js",
+            "lineno": 3,
+            "columnno": 67,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002943",
+                "name": "n",
+                "type": "MemberExpression",
+                "value": "a[0].length"
+            }
+        },
+        "undocumented": true,
+        "name": "n",
+        "longname": "n",
+        "kind": "member",
+        "scope": "global"
     },
     {
         "comment": "/**\n * @function identity\n * @desc Creates an identiy matrix from an empty array\n * @param m {Array}\n * @param idx {number}\n * @return {Matrix}\n */",
@@ -6182,15 +7570,15 @@
         "comment": "",
         "meta": {
             "range": [
-                182,
-                249
+                178,
+                245
             ],
             "filename": "identity.js",
             "lineno": 10,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002458",
+                "id": "astnode100002960",
                 "name": "module.exports",
                 "type": "ArrowFunctionExpression",
                 "paramnames": [
@@ -6262,7 +7650,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002476",
+                "id": "astnode100002978",
                 "name": "module.exports",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -6290,7 +7678,7 @@
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002477",
+                "id": "astnode100002979",
                 "name": "round",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -6310,7 +7698,7 @@
         "comment": "/**\n * @function transpose\n * @desc Transposes a array of arrays using the Matrix.map function\n * @param m {Array}\n * @param idx {number}\n * @return {Matrix}\n */",
         "meta": {
             "filename": "transpose.js",
-            "lineno": 4,
+            "lineno": 3,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -6352,15 +7740,15 @@
         "comment": "",
         "meta": {
             "range": [
-                233,
-                326
+                199,
+                292
             ],
             "filename": "transpose.js",
-            "lineno": 11,
+            "lineno": 10,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002508",
+                "id": "astnode100003008",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
@@ -6376,6 +7764,7 @@
         "kind": "package",
         "longname": "package:undefined",
         "files": [
+            "/Volumes/BigOne/github/funMatrix/src/gpumatrix.js",
             "/Volumes/BigOne/github/funMatrix/src/matrix.js",
             "/Volumes/BigOne/github/funMatrix/src/util/addMatrix.js",
             "/Volumes/BigOne/github/funMatrix/src/util/addScalar.js",
@@ -6383,6 +7772,10 @@
             "/Volumes/BigOne/github/funMatrix/src/util/dot.js",
             "/Volumes/BigOne/github/funMatrix/src/util/empty.js",
             "/Volumes/BigOne/github/funMatrix/src/util/generate.js",
+            "/Volumes/BigOne/github/funMatrix/src/util/gpudot.js",
+            "/Volumes/BigOne/github/funMatrix/src/util/gpufold.js",
+            "/Volumes/BigOne/github/funMatrix/src/util/gpumap.js",
+            "/Volumes/BigOne/github/funMatrix/src/util/gpuproduct.js",
             "/Volumes/BigOne/github/funMatrix/src/util/identity.js",
             "/Volumes/BigOne/github/funMatrix/src/util/round.js",
             "/Volumes/BigOne/github/funMatrix/src/util/transpose.js"
