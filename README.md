@@ -9,7 +9,7 @@ The documentation is done using jsdocs and can be found in the /docs folder or a
 
 ## Install funmatrix.js
 
-```$ npm install @astuanax/funmatrix.js --save``` 
+```$ npm install @astuanax/funmatrix --save``` 
 
 ## Example
 
