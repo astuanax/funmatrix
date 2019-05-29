@@ -2,15 +2,15 @@ import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
 import equals from 'fun.js/src/equals'
-import concat from 'util/concat'
-import empty from 'util/empty'
-import dot from 'util/dot'
-import identity from 'util/identity'
-import transpose from 'util/transpose'
-import generate from 'util/generate'
-import gpumap from 'util/gpumap'
-import gpufold from 'util/gpufold'
-import gpuproduct from 'util/gpuproduct'
+import concat from './util/concat'
+import empty from './util/empty'
+import dot from './util/dot'
+import identity from './util/identity'
+import transpose from './util/transpose'
+import generate from './util/generate'
+// import gpumap from 'util/gpumap'
+// import gpufold from 'util/gpufold'
+// import gpuproduct from 'util/gpuproduct'
 
 /**
  * @class Matrix
@@ -23,11 +23,8 @@ import gpuproduct from 'util/gpuproduct'
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
  *
  */
-let Matrix = function (val, GPUJS) {
+let Matrix = function (val) {
   this.__value = val
-  if (GPUJS) {
-    this.gpujs = GPUJS || null
-  }
 }
 
 /**
@@ -46,7 +43,6 @@ Matrix.of = function (val) {
   if (val instanceof Matrix) return val
   if (this instanceof Matrix) {
     this.__value = val
-    this.gpujs = GPUJS
     return this
   }
   return new Matrix(val)
@@ -1114,80 +1110,6 @@ Matrix.prototype.kronecker = function (M) {
  */
 Matrix.kronecker = function (A, B) {
   return Matrix.of(A).kronecker(B)
-}
-
-//* ***********************/
-// GPU Functions
-//* ***********************/
-
-/**
- * @memberOf Matrix
- * @instance
- * @member gpuMap
- * @description Maps over the rows of the matrix using a map function using the GPU
- * @param f {function} An GPU.js enabled iterator function
- * @returns {Matrix}
- * @example
- *
- * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }
- * const m = Matrix.of([[2, 2], [2, 2]], GPUJS)
- * m.gpuMap(gpuMapper)
- * // [Float32Array(2,2), Float32Array(2,2)]
- *
- *
- */
-Matrix.prototype.gpuMap = function (f) {
-  return Matrix.of(gpumap(this.gpujs, f, this.__value))
-}
-
-/**
- * @memberOf Matrix
- * @static
- * @function gpuMap
- * @description Static function that maps over the rows of the matrix using a map function using the GPU
- * @param f {function} An GPU.js enabled iterator function
- * @param M {Matrix|array} Matrix or array to map
- * @returns {Matrix}
- * @example
- *
- * function gpuMapper (a) { return a[this.thread.y][this.thread.x] }
- * const m = Matrix.gpuMap(GPUJS, gpuMapper, [[2, 2], [2, 2]])
- * // [Float32Array(2,2), Float32Array(2,2)]
- *
- */
-Matrix.gpuMap = curry(function (gpu, f, M) {
-  return Matrix.of(M, gpu).gpuMap(f)
-})
-
-/**
- * @memberOf Matrix
- * @instance
- * @member gpuFold
- * @description Folds the rows of the matrix using a GPUS.js enqbled reduce function, using the GPU
- * @param f {function} An iterator function
- * @returns {Matrix}
- * @example
- *
- * const m = Matrix.of([[1, 1], [1, 1]])
- * m.map(x => x.map(y => y+ 1))
- * // [[2, 2], [2, 2]]
- *
- */
-Matrix.prototype.gpuFold = function (f, output) {
-  return Matrix.of(gpufold(this.gpujs, f, output, this.__value))
-}
-
-/**
- * @memberOf Matrix
- * @function Matrix#gpuProduct
- * @param f
- * @param output
- * @param M
- * @returns {Matrix}
- */
-Matrix.prototype.gpuProduct = function (f, output, M) {
-  // (gpu, f, output, a, b, constants = {}
-  return Matrix.of(gpuproduct(this.gpujs, f, output, this.__value, M.__value))
 }
 
 export default Matrix
