@@ -8,9 +8,6 @@ import dot from './util/dot'
 import identity from './util/identity'
 import transpose from './util/transpose'
 import generate from './util/generate'
-// import gpumap from 'util/gpumap'
-// import gpufold from 'util/gpufold'
-// import gpuproduct from 'util/gpuproduct'
 
 /**
  * @class Matrix
@@ -32,7 +29,7 @@ let Matrix = function (val) {
  * @static
  * @function Matrix.of
  * @desc Creates a Matrix object and flattens the Matrix
- * @param val {array|function} An array of arrays
+ * @param val {Array|function} An array of arrays
  * @returns {Matrix}
  * @example
  *
@@ -50,8 +47,8 @@ Matrix.of = function (val) {
 
 /**
  * @memberOf Matrix
- * @property {string} type
- * @type {string}
+ * @property {String} type
+ * @type {String}
  * @example
  *
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
@@ -61,8 +58,8 @@ Matrix.prototype.type = 'Matrix'
 
 /**
  * @memberOf Matrix
- * @property {number} precision
- * @type {number}
+ * @property {Number} precision
+ * @type {Number}
  * @example
  *
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
@@ -72,9 +69,8 @@ Matrix.prototype.precision = 4
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#setPrecision
- * @param precision {number} Set the number of decimals for rounding
+ * @function Matrix#setPrecision
+ * @param precision {Number} Set the number of decimals for rounding
  * @example
  *
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
@@ -87,9 +83,8 @@ Matrix.prototype.setPrecision = function (precision) {
 
 /**
  * @memberOf Matrix
- * @instance
  * @member isSymmetric
- * @returns {boolean}
+ * @returns {Boolean}
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
@@ -104,10 +99,10 @@ Matrix.prototype.isSymmetric = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#isSquare
+
+ * @function Matrix#isSquare
  * @desc Boolean indicating whether this contains a square Matrix
- * @returns {boolean}
+ * @returns {Boolean}
  * @example
  *
  * const A = Matrix.of([[1, 1], [1, 1]])
@@ -120,10 +115,10 @@ Matrix.prototype.isSquare = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#isOrthogonal
- * @param M {Matrix|array}
- * @returns {boolean}
+
+ * @function Matrix#isOrthogonal
+ * @param M {Matrix|Array}
+ * @returns {Boolean}
  * @example
  *
  * const result = [[-0.3092, -0.9510], [-0.9510, 0.3092]]
@@ -138,8 +133,8 @@ Matrix.prototype.isOrthogonal = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#getCols
+
+ * @function Matrix#getCols
  * @returns {Number}
  * @example
  *
@@ -153,9 +148,9 @@ Matrix.prototype.getCols = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#equals
- * @param M {Matrix|array}
+
+ * @function Matrix#equals
+ * @param M {Matrix|Array}
  * @returns {Boolean}
  * @example
  *
@@ -170,8 +165,8 @@ Matrix.prototype.equals = function (M) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#getRows
+
+ * @function Matrix#getRows
  * @returns {Number}
  * @example
  *
@@ -184,8 +179,8 @@ Matrix.prototype.getRows = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#getShape
+
+ * @function Matrix#getShape
  * @returns {Array}
  * @example
  *
@@ -198,8 +193,8 @@ Matrix.prototype.getShape = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#map
+
+ * @function Matrix#map
  * @description Maps over the rows of the matrix using a map function
  * @param f {function} An iterator function
  * @returns {Matrix}
@@ -220,7 +215,7 @@ Matrix.prototype.map = function (f) {
  * @function Matrix.map
  * @description Static function that maps over the rows of the matrix using a map function
  * @param f {function} An iterator function
- * @param M {Matrix|array} Matrix or array to map
+ * @param M {Matrix|Array} Matrix or array to map
  * @returns {Matrix}
  * @example
  *
@@ -234,8 +229,8 @@ Matrix.map = curry(function (f, M) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#fold
+
+ * @function Matrix#fold
  * @description Reduce the matrix rows using a reduce function
  * @param f {function} A reduce/fold function
  * @returns {Matrix}
@@ -271,8 +266,8 @@ Matrix.fold = curry(function (f, M) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#ap
+
+ * @function Matrix#ap
  * @description Applies a Matrix to a function
  * @param M {Matrix}
  * @returns {Matrix}
@@ -293,7 +288,7 @@ Matrix.prototype.ap = function (M) {
  * @function Matrix.ap
  * @description Applies a Matrix to a function
  * @param f {function}
- * @param M {Matrix|array}
+ * @param M {Matrix|Array}
  * @returns {Matrix}
  * @example
  *
@@ -307,8 +302,8 @@ Matrix.ap = curry(function (f, M) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#concat
+
+ * @function Matrix#concat
  * @description Concatenates 2 Matrices using a function as operator
  * @param M {Matrix}
  * @returns {Matrix}
@@ -350,8 +345,8 @@ Matrix.concat = curry(function (A, B, f = concat) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#empty
+
+ * @function Matrix#empty
  * @description Return an empty Matrix from an existing Matrix
  * @returns {Matrix}
  */
@@ -364,8 +359,8 @@ Matrix.prototype.empty = function () {
  * @static
  * @function Matrix.empty
  * @description Return an empty Matrix from an existing Matrix
- * @param rows {number}
- * @param cols {number}
+ * @param rows {Number}
+ * @param cols {Number}
  * @returns {Matrix}
  */
 Matrix.empty = curry(function (rows = 0, cols = 0) {
@@ -377,8 +372,8 @@ Matrix.empty = curry(function (rows = 0, cols = 0) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#identity
+
+ * @function Matrix#identity
  * @desc Returns an identity matrix
  * @returns {Matrix}
  * @example
@@ -412,8 +407,8 @@ Matrix.identity = function (rows, cols) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#combine
+
+ * @function Matrix#combine
  * @see Matrix.concat
  * @param M
  * @returns {Matrix}
@@ -436,8 +431,8 @@ Matrix.combine = function (A, B) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#dot
+
+ * @function Matrix#dot
  * @description Returns the dot product between 2 matrices
  * @param M
  * @param f
@@ -482,8 +477,8 @@ Matrix.dot = function (A, B) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#fill
+
+ * @function Matrix#fill
  * @desc Fill up an empty matrix with the provided map function
  * @param f
  * @returns {Matrix}
@@ -499,8 +494,8 @@ Matrix.prototype.fill = function (f) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#zeros
+
+ * @function Matrix#zeros
  * @desc Fill up an empty matrix with zeros
  * @returns {Matrix}
  *
@@ -518,8 +513,8 @@ Matrix.prototype.zeros = function () {
  * @memberOf Matrix
  * @function Matrix.zeros
  * @desc Fill up an empty matrix with zeros
- * @param rows {number} Defines the rows of the matrix
- * @param cols {number} Defines the columns of the matrix
+ * @param rows {Number} Defines the rows of the matrix
+ * @param cols {Number} Defines the columns of the matrix
  * @returns {Matrix}
  * @example
  *
@@ -534,8 +529,8 @@ Matrix.zeros = function (rows, cols) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#ones
+
+ * @function Matrix#ones
  * @desc Fill up an empty matrix with ones
  * @returns {Matrix}
  * @example
@@ -552,8 +547,8 @@ Matrix.prototype.ones = function () {
  * @memberOf Matrix
  * @function Matrix.ones
  * @desc Fill up an empty matrix with ones
- * @param rows {number} Defines the rows of the matrix
- * @param cols {number} Defines the columns of the matrix
+ * @param rows {Number} Defines the rows of the matrix
+ * @param cols {Number} Defines the columns of the matrix
  * @returns {Matrix}
  * @example
  *
@@ -568,8 +563,8 @@ Matrix.ones = function (rows, cols) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#random
+
+ * @function Matrix#random
  * @desc Fill up an empty matrix with random values
  * @param {function} [f = e => Math.random() * 2 - 1]
  * @returns {Matrix}
@@ -583,8 +578,8 @@ Matrix.prototype.random = function (f = e => Math.random() * 2 - 1) {
  * @function Matrix.random
  * @desc Fill up an empty matrix with random numbers
  * @param f {function} Function which returns random values. Default random values are between -1 and 1
- * @param rows {number} Defines the rows of the matrix
- * @param cols {number} Defines the columns of the matrix
+ * @param rows {Number} Defines the rows of the matrix
+ * @param cols {Number} Defines the columns of the matrix
  * @returns {Matrix}
  */
 Matrix.random = function (f = e => (Math.random() * 2 - 1), rows, cols) {
@@ -594,8 +589,8 @@ Matrix.random = function (f = e => (Math.random() * 2 - 1), rows, cols) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#toArray
+
+ * @function Matrix#toArray
  * @desc Returns the array from the matrix
  * @returns {Array}
  */
@@ -605,8 +600,8 @@ Matrix.prototype.toArray = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#clone
+
+ * @function Matrix#clone
  * @desc Returns a clone of the matrix
  * @returns {Matrix}
  */
@@ -616,8 +611,8 @@ Matrix.prototype.clone = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#fromArray
+
+ * @function Matrix#fromArray
  * @desc Returns a Matrix from an array
  * @returns {Array}
  */
@@ -627,8 +622,8 @@ Matrix.fromArray = function (arr) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#transpose
+
+ * @function Matrix#transpose
  * @desc Returns a transposed Matrix
  * @returns {Matrix}
  * @example
@@ -645,7 +640,7 @@ Matrix.prototype.transpose = function () {
  * @memberOf Matrix
  * @function Matrix.transpose
  * @desc Returns a transposed Matrix
- * @param M {Matrix|array} A Matrix or a matrix array
+ * @param M {Matrix|Array} A Matrix or a matrix array
  * @returns {Matrix}
  * @example
  *
@@ -659,8 +654,7 @@ Matrix.transpose = function (M) {
 
 /**
  * @memberOf Matrix
- * @function Matrix.add
- * @instance
+ * @function Matrix#add
  * @param M {Matrix|number} Add a Matrix or a number
  * @returns {Matrix}
  * @example
@@ -684,8 +678,7 @@ Matrix.prototype.add = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#subtract
- * @instance
+ * @function Matrix#subtract
  * @param M {Matrix|number} Subtract a Matrix or a number
  * @returns {Matrix}
  * @example
@@ -709,8 +702,7 @@ Matrix.prototype.subtract = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#multiply
- * @instance
+ * @function Matrix#multiply
  * @desc Mutliply a scalar or a mtraix with a matrix. Throws an error if the multiplication is not possible.
  * @param M {Matrix|number}
  * @returns {Matrix}
@@ -736,8 +728,7 @@ Matrix.prototype.multiply = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#additiveinverse
- * @instance
+ * @function Matrix#additiveinverse
  * @desc Function that returns the matrix obtained by changing the sign of every matrix element. The additive inverse of matrix A is written –A.
  * @returns {Matrix}
  * @example
@@ -752,8 +743,8 @@ Matrix.prototype.additiveinverse = function () {
 
 /**
  * @memberOf Matrix
- * @member Matrix#hadamard
- * @instance
+ * @function Matrix#hadamard
+
  * @see multiply
  * @param M
  * @returns {Matrix}
@@ -771,8 +762,8 @@ Matrix.prototype.hadamard = function (M) {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#lu
+
+ * @function Matrix#lu
  * @desc Calculates LU decomposition of the current Matrix
  * @returns {Matrix[]}
  * @example
@@ -810,9 +801,9 @@ Matrix.prototype.lu = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#rref
- * @returns {Matrix|array}
+
+ * @function Matrix#rref
+ * @returns {Matrix|Array}
  * @example
  *
  * var A = Matrix.of([[-1, 1], [-1, 0], [0, -1], [-1, -2]])
@@ -861,8 +852,8 @@ Matrix.prototype.rref = function () {
 
 /**
  * @memberOf Matrix
- * @instance
- * @member Matrix#solve
+
+ * @function Matrix#solve
  * @param b
  * @returns {Array}
  * @example
@@ -907,8 +898,8 @@ Matrix.prototype.solve = function (b) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#inverse
- * @instance
+ * @function Matrix#inverse
+
  * @returns {Matrix}
  * @example
  *
@@ -931,8 +922,8 @@ Matrix.prototype.inverse = function () {
 
 /**
  * @memberOf Matrix
- * @member Matrix#rank
- * @instance
+ * @function Matrix#rank
+
  * @returns {Number}
  */
 Matrix.prototype.rank = function () {
@@ -946,8 +937,8 @@ Matrix.prototype.rank = function () {
 
 /**
  * @memberOf Matrix
- * @member Matrix#dimension
- * @instance
+ * @function Matrix#dimension
+
  * @see rank
  * @returns {Number}
  */
@@ -957,8 +948,8 @@ Matrix.prototype.dimension = function () {
 
 /**
  * @memberOf Matrix
- * @member Matrix#diag
- * @instance
+ * @function Matrix#diag
+
  * @desc Returns an array containing the values on the diagonal
  * @returns {Array}
  * @example
@@ -994,8 +985,7 @@ Matrix.diag = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#diagproduct
- * @instance
+ * @function Matrix#diagproduct
  * @desc Returns the product of the values on the diagonal
  * @returns {Number}
  * @example
@@ -1032,8 +1022,7 @@ Matrix.diagproduct = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#sum
- * @instance
+ * @function Matrix#sum
  * @desc Returns the sum of the values in the Matrix
  * @returns {Number}
  * @example
@@ -1070,8 +1059,7 @@ Matrix.sum = function (M) {
 
 /**
  * @memberOf Matrix
- * @member Matrix#kronecker
- * @instance
+ * @function Matrix#kronecker
  * @desc The Kronecker product is an operation on two matrices of arbitrary size resulting in a block matrix.
  * @param M {Matrix} The right side Matrix of the product (this ⊗ M)
  * @returns {Matrix}
