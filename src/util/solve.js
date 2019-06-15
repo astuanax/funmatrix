@@ -4,11 +4,12 @@
  * @param n
  * @param L
  * @param b
- * @param c
- * @param s
  * @returns {Array}
  */
-function solveL (n, L, b, c = [], s = 0) {
+function solveL (n, L, b) {
+  let s = 0
+  const c = []
+
   for (let k = 0; k < n; ++k) {
     for (let j = 0; j < k; ++j) {
       s = s + L.__value[k][j] * c[j]
@@ -26,9 +27,9 @@ function solveL (n, L, b, c = [], s = 0) {
  * @param U
  * @param c
  * @param b
- * @param x
  */
-function solveU (n, U, c, b, x = []) {
+function solveU (n, U, c, b) {
+  const x = []
   for (let a = n - 1; a > -1; --a) {
     let t = 0
     for (let b = a + 1; b < n; ++b) {
