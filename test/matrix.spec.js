@@ -415,3 +415,41 @@ describe('Matrix kronecker product', function () {
     chai.expect(kronecker.__value).to.deep.equal([[0, 5, 0, 10], [6, 7, 12, 14], [0, 15, 0, 20], [18, 21, 24, 28]])
   })
 })
+
+describe('Matrix determinant calculation', function () {
+  it('returns the determinant of a 2x2 matrix', function () {
+    const m = [[5, 3], [2, 4]]
+    const A = Matrix.of(m)
+    chai.expect(A.determinant()).to.equal(14)
+    chai.expect(Matrix.determinant(m)).to.equal(14)
+  })
+
+  it('returns the determinant of a 3x3 matrix', function () {
+    const m = [[1, 2, 3], [4, 2, 5], [9, 8, 7]]
+    const A = Matrix.of(m)
+    chai.expect(Math.round(A.determinant())).to.equal(50)
+    chai.expect(Math.round(Matrix.determinant(m))).to.equal(50)
+  })
+
+  it('returns the determinant of a 10x10 matrix', function () {
+    const m = [[4, 3, 9, 7], [5, 2, 0, 9], [1, 3, 5, 9], [1, 3, 1, 7]]
+    const A = Matrix.of(m)
+    chai.expect(Math.round(A.determinant())).to.equal(-376)
+    chai.expect(Math.round(Matrix.determinant(m))).to.equal(-376)
+  })
+})
+
+describe('Matrix gets values from Matrix', function () {
+  it('returns largest number', function () {
+    const m = [[5, 3], [2, 4]]
+    const max = Matrix.of(m).max()
+    chai.expect(max).to.equal(5)
+  })
+
+  it('returns smallest number', function () {
+    const m = [[5, 3], [2, 4]]
+    const min = Matrix.of(m).min()
+    chai.expect(min).to.equal(2)
+  })
+
+})

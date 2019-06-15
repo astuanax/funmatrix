@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/transpose.js - Documentation</title>
+    <title>util/empty.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/transpose.js</h1>
+    <h1 class="page-title">util/empty.js</h1>
     
 
     
@@ -39,17 +39,13 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import map from 'fun.js/src/map'
-import curry from 'fun.js/src/curry'
+            <pre class="prettyprint source linenums"><code>import curry from 'fun.js/src/curry'
 
 /**
- * @function transpose
- * @desc Transposes a array of arrays using the Matrix.map function
- * @param m {Array}
- * @param idx {Number}
- * @return {Matrix}
+ * @function empty
+ * @desc Helper function to generate an empty Matrix
  */
-export default curry((prev, next) => map((item, i) => (prev[i] || []).concat(next[i]))(next))
+export default curry(m => [])
 </code></pre>
         </article>
     </section>

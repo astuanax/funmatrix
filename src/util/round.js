@@ -1,7 +1,7 @@
 /**
  * @function round
- * @param value {number}
- * @param decimals {number}
+ * @param value {Number}
+ * @param decimals {Number}
  * @returns {Number}
  */
 export default function round (value, decimals) {

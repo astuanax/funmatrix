@@ -5,13 +5,16 @@ Matrix applicative providing standard matrix operations [Fork on Github](https:/
 
 ## Docs
 
-The documentation is done using jsdocs and can be found in the /docs folder or at the url [https://astuanax.github.io/funmatrix/](https://astuanax.github.io/funmatrix/)
+The documentation can be found in the /docs folder or at the url [https://astuanax.github.io/funmatrix/](https://astuanax.github.io/funmatrix/)
+Or a json format of the docs: docs.json
+
+Generate docs using:  ```npm run jsdocs```
 
 ## Install funmatrix.js
 
 ```$ npm install @astuanax/funmatrix --save``` 
 
-## Example
+## Getting started
 
 ```
 // Create matrix
@@ -25,11 +28,11 @@ if(m.dot(I).equals(m)) {
 }0
 ```
 
-## Create a matrix
+### Create a matrix
 
 There are 2 ways to instantiate a Matrix, though you should not use the new keyword.
 
-### Matrix.of()
+#### Matrix.of()
 `Matrix.of`accepts both an array of arrays or a Matrix
 
 ````
@@ -37,7 +40,7 @@ const a = Matrix.of([[1, 2], [2, 3]])  // returns a Matrix
 const b = Matrix.of(a) // returns a flattened Matrix from Matrix a
 ```` 
 
-### Matrix.fromArray()
+#### Matrix.fromArray()
 `fromArray` returns an Matrix with a clone of the provided array 
 
 ```
@@ -45,14 +48,14 @@ Matrix.fromArray([[1, 2], [2, 3]])
 ```
 
 
-## Higher order functions
+### Higher order functions
 
 * map
 * fold
 * ap
 * concat
 
-## Methods and properties
+### Methods and properties
 
 * add -  a scalar or a Matrix
 * additiveinverse - multiply by  -1
@@ -83,4 +86,5 @@ Matrix.fromArray([[1, 2], [2, 3]])
 * toArray - Returns an array 
 * transpose - Returns a tranposed Matrix
 * zeros - Fills the Matrix with 0 values
+* determinant - Calculates the determinant usin LU decomposition
 

@@ -5,8 +5,9 @@ import round from './round'
 
 /**
  * @function dot
- * @param B {Matrix}
- * @param a {Array}
+ * @desc Helper function to generate the dotproduct of 2 Matrices
+ * @param {Matrix} B - Right side of hte dot product
+ * @param {Array} a - Array representing theleft side of the dot product
  * @returns {Array}
  */
 export default curry((decimals, B, a) => map((item, i) => {

@@ -1,7 +1,7 @@
 {
   "name": "@astuanax/funmatrix",
   "sideEffects": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Matrix monad",
   "main": "src/matrix.js",
   "scripts": {
@@ -72,6 +72,6 @@
     "instrument": false
   },
   "dependencies": {
-    "fun.js": "^1.0.4"
+    "fun.js": "^1.0.5"
   }
 }

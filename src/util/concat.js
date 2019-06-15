@@ -3,9 +3,10 @@ import concat from 'fun.js/src/concat'
 
 /**
  * @function concat
- * @param M {Matrix}
- * @param m {Array}
- * @param idx {number}
+ * @desc Helper function concatenating/combining 2 Matrices
+ * @param {Matrix} M - Left side of the concat operatior
+ * @param {Array} m - right side of the contac operator
+ * @param {Number} idx - Index of the row
  * @returns {Array}
  */
 export default curry(function (M, m, idx) {
