@@ -11,6 +11,7 @@ import dot from './util/dot'
 import identity from './util/identity'
 import transpose from './util/transpose'
 import generate from './util/generate'
+import solve from './util/solve'
 
 /**
  * @class Matrix
@@ -869,25 +870,27 @@ Matrix.prototype.solve = function (b) {
   const L = LU[0]
   const U = LU[1]
   const n = this.getRows()
-  let s = 0
-  const c = []
-  const x = []
+  // let s = 0
+  // const c = []
+  // const x = []
 
-  for (let k = 0; k < n; ++k) {
-    for (let j = 0; j < k; ++j) {
-      s = s + L.__value[k][j] * c[j]
-    }
-    c[k] = b[k] - s
-    s = 0
-  }
-  for (let a = n - 1; a > -1; --a) {
-    let t = 0
-    for (let b = a + 1; b < n; ++b) {
-      t = t + U.__value[a][b] * x[b]
-    }
-    x[a] = (c[a] - t) / U.__value[a][a]
-  }
-  return x
+  return solve(n, L, U, b)
+
+  // for (let k = 0; k < n; ++k) {
+  //   for (let j = 0; j < k; ++j) {
+  //     s = s + L.__value[k][j] * c[j]
+  //   }
+  //   c[k] = b[k] - s
+  //   s = 0
+  // }
+  // for (let a = n - 1; a > -1; --a) {
+  //   let t = 0
+  //   for (let b = a + 1; b < n; ++b) {
+  //     t = t + U.__value[a][b] * x[b]
+  //   }
+  //   x[a] = (c[a] - t) / U.__value[a][a]
+  // }
+  // return x
 }
 
 /**
