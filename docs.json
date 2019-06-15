@@ -6482,7 +6482,7 @@
         "params": []
     },
     {
-        "comment": "/**\n * @function solveL\n * @desc solve the xA = b equation for lower triangular\n * @param n\n * @param L\n * @param b\n * @param c\n * @param s\n * @returns {Array}\n */",
+        "comment": "/**\n * @function solveL\n * @desc solve the xA = b equation for lower triangular\n * @param n\n * @param L\n * @param b\n * @returns {Array}\n */",
         "meta": {
             "filename": "solve.js",
             "lineno": 1,
@@ -6502,12 +6502,6 @@
             },
             {
                 "name": "b"
-            },
-            {
-                "name": "c"
-            },
-            {
-                "name": "s"
             }
         ],
         "returns": [
@@ -6526,11 +6520,11 @@
         "comment": "",
         "meta": {
             "range": [
-                164,
-                362
+                140,
+                351
             ],
             "filename": "solve.js",
-            "lineno": 11,
+            "lineno": 9,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
@@ -6540,16 +6534,15 @@
                 "paramnames": [
                     "n",
                     "L",
-                    "b",
-                    "c",
-                    "s"
+                    "b"
                 ]
             },
             "vars": {
+                "s": "solveL~s",
+                "c": "solveL~c",
                 "k": "solveL~k",
                 "j": "solveL~j",
-                "s": "solveL~s",
-                "c[undefined]": null
+                "c[undefined]": "solveL~c.undefined]"
             }
         },
         "undocumented": true,
@@ -6563,15 +6556,67 @@
         "comment": "",
         "meta": {
             "range": [
-                218,
-                223
+                174,
+                179
             ],
             "filename": "solve.js",
-            "lineno": 12,
+            "lineno": 10,
+            "columnno": 6,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002582",
+                "name": "s",
+                "type": "Literal",
+                "value": 0
+            }
+        },
+        "undocumented": true,
+        "name": "s",
+        "longname": "solveL~s",
+        "kind": "member",
+        "memberof": "solveL",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                188,
+                194
+            ],
+            "filename": "solve.js",
+            "lineno": 11,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002586",
+                "name": "c",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "c",
+        "longname": "solveL~c",
+        "kind": "constant",
+        "memberof": "solveL",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                207,
+                212
+            ],
+            "filename": "solve.js",
+            "lineno": 13,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002589",
+                "id": "astnode100002591",
                 "name": "k",
                 "type": "Literal",
                 "value": 0
@@ -6589,15 +6634,15 @@
         "comment": "",
         "meta": {
             "range": [
-                252,
-                257
+                241,
+                246
             ],
             "filename": "solve.js",
-            "lineno": 13,
+            "lineno": 14,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002600",
+                "id": "astnode100002602",
                 "name": "j",
                 "type": "Literal",
                 "value": 0
@@ -6615,15 +6660,15 @@
         "comment": "",
         "meta": {
             "range": [
-                279,
-                309
+                268,
+                298
             ],
             "filename": "solve.js",
-            "lineno": 14,
+            "lineno": 15,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002610",
+                "id": "astnode100002612",
                 "name": "s",
                 "type": "BinaryExpression",
                 "funcscope": "solveL",
@@ -6642,40 +6687,42 @@
         "comment": "",
         "meta": {
             "range": [
-                320,
-                335
-            ],
-            "filename": "solve.js",
-            "lineno": 16,
-            "columnno": 4,
-            "path": "/Volumes/BigOne/github/funMatrix/src/util",
-            "code": {
-                "id": "astnode100002626",
-                "name": "c[undefined]",
-                "type": "BinaryExpression",
-                "value": "",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "c[undefined]",
-        "longname": "c[undefined]",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                340,
-                345
+                309,
+                324
             ],
             "filename": "solve.js",
             "lineno": 17,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002636",
+                "id": "astnode100002628",
+                "name": "c[undefined]",
+                "type": "BinaryExpression",
+                "funcscope": "solveL",
+                "value": "",
+                "paramnames": []
+            }
+        },
+        "undocumented": true,
+        "name": "undefined]",
+        "longname": "solveL~c.undefined]",
+        "kind": "member",
+        "memberof": "solveL~c",
+        "scope": "static"
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                329,
+                334
+            ],
+            "filename": "solve.js",
+            "lineno": 18,
+            "columnno": 4,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002638",
                 "name": "s",
                 "type": "Literal",
                 "funcscope": "solveL",
@@ -6691,10 +6738,10 @@
         "scope": "inner"
     },
     {
-        "comment": "/**\n * @function solveU\n * @desc solve the xA = b equation for upper triangular\n * @param n\n * @param U\n * @param c\n * @param b\n * @param x\n */",
+        "comment": "/**\n * @function solveU\n * @desc solve the xA = b equation for upper triangular\n * @param n\n * @param U\n * @param c\n * @param b\n */",
         "meta": {
             "filename": "solve.js",
-            "lineno": 22,
+            "lineno": 23,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -6714,9 +6761,6 @@
             },
             {
                 "name": "b"
-            },
-            {
-                "name": "x"
             }
         ],
         "longname": "solveU",
@@ -6726,30 +6770,30 @@
         "comment": "",
         "meta": {
             "range": [
-                508,
-                735
+                485,
+                719
             ],
             "filename": "solve.js",
             "lineno": 31,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002641",
+                "id": "astnode100002643",
                 "name": "solveU",
                 "type": "FunctionDeclaration",
                 "paramnames": [
                     "n",
                     "U",
                     "c",
-                    "b",
-                    "x"
+                    "b"
                 ]
             },
             "vars": {
+                "x": "solveU~x",
                 "a": "solveU~a",
                 "t": "solveU~t",
                 "b": "solveU~b",
-                "x[undefined]": null
+                "x[undefined]": "solveU~x.undefined]"
             }
         },
         "undocumented": true,
@@ -6763,15 +6807,41 @@
         "comment": "",
         "meta": {
             "range": [
-                558,
-                567
+                524,
+                530
             ],
             "filename": "solve.js",
             "lineno": 32,
+            "columnno": 8,
+            "path": "/Volumes/BigOne/github/funMatrix/src/util",
+            "code": {
+                "id": "astnode100002651",
+                "name": "x",
+                "type": "ArrayExpression",
+                "value": "[]"
+            }
+        },
+        "undocumented": true,
+        "name": "x",
+        "longname": "solveU~x",
+        "kind": "constant",
+        "memberof": "solveU",
+        "scope": "inner",
+        "params": []
+    },
+    {
+        "comment": "",
+        "meta": {
+            "range": [
+                542,
+                551
+            ],
+            "filename": "solve.js",
+            "lineno": 33,
             "columnno": 11,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002653",
+                "id": "astnode100002656",
                 "name": "a",
                 "type": "BinaryExpression",
                 "value": ""
@@ -6789,15 +6859,15 @@
         "comment": "",
         "meta": {
             "range": [
-                592,
-                597
+                576,
+                581
             ],
             "filename": "solve.js",
-            "lineno": 33,
+            "lineno": 34,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002666",
+                "id": "astnode100002669",
                 "name": "t",
                 "type": "Literal",
                 "value": 0
@@ -6815,15 +6885,15 @@
         "comment": "",
         "meta": {
             "range": [
-                611,
-                620
+                595,
+                604
             ],
             "filename": "solve.js",
-            "lineno": 34,
+            "lineno": 35,
             "columnno": 13,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002671",
+                "id": "astnode100002674",
                 "name": "b",
                 "type": "BinaryExpression",
                 "value": ""
@@ -6841,15 +6911,15 @@
         "comment": "",
         "meta": {
             "range": [
-                642,
-                672
+                626,
+                656
             ],
             "filename": "solve.js",
-            "lineno": 35,
+            "lineno": 36,
             "columnno": 6,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002683",
+                "id": "astnode100002686",
                 "name": "t",
                 "type": "BinaryExpression",
                 "funcscope": "solveU",
@@ -6868,32 +6938,34 @@
         "comment": "",
         "meta": {
             "range": [
-                683,
-                718
+                667,
+                702
             ],
             "filename": "solve.js",
-            "lineno": 37,
+            "lineno": 38,
             "columnno": 4,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002699",
+                "id": "astnode100002702",
                 "name": "x[undefined]",
                 "type": "BinaryExpression",
+                "funcscope": "solveU",
                 "value": "",
                 "paramnames": []
             }
         },
         "undocumented": true,
-        "name": "x[undefined]",
-        "longname": "x[undefined]",
+        "name": "undefined]",
+        "longname": "solveU~x.undefined]",
         "kind": "member",
-        "scope": "global"
+        "memberof": "solveU~x",
+        "scope": "static"
     },
     {
         "comment": "/**\n * @function solve\n * @desc Helper function for xA = b solver\n * @param n\n * @param L\n * @param U\n * @param b\n */",
         "meta": {
             "filename": "solve.js",
-            "lineno": 42,
+            "lineno": 43,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {}
@@ -6922,15 +6994,15 @@
         "comment": "",
         "meta": {
             "range": [
-                855,
-                957
+                839,
+                941
             ],
             "filename": "solve.js",
-            "lineno": 50,
+            "lineno": 51,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002718",
+                "id": "astnode100002721",
                 "name": "module.exports",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -6952,15 +7024,15 @@
         "comment": "",
         "meta": {
             "range": [
-                870,
-                957
+                854,
+                941
             ],
             "filename": "solve.js",
-            "lineno": 50,
+            "lineno": 51,
             "columnno": 15,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002719",
+                "id": "astnode100002722",
                 "name": "solve",
                 "type": "FunctionDeclaration",
                 "paramnames": [
@@ -6985,15 +7057,15 @@
         "comment": "",
         "meta": {
             "range": [
-                908,
-                927
+                892,
+                911
             ],
             "filename": "solve.js",
-            "lineno": 51,
+            "lineno": 52,
             "columnno": 8,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002727",
+                "id": "astnode100002730",
                 "name": "c",
                 "type": "CallExpression",
                 "value": ""
@@ -7061,7 +7133,7 @@
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src/util",
             "code": {
-                "id": "astnode100002751",
+                "id": "astnode100002754",
                 "name": "module.exports",
                 "type": "CallExpression"
             }
