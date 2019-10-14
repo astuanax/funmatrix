@@ -32,8 +32,8 @@
         "comment": "",
         "meta": {
             "range": [
-                990,
-                1038
+                936,
+                984
             ],
             "filename": "matrix.js",
             "lineno": 29,
@@ -59,8 +59,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1018,
-                1036
+                964,
+                982
             ],
             "filename": "matrix.js",
             "lineno": 30,
@@ -124,8 +124,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1295,
-                1465
+                1241,
+                1411
             ],
             "filename": "matrix.js",
             "lineno": 45,
@@ -154,8 +154,8 @@
         "comment": "",
         "meta": {
             "range": [
-                1400,
-                1418
+                1346,
+                1364
             ],
             "filename": "matrix.js",
             "lineno": 48,
@@ -180,8 +180,8 @@
         "comment": "/**\n * @memberOf Matrix\n * @property {String} type - Returns the string 'Matrix' for all Matrix objects\n * @type {String}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.type === 'Matrix'\n */",
         "meta": {
             "range": [
-                1676,
-                1708
+                1622,
+                1654
             ],
             "filename": "matrix.js",
             "lineno": 63,
@@ -224,8 +224,8 @@
         "comment": "/**\n * @memberOf Matrix\n * @property {Number} precision - Floating point precision is set to 4 by default\n * @type {Number}\n * @example\n *\n * const m =  Matrix.of([[1,2],[2,3],[4,5]])\n * m.precision === 4\n */",
         "meta": {
             "range": [
-                1919,
-                1949
+                1865,
+                1895
             ],
             "filename": "matrix.js",
             "lineno": 74,
@@ -300,8 +300,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2273,
-                2358
+                2219,
+                2304
             ],
             "filename": "matrix.js",
             "lineno": 87,
@@ -330,8 +330,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2330,
-                2356
+                2276,
+                2302
             ],
             "filename": "matrix.js",
             "lineno": 88,
@@ -384,8 +384,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2639,
-                2775
+                2585,
+                2721
             ],
             "filename": "matrix.js",
             "lineno": 102,
@@ -413,8 +413,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2692,
-                2708
+                2638,
+                2654
             ],
             "filename": "matrix.js",
             "lineno": 103,
@@ -439,8 +439,8 @@
         "comment": "",
         "meta": {
             "range": [
-                2717,
-                2751
+                2663,
+                2697
             ],
             "filename": "matrix.js",
             "lineno": 104,
@@ -493,8 +493,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3005,
-                3096
+                2951,
+                3042
             ],
             "filename": "matrix.js",
             "lineno": 119,
@@ -546,8 +546,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3484,
-                3626
+                3430,
+                3572
             ],
             "filename": "matrix.js",
             "lineno": 134,
@@ -575,8 +575,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3538,
-                3571
+                3484,
+                3517
             ],
             "filename": "matrix.js",
             "lineno": 135,
@@ -601,8 +601,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3580,
-                3599
+                3526,
+                3545
             ],
             "filename": "matrix.js",
             "lineno": 136,
@@ -655,8 +655,8 @@
         "comment": "",
         "meta": {
             "range": [
-                3849,
-                3923
+                3795,
+                3869
             ],
             "filename": "matrix.js",
             "lineno": 151,
@@ -720,8 +720,8 @@
         "comment": "",
         "meta": {
             "range": [
-                4281,
-                4369
+                4227,
+                4315
             ],
             "filename": "matrix.js",
             "lineno": 168,
@@ -775,8 +775,8 @@
         "comment": "",
         "meta": {
             "range": [
-                4585,
-                4656
+                4531,
+                4602
             ],
             "filename": "matrix.js",
             "lineno": 182,
@@ -827,8 +827,8 @@
         "comment": "",
         "meta": {
             "range": [
-                4818,
-                4903
+                4764,
+                4849
             ],
             "filename": "matrix.js",
             "lineno": 195,
@@ -891,8 +891,8 @@
         "comment": "",
         "meta": {
             "range": [
-                5208,
-                5288
+                5154,
+                5234
             ],
             "filename": "matrix.js",
             "lineno": 212,
@@ -967,8 +967,8 @@
         "comment": "",
         "meta": {
             "range": [
-                5670,
-                5738
+                5616,
+                5684
             ],
             "filename": "matrix.js",
             "lineno": 230,
@@ -1032,8 +1032,8 @@
         "comment": "",
         "meta": {
             "range": [
-                6051,
-                6137
+                5997,
+                6083
             ],
             "filename": "matrix.js",
             "lineno": 246,
@@ -1108,8 +1108,8 @@
         "comment": "",
         "meta": {
             "range": [
-                6609,
-                6679
+                6555,
+                6625
             ],
             "filename": "matrix.js",
             "lineno": 266,
@@ -1174,8 +1174,8 @@
         "comment": "",
         "meta": {
             "range": [
-                7053,
-                7131
+                6999,
+                7077
             ],
             "filename": "matrix.js",
             "lineno": 283,
@@ -1250,8 +1250,8 @@
         "comment": "",
         "meta": {
             "range": [
-                7560,
-                7626
+                7506,
+                7572
             ],
             "filename": "matrix.js",
             "lineno": 301,
@@ -1326,8 +1326,8 @@
         "comment": "",
         "meta": {
             "range": [
-                8137,
-                8226
+                8083,
+                8172
             ],
             "filename": "matrix.js",
             "lineno": 322,
@@ -1413,8 +1413,8 @@
         "comment": "",
         "meta": {
             "range": [
-                8836,
-                8922
+                8782,
+                8868
             ],
             "filename": "matrix.js",
             "lineno": 345,
@@ -1464,8 +1464,8 @@
         "comment": "",
         "meta": {
             "range": [
-                9063,
-                9139
+                9009,
+                9085
             ],
             "filename": "matrix.js",
             "lineno": 355,
@@ -1538,8 +1538,8 @@
         "comment": "",
         "meta": {
             "range": [
-                9385,
-                9581
+                9331,
+                9527
             ],
             "filename": "matrix.js",
             "lineno": 368,
@@ -1564,8 +1564,8 @@
         "comment": "",
         "meta": {
             "range": [
-                9446,
-                9470
+                9392,
+                9416
             ],
             "filename": "matrix.js",
             "lineno": 369,
@@ -1618,8 +1618,8 @@
         "comment": "",
         "meta": {
             "range": [
-                9862,
-                9943
+                9808,
+                9889
             ],
             "filename": "matrix.js",
             "lineno": 388,
@@ -1671,8 +1671,8 @@
         "comment": "",
         "meta": {
             "range": [
-                10174,
-                10367
+                10120,
+                10313
             ],
             "filename": "matrix.js",
             "lineno": 404,
@@ -1697,8 +1697,8 @@
         "comment": "",
         "meta": {
             "range": [
-                10230,
-                10254
+                10176,
+                10200
             ],
             "filename": "matrix.js",
             "lineno": 405,
@@ -1762,8 +1762,8 @@
         "comment": "",
         "meta": {
             "range": [
-                10578,
-                10675
+                10524,
+                10621
             ],
             "filename": "matrix.js",
             "lineno": 417,
@@ -1837,8 +1837,8 @@
         "comment": "",
         "meta": {
             "range": [
-                10953,
-                11047
+                10899,
+                10993
             ],
             "filename": "matrix.js",
             "lineno": 431,
@@ -1903,8 +1903,8 @@
         "comment": "",
         "meta": {
             "range": [
-                11514,
-                11620
+                11460,
+                11566
             ],
             "filename": "matrix.js",
             "lineno": 454,
@@ -1980,8 +1980,8 @@
         "comment": "",
         "meta": {
             "range": [
-                12095,
-                12174
+                12041,
+                12120
             ],
             "filename": "matrix.js",
             "lineno": 476,
@@ -2045,8 +2045,8 @@
         "comment": "",
         "meta": {
             "range": [
-                12498,
-                12583
+                12444,
+                12529
             ],
             "filename": "matrix.js",
             "lineno": 492,
@@ -2103,8 +2103,8 @@
         "comment": "",
         "meta": {
             "range": [
-                12819,
-                12897
+                12765,
+                12843
             ],
             "filename": "matrix.js",
             "lineno": 508,
@@ -2179,8 +2179,8 @@
         "comment": "",
         "meta": {
             "range": [
-                13219,
-                13327
+                13165,
+                13273
             ],
             "filename": "matrix.js",
             "lineno": 525,
@@ -2211,8 +2211,8 @@
         "comment": "",
         "meta": {
             "range": [
-                13266,
-                13290
+                13212,
+                13236
             ],
             "filename": "matrix.js",
             "lineno": 526,
@@ -2265,8 +2265,8 @@
         "comment": "",
         "meta": {
             "range": [
-                13558,
-                13635
+                13504,
+                13581
             ],
             "filename": "matrix.js",
             "lineno": 542,
@@ -2341,8 +2341,8 @@
         "comment": "",
         "meta": {
             "range": [
-                13954,
-                14061
+                13900,
+                14007
             ],
             "filename": "matrix.js",
             "lineno": 559,
@@ -2373,8 +2373,8 @@
         "comment": "",
         "meta": {
             "range": [
-                14000,
-                14024
+                13946,
+                13970
             ],
             "filename": "matrix.js",
             "lineno": 560,
@@ -2437,8 +2437,8 @@
         "comment": "",
         "meta": {
             "range": [
-                14306,
-                14410
+                14252,
+                14356
             ],
             "filename": "matrix.js",
             "lineno": 571,
@@ -2521,8 +2521,8 @@
         "comment": "",
         "meta": {
             "range": [
-                14764,
-                14902
+                14710,
+                14848
             ],
             "filename": "matrix.js",
             "lineno": 584,
@@ -2554,8 +2554,8 @@
         "comment": "",
         "meta": {
             "range": [
-                14846,
-                14870
+                14792,
+                14816
             ],
             "filename": "matrix.js",
             "lineno": 585,
@@ -2605,8 +2605,8 @@
         "comment": "",
         "meta": {
             "range": [
-                15023,
-                15119
+                14969,
+                15065
             ],
             "filename": "matrix.js",
             "lineno": 595,
@@ -2658,8 +2658,8 @@
         "comment": "",
         "meta": {
             "range": [
-                15235,
-                15362
+                15181,
+                15308
             ],
             "filename": "matrix.js",
             "lineno": 605,
@@ -2686,8 +2686,8 @@
         "comment": "",
         "meta": {
             "range": [
-                15282,
-                15316
+                15228,
+                15262
             ],
             "filename": "matrix.js",
             "lineno": 606,
@@ -2737,8 +2737,8 @@
         "comment": "",
         "meta": {
             "range": [
-                15482,
-                15577
+                15428,
+                15523
             ],
             "filename": "matrix.js",
             "lineno": 617,
@@ -2795,8 +2795,8 @@
         "comment": "",
         "meta": {
             "range": [
-                15834,
-                15932
+                15780,
+                15878
             ],
             "filename": "matrix.js",
             "lineno": 632,
@@ -2860,8 +2860,8 @@
         "comment": "",
         "meta": {
             "range": [
-                16240,
-                16309
+                16186,
+                16255
             ],
             "filename": "matrix.js",
             "lineno": 648,
@@ -2927,8 +2927,8 @@
         "comment": "",
         "meta": {
             "range": [
-                16616,
-                16962
+                16562,
+                16908
             ],
             "filename": "matrix.js",
             "lineno": 666,
@@ -2997,8 +2997,8 @@
         "comment": "",
         "meta": {
             "range": [
-                17294,
-                17650
+                17240,
+                17596
             ],
             "filename": "matrix.js",
             "lineno": 691,
@@ -3067,8 +3067,8 @@
         "comment": "",
         "meta": {
             "range": [
-                18058,
-                18504
+                18004,
+                18450
             ],
             "filename": "matrix.js",
             "lineno": 716,
@@ -3125,8 +3125,8 @@
         "comment": "",
         "meta": {
             "range": [
-                18856,
-                18944
+                18802,
+                18890
             ],
             "filename": "matrix.js",
             "lineno": 739,
@@ -3194,8 +3194,8 @@
         "comment": "",
         "meta": {
             "range": [
-                19343,
-                19424
+                19289,
+                19370
             ],
             "filename": "matrix.js",
             "lineno": 759,
@@ -3249,8 +3249,8 @@
         "comment": "",
         "meta": {
             "range": [
-                19941,
-                20578
+                19887,
+                20524
             ],
             "filename": "matrix.js",
             "lineno": 778,
@@ -3288,8 +3288,8 @@
         "comment": "",
         "meta": {
             "range": [
-                19985,
-                20003
+                19931,
+                19949
             ],
             "filename": "matrix.js",
             "lineno": 779,
@@ -3314,8 +3314,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20012,
-                20022
+                19958,
+                19968
             ],
             "filename": "matrix.js",
             "lineno": 780,
@@ -3340,8 +3340,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20031,
-                20047
+                19977,
+                19993
             ],
             "filename": "matrix.js",
             "lineno": 781,
@@ -3366,8 +3366,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20056,
-                20072
+                20002,
+                20018
             ],
             "filename": "matrix.js",
             "lineno": 782,
@@ -3392,8 +3392,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20081,
-                20097
+                20027,
+                20043
             ],
             "filename": "matrix.js",
             "lineno": 783,
@@ -3418,8 +3418,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20110,
-                20115
+                20056,
+                20061
             ],
             "filename": "matrix.js",
             "lineno": 785,
@@ -3444,8 +3444,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20229,
-                20248
+                20175,
+                20194
             ],
             "filename": "matrix.js",
             "lineno": 787,
@@ -3471,8 +3471,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20262,
-                20271
+                20208,
+                20217
             ],
             "filename": "matrix.js",
             "lineno": 788,
@@ -3497,8 +3497,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20293,
-                20344
+                20239,
+                20290
             ],
             "filename": "matrix.js",
             "lineno": 789,
@@ -3524,8 +3524,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20360,
-                20369
+                20306,
+                20315
             ],
             "filename": "matrix.js",
             "lineno": 790,
@@ -3550,8 +3550,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20393,
-                20462
+                20339,
+                20408
             ],
             "filename": "matrix.js",
             "lineno": 791,
@@ -3577,8 +3577,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20490,
-                20495
+                20436,
+                20441
             ],
             "filename": "matrix.js",
             "lineno": 794,
@@ -3603,8 +3603,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20517,
-                20550
+                20463,
+                20496
             ],
             "filename": "matrix.js",
             "lineno": 795,
@@ -3658,8 +3658,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20855,
-                21841
+                20801,
+                21787
             ],
             "filename": "matrix.js",
             "lineno": 811,
@@ -3694,8 +3694,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20899,
-                20907
+                20845,
+                20853
             ],
             "filename": "matrix.js",
             "lineno": 812,
@@ -3720,8 +3720,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20916,
-                20943
+                20862,
+                20889
             ],
             "filename": "matrix.js",
             "lineno": 813,
@@ -3746,8 +3746,8 @@
         "comment": "",
         "meta": {
             "range": [
-                20956,
-                20961
+                20902,
+                20907
             ],
             "filename": "matrix.js",
             "lineno": 815,
@@ -3772,8 +3772,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21064,
-                21069
+                21010,
+                21015
             ],
             "filename": "matrix.js",
             "lineno": 819,
@@ -3798,8 +3798,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21172,
-                21177
+                21118,
+                21123
             ],
             "filename": "matrix.js",
             "lineno": 823,
@@ -3825,8 +3825,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21295,
-                21324
+                21241,
+                21270
             ],
             "filename": "matrix.js",
             "lineno": 831,
@@ -3851,8 +3851,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21329,
-                21378
+                21275,
+                21324
             ],
             "filename": "matrix.js",
             "lineno": 832,
@@ -3878,8 +3878,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21383,
-                21412
+                21329,
+                21358
             ],
             "filename": "matrix.js",
             "lineno": 833,
@@ -3905,8 +3905,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21422,
-                21457
+                21368,
+                21403
             ],
             "filename": "matrix.js",
             "lineno": 835,
@@ -3931,8 +3931,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21471,
-                21476
+                21417,
+                21422
             ],
             "filename": "matrix.js",
             "lineno": 836,
@@ -3957,8 +3957,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21511,
-                21544
+                21457,
+                21490
             ],
             "filename": "matrix.js",
             "lineno": 837,
@@ -3984,8 +3984,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21565,
-                21570
+                21511,
+                21516
             ],
             "filename": "matrix.js",
             "lineno": 840,
@@ -4010,8 +4010,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21633,
-                21668
+                21579,
+                21614
             ],
             "filename": "matrix.js",
             "lineno": 842,
@@ -4037,8 +4037,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21684,
-                21689
+                21630,
+                21635
             ],
             "filename": "matrix.js",
             "lineno": 843,
@@ -4063,8 +4063,8 @@
         "comment": "",
         "meta": {
             "range": [
-                21726,
-                21788
+                21672,
+                21734
             ],
             "filename": "matrix.js",
             "lineno": 844,
@@ -4129,8 +4129,8 @@
         "comment": "",
         "meta": {
             "range": [
-                22282,
-                22864
+                22228,
+                22810
             ],
             "filename": "matrix.js",
             "lineno": 871,
@@ -4162,8 +4162,8 @@
         "comment": "",
         "meta": {
             "range": [
-                22330,
-                22344
+                22276,
+                22290
             ],
             "filename": "matrix.js",
             "lineno": 872,
@@ -4188,8 +4188,8 @@
         "comment": "",
         "meta": {
             "range": [
-                22353,
-                22362
+                22299,
+                22308
             ],
             "filename": "matrix.js",
             "lineno": 873,
@@ -4214,8 +4214,8 @@
         "comment": "",
         "meta": {
             "range": [
-                22371,
-                22380
+                22317,
+                22326
             ],
             "filename": "matrix.js",
             "lineno": 874,
@@ -4240,8 +4240,8 @@
         "comment": "",
         "meta": {
             "range": [
-                22389,
-                22407
+                22335,
+                22353
             ],
             "filename": "matrix.js",
             "lineno": 875,
@@ -4294,8 +4294,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23088,
-                23397
+                23034,
+                23343
             ],
             "filename": "matrix.js",
             "lineno": 910,
@@ -4326,8 +4326,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23137,
-                23153
+                23083,
+                23099
             ],
             "filename": "matrix.js",
             "lineno": 911,
@@ -4352,8 +4352,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23162,
-                23178
+                23108,
+                23124
             ],
             "filename": "matrix.js",
             "lineno": 912,
@@ -4378,8 +4378,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23187,
-                23211
+                23133,
+                23157
             ],
             "filename": "matrix.js",
             "lineno": 913,
@@ -4404,8 +4404,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23221,
-                23368
+                23167,
+                23314
             ],
             "filename": "matrix.js",
             "lineno": 915,
@@ -4430,8 +4430,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23281,
-                23300
+                23227,
+                23246
             ],
             "filename": "matrix.js",
             "lineno": 916,
@@ -4481,8 +4481,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23552,
-                23733
+                23498,
+                23679
             ],
             "filename": "matrix.js",
             "lineno": 929,
@@ -4511,8 +4511,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23598,
-                23616
+                23544,
+                23562
             ],
             "filename": "matrix.js",
             "lineno": 930,
@@ -4537,8 +4537,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23623,
-                23633
+                23569,
+                23579
             ],
             "filename": "matrix.js",
             "lineno": 931,
@@ -4563,8 +4563,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23645,
-                23650
+                23591,
+                23596
             ],
             "filename": "matrix.js",
             "lineno": 932,
@@ -4589,8 +4589,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23683,
-                23711
+                23629,
+                23657
             ],
             "filename": "matrix.js",
             "lineno": 933,
@@ -4644,8 +4644,8 @@
         "comment": "",
         "meta": {
             "range": [
-                23913,
-                23978
+                23859,
+                23924
             ],
             "filename": "matrix.js",
             "lineno": 945,
@@ -4697,8 +4697,8 @@
         "comment": "",
         "meta": {
             "range": [
-                24261,
-                24386
+                24207,
+                24332
             ],
             "filename": "matrix.js",
             "lineno": 963,
@@ -4765,8 +4765,8 @@
         "comment": "",
         "meta": {
             "range": [
-                24673,
-                24732
+                24619,
+                24678
             ],
             "filename": "matrix.js",
             "lineno": 981,
@@ -4820,8 +4820,8 @@
         "comment": "",
         "meta": {
             "range": [
-                25010,
-                25144
+                24956,
+                25090
             ],
             "filename": "matrix.js",
             "lineno": 999,
@@ -4848,8 +4848,8 @@
         "comment": "",
         "meta": {
             "range": [
-                25092,
-                25105
+                25038,
+                25051
             ],
             "filename": "matrix.js",
             "lineno": 1001,
@@ -4915,8 +4915,8 @@
         "comment": "",
         "meta": {
             "range": [
-                25437,
-                25510
+                25383,
+                25456
             ],
             "filename": "matrix.js",
             "lineno": 1018,
@@ -4970,8 +4970,8 @@
         "comment": "",
         "meta": {
             "range": [
-                25758,
-                25912
+                25704,
+                25858
             ],
             "filename": "matrix.js",
             "lineno": 1036,
@@ -4998,8 +4998,8 @@
         "comment": "",
         "meta": {
             "range": [
-                25827,
-                25873
+                25773,
+                25819
             ],
             "filename": "matrix.js",
             "lineno": 1038,
@@ -5065,8 +5065,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26182,
-                26239
+                26128,
+                26185
             ],
             "filename": "matrix.js",
             "lineno": 1055,
@@ -5128,8 +5128,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26501,
-                27004
+                26447,
+                26950
             ],
             "filename": "matrix.js",
             "lineno": 1066,
@@ -5169,8 +5169,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26553,
-                26571
+                26499,
+                26517
             ],
             "filename": "matrix.js",
             "lineno": 1067,
@@ -5195,8 +5195,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26580,
-                26598
+                26526,
+                26544
             ],
             "filename": "matrix.js",
             "lineno": 1068,
@@ -5221,8 +5221,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26607,
-                26622
+                26553,
+                26568
             ],
             "filename": "matrix.js",
             "lineno": 1069,
@@ -5247,8 +5247,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26631,
-                26646
+                26577,
+                26592
             ],
             "filename": "matrix.js",
             "lineno": 1070,
@@ -5273,8 +5273,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26656,
-                26675
+                26602,
+                26621
             ],
             "filename": "matrix.js",
             "lineno": 1072,
@@ -5299,8 +5299,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26684,
-                26701
+                26630,
+                26647
             ],
             "filename": "matrix.js",
             "lineno": 1073,
@@ -5325,8 +5325,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26711,
-                26741
+                26657,
+                26687
             ],
             "filename": "matrix.js",
             "lineno": 1075,
@@ -5351,8 +5351,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26754,
-                26759
+                26700,
+                26705
             ],
             "filename": "matrix.js",
             "lineno": 1077,
@@ -5377,8 +5377,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26788,
-                26793
+                26734,
+                26739
             ],
             "filename": "matrix.js",
             "lineno": 1078,
@@ -5403,8 +5403,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26824,
-                26829
+                26770,
+                26775
             ],
             "filename": "matrix.js",
             "lineno": 1079,
@@ -5429,8 +5429,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26862,
-                26867
+                26808,
+                26813
             ],
             "filename": "matrix.js",
             "lineno": 1080,
@@ -5455,8 +5455,8 @@
         "comment": "",
         "meta": {
             "range": [
-                26893,
-                26947
+                26839,
+                26893
             ],
             "filename": "matrix.js",
             "lineno": 1081,
@@ -5527,8 +5527,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27330,
-                27403
+                27276,
+                27349
             ],
             "filename": "matrix.js",
             "lineno": 1098,
@@ -5580,8 +5580,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27580,
-                28097
+                27526,
+                28043
             ],
             "filename": "matrix.js",
             "lineno": 1108,
@@ -5614,8 +5614,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27694,
-                27716
+                27640,
+                27662
             ],
             "filename": "matrix.js",
             "lineno": 1111,
@@ -5640,8 +5640,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27729,
-                27751
+                27675,
+                27697
             ],
             "filename": "matrix.js",
             "lineno": 1112,
@@ -5666,8 +5666,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27764,
-                27786
+                27710,
+                27732
             ],
             "filename": "matrix.js",
             "lineno": 1113,
@@ -5692,8 +5692,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27799,
-                27821
+                27745,
+                27767
             ],
             "filename": "matrix.js",
             "lineno": 1114,
@@ -5718,8 +5718,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27866,
-                27880
+                27812,
+                27826
             ],
             "filename": "matrix.js",
             "lineno": 1118,
@@ -5744,8 +5744,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27891,
-                27925
+                27837,
+                27871
             ],
             "filename": "matrix.js",
             "lineno": 1119,
@@ -5770,8 +5770,8 @@
         "comment": "",
         "meta": {
             "range": [
-                27936,
-                27970
+                27882,
+                27916
             ],
             "filename": "matrix.js",
             "lineno": 1120,
@@ -5833,8 +5833,8 @@
         "comment": "",
         "meta": {
             "range": [
-                28348,
-                28421
+                28294,
+                28367
             ],
             "filename": "matrix.js",
             "lineno": 1134,
@@ -5885,8 +5885,8 @@
         "comment": "",
         "meta": {
             "range": [
-                28541,
-                28635
+                28487,
+                28581
             ],
             "filename": "matrix.js",
             "lineno": 1144,
@@ -5935,8 +5935,8 @@
         "comment": "",
         "meta": {
             "range": [
-                28756,
-                28850
+                28702,
+                28796
             ],
             "filename": "matrix.js",
             "lineno": 1154,
@@ -5957,7 +5957,7 @@
         "scope": "instance"
     },
     {
-        "comment": "/**\n * @memberOf Matrix\n * @function Matrix#divide\n * @desc Divide a scalar or a matrix by a matrix. Throws an error if the division is not possible.\n * @param {Matrix|Number} M - A Matrix M or a Number to multiply a Matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.divide(2) // [[10, 8]]\n * const B = Matrix.of([[5, 5]])\n * B.multiply(B) // [[25, 25]]\n *\n */",
+        "comment": "/**\n * @memberOf Matrix\n * @function Matrix#divide\n * @desc Divide a scalar or a matrix by a matrix. Throws an error if the division is not possible.\n * @param {Matrix|Number} M - A Matrix M or a Number to divide a Matrix\n * @returns {Matrix}\n * @example\n *\n * const A = Matrix.of([[5, 4]])\n * A.divide(2) // [[10, 8]]\n * const B = Matrix.of([[1, 1], [2, 4]])\n * B.divide(B) // [[1, 0], [0, 1]]\n *\n */",
         "meta": {
             "filename": "matrix.js",
             "lineno": 1158,
@@ -5977,7 +5977,7 @@
                         "Number"
                     ]
                 },
-                "description": "A Matrix M or a Number to multiply a Matrix",
+                "description": "A Matrix M or a Number to divide a Matrix",
                 "name": "M"
             }
         ],
@@ -5991,7 +5991,7 @@
             }
         ],
         "examples": [
-            "const A = Matrix.of([[5, 4]])\nA.divide(2) // [[10, 8]]\nconst B = Matrix.of([[5, 5]])\nB.multiply(B) // [[25, 25]]"
+            "const A = Matrix.of([[5, 4]])\nA.divide(2) // [[10, 8]]\nconst B = Matrix.of([[1, 1], [2, 4]])\nB.divide(B) // [[1, 0], [0, 1]]"
         ],
         "longname": "Matrix#divide",
         "scope": "instance"
@@ -6000,8 +6000,8 @@
         "comment": "",
         "meta": {
             "range": [
-                29244,
-                29674
+                29200,
+                29630
             ],
             "filename": "matrix.js",
             "lineno": 1172,
@@ -6030,8 +6030,8 @@
         "comment": "",
         "meta": {
             "range": [
-                29581,
-                29599
+                29537,
+                29555
             ],
             "filename": "matrix.js",
             "lineno": 1180,
@@ -6056,11 +6056,11 @@
         "comment": "",
         "meta": {
             "range": [
-                30219,
-                30240
+                29632,
+                29653
             ],
             "filename": "matrix.js",
-            "lineno": 1206,
+            "lineno": 1187,
             "columnno": 0,
             "path": "/Volumes/BigOne/github/funMatrix/src",
             "code": {

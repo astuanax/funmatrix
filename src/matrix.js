@@ -1,4 +1,3 @@
-// import { min, max, map, fold, curry } from 'fun.js'
 import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
@@ -13,6 +12,7 @@ import dot from './util/dot'
 import identity from './util/identity'
 import transpose from './util/transpose'
 import generate from './util/generate'
+
 import solve from './util/solve'
 
 /**
@@ -1183,6 +1183,5 @@ Matrix.prototype.divide = function (M) {
     return this.multiply(1 / M)
   }
 }
-
 
 export default Matrix
