@@ -4,6 +4,6 @@
  * @param decimals {Number}
  * @returns {Number}
  */
-export default function round (value, decimals) {
-  return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals)
+export default function round (value, decimals = 4) {
+  return Number(Number.parseFloat(value).toPrecision(decimals))
 }
