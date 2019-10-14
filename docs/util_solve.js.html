@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>util/round.js - Documentation</title>
+    <title>util/solve.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">util/round.js</h1>
+    <h1 class="page-title">util/solve.js</h1>
     
 
     
@@ -40,13 +40,58 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @function round
- * @param value {Number}
- * @param decimals {Number}
- * @returns {Number}
+ * @function solveL
+ * @desc solve the xA = b equation for lower triangular
+ * @param n
+ * @param L
+ * @param b
+ * @returns {Array}
  */
-export default function round (value, decimals = 4) {
-  return Number(Number.parseFloat(value).toPrecision(decimals))
+function solveL (n, L, b) {
+  let s = 0
+  const c = []
+
+  for (let k = 0; k &lt; n; ++k) {
+    for (let j = 0; j &lt; k; ++j) {
+      s = s + L.__value[k][j] * c[j]
+    }
+    c[k] = b[k] - s
+    s = 0
+  }
+  return c
+}
+
+/**
+ * @function solveU
+ * @desc solve the xA = b equation for upper triangular
+ * @param n
+ * @param U
+ * @param c
+ * @param b
+ */
+function solveU (n, U, c, b) {
+  const x = []
+  for (let a = n - 1; a > -1; --a) {
+    let t = 0
+    for (let b = a + 1; b &lt; n; ++b) {
+      t = t + U.__value[a][b] * x[b]
+    }
+    x[a] = (c[a] - t) / U.__value[a][a]
+  }
+  return x
+}
+
+/**
+ * @function solve
+ * @desc Helper function for xA = b solver
+ * @param n
+ * @param L
+ * @param U
+ * @param b
+ */
+export default function solve (n, L, U, b) {
+  const c = solveL(n, L, b)
+  return solveU(n, U, c, b)
 }
 </code></pre>
         </article>

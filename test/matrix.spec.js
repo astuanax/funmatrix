@@ -290,6 +290,12 @@ describe('Matrix operations multiplication', function () {
     chai.expect(A.multiply(1).__value).to.deep.equal(result)
   })
 
+  it('multiplies with a scalar', function () {
+    const result = [[2, 3], [3, 2]]
+    const A = Matrix.fromArray(result)
+    chai.expect(A.multiply(10).__value).to.deep.equal([[20, 30], [30, 20]])
+  })
+
   it('multiplies with a matrix', function () {
     const result = [[2, 3], [3, 2]]
     const A = Matrix.fromArray(result)
