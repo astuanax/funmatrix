@@ -1,3 +1,4 @@
+// import { min, max, map, fold, curry } from 'fun.js'
 import curry from 'fun.js/src/curry'
 import map from 'fun.js/src/map'
 import fold from 'fun.js/src/fold'
@@ -5,6 +6,7 @@ import max from 'fun.js/src/max'
 import min from 'fun.js/src/min'
 import reduce from 'fun.js/src/reduce'
 import equals from 'fun.js/src/equals'
+import not from 'fun.js/src/not'
 import concat from './util/concat'
 import empty from './util/empty'
 import dot from './util/dot'
@@ -18,7 +20,7 @@ import solve from './util/solve'
  * @classdesc Matrix applicative providing standard matrix operations
  * @summary The Matrix class should not be instantiated with the new keyword. Instead use the Matrix.of syntax to create a new Matrix. Unfortunatly jsdocs does not allow for the constructor to be hidden.
  * @hidecontructor
- * @see of
+ * @see Matrix.of
  * @example
  *
  * const m =  Matrix.of([[1,2],[2,3],[4,5]])
@@ -742,9 +744,10 @@ Matrix.prototype.additiveinverse = function () {
  * @memberOf Matrix
  * @function Matrix#hadamard
  * @desc Hadamar is an alias of the multiply function
- * @see multiply
+ * @see Matrix.multiply
  * @param {Matrix|Number} M - A Matrix M or a Number to multiply a Matrix
  * @returns {Matrix}
+ * @see Matrix.hadamard
  * @example
  *
  * const A = Matrix.of([[5, 4]])
@@ -936,7 +939,7 @@ Matrix.prototype.rank = function () {
  * @memberOf Matrix
  * @function Matrix#dimension
  * @desc Number indicating the maximum number of linearly independent columns.
- * @see rank
+ * @see Matrix.rank
  * @returns {Number}
  */
 Matrix.prototype.dimension = function () {
@@ -1151,5 +1154,35 @@ Matrix.prototype.max = function () {
 Matrix.prototype.min = function () {
   return reduce(min, [].concat.apply([], this.__value))
 }
+
+/**
+ * @memberOf Matrix
+ * @function Matrix#divide
+ * @desc Divide a scalar or a matrix by a matrix. Throws an error if the division is not possible.
+ * @param {Matrix|Number} M - A Matrix M or a Number to divide a Matrix
+ * @returns {Matrix}
+ * @example
+ *
+ * const A = Matrix.of([[5, 4]])
+ * A.divide(2) // [[10, 8]]
+ * const B = Matrix.of([[1, 1], [2, 4]])
+ * B.divide(B) // [[1, 0], [0, 1]]
+ *
+ */
+Matrix.prototype.divide = function (M) {
+  if (M instanceof Matrix) {
+    if (this.getCols() !== M.getCols() || this.getRows() !== M.getRows()) {
+      throw new Error('Matrices do not match, cannot create division')
+    }
+    if (not(M.isSquare())) {
+      throw new Error('Matrix is not square, cannot create inverse')
+    }
+    const mInv = M.inverse()
+    return this.dot(mInv)
+  } else {
+    return this.multiply(1 / M)
+  }
+}
+
 
 export default Matrix
