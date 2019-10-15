@@ -32,5 +32,5 @@ node_modules
 .vscode
 
 .DS_Store
-
+.idea
 /src/_matrix.js
