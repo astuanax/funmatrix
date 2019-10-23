@@ -24,8 +24,8 @@ const config = {
     path: __dirname + '/lib',
     filename: outputFile,
     library: 'funmatrix',
-    // libraryTarget: 'umd',
-    // umdNamedDefine: true,
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"
   },
   module: {
