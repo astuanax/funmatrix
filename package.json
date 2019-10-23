@@ -3,7 +3,8 @@
   "sideEffects": false,
   "version": "1.0.3",
   "description": "Matrix monad",
-  "main": "src/matrix.js",
+  "main": "lib/@astuanax/funmatrix.js",
+  "module": "src/matrix.js",
   "scripts": {
     "build": "./node_modules/.bin/eslint ./src --fix && npm run compile && npm run test && npm run jsdocs-json && npm run jsdocs && npm run size",
     "dev": "webpack --progress --colors --watch --env dev",
