@@ -1,6 +1,4 @@
-import curry from 'fun.js/src/curry'
-import fold from 'fun.js/src/fold'
-import map from 'fun.js/src/map'
+import { curry, map, fold } from 'fun.js'
 import round from './round'
 
 /**

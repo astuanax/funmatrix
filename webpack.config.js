@@ -23,9 +23,9 @@ const config = {
   output: {
     path: __dirname + '/lib',
     filename: outputFile,
-    library: libraryName,
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
+    library: 'funmatrix',
+    // libraryTarget: 'umd',
+    // umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"
   },
   module: {
@@ -57,6 +57,9 @@ const config = {
   resolve: {
     modules: [path.resolve('./node_modules'), path.resolve('./src')],
     extensions: ['.json', '.js']
+  },
+  externals: {
+    "fun.js": 'fun.js'
   }
 }
 

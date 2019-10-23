@@ -1,6 +1,4 @@
-import curry from 'fun.js/src/curry'
-import concat from 'fun.js/src/concat'
-
+import { curry, concat } from 'fun.js'
 /**
  * @function concat
  * @desc Helper function concatenating/combining 2 Matrices
