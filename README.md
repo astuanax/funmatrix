@@ -3,12 +3,15 @@ Matrix applicative providing standard matrix operations [Fork on Github](https:/
 
 [![Build Status](https://travis-ci.org/astuanax/funmatrix.svg?branch=master)](https://travis-ci.org/astuanax/funmatrix)  [![Code Climate](https://codeclimate.com/github/astuanax/funmatrix/badges/gpa.svg)](https://codeclimate.com/github/astuanax/funmatrix) [![Test Coverage](https://api.codeclimate.com/v1/badges/863475b9e13c7ebfb711/test_coverage)](https://codeclimate.com/github/astuanax/funmatrix/test_coverage) ![GitHub file size in bytes](https://img.badgesize.io/astuanax/funmatrix/master/lib/@astuanax/funmatrix.min.js.svg?compression=gzip)  [Check bundle size on bundlephobia](https://bundlephobia.com/result?p=fun.js@1.0.3)
 
-## Docs
+## Docs and examples
 
 The documentation can be found in the /docs folder or at the url [https://astuanax.github.io/funmatrix/](https://astuanax.github.io/funmatrix/)
 Or a json format of the docs: docs.json
 
 Generate docs using:  ```npm run jsdocs```
+
+An example repository with machinelearning algorithms can be found at the [funml repository](https://github.com/astuanax/funml)
+The [funml repository](https://github.com/astuanax/funml) has a NeuralNetwork, a Perceptron and a DecisionTree algorithm 
 
 ## Install funmatrix.js
 
