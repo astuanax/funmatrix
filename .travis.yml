@@ -13,5 +13,5 @@ script:
 - npm run test:cover
 after_script:
 - ./cc-test-reporter format-coverage -t lcov -o coverage/lcov.info  # Format frontend coverage
-- if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
+- if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage  -i coverage/lcov.info; fi
 
