@@ -379,7 +379,7 @@ Matrix.ap = curry(function (f, M) {
  *
  */
 Matrix.prototype.concat = function (M, f = concat) {
-  return Matrix.of(this).map(f(M))
+  return this.map(f(M))
 }
 
 /**
@@ -412,7 +412,7 @@ Matrix.concat = curry(function (A, B, f = concat) {
  * @returns {Matrix}
  */
 Matrix.prototype.empty = function () {
-  return Matrix.of(this).map(empty)
+  return this.map(empty)
 }
 
 /**
@@ -474,7 +474,7 @@ Matrix.identity = curry(function (rows, cols) {
  * @returns {Matrix}
  */
 Matrix.prototype.combine = function (M) {
-  return Matrix.of(this).concat(Matrix.of(M), concat)
+  return this.concat(Matrix.of(M), concat)
 }
 
 /**
@@ -511,7 +511,7 @@ Matrix.combine = curry(function (A, B) {
  *
  */
 Matrix.prototype.dot = function (M) {
-  return Matrix.of(this).concat(Matrix.of(M), dot(this.precision))
+  return this.concat(Matrix.of(M), dot(this.precision))
 }
 
 /**
@@ -549,7 +549,7 @@ Matrix.dot = curry(function (A, B) {
  *
  */
 Matrix.prototype.fill = function (f) {
-  return Matrix.of(this).map(map(x => f(x)))
+  return this.map(map(x => f(x)))
 }
 
 /**
@@ -565,7 +565,7 @@ Matrix.prototype.fill = function (f) {
  *
  */
 Matrix.prototype.zeros = function () {
-  return Matrix.of(this).fill(x => 0)
+  return this.fill(x => 0)
 }
 
 /**
@@ -599,7 +599,7 @@ Matrix.zeros = function (rows, cols) {
  *
  */
 Matrix.prototype.ones = function () {
-  return Matrix.of(this).fill(x => 1)
+  return this.fill(x => 1)
 }
 
 /**
@@ -628,7 +628,7 @@ Matrix.ones = function (rows, cols) {
  * @returns {Matrix}
  */
 Matrix.prototype.random = function (f = e => Math.random() * 2 - 1) {
-  return Matrix.of(this).fill(f)
+  return this.fill(f)
 }
 
 /**
@@ -796,7 +796,7 @@ Matrix.prototype.multiply = function (M) {
  * // [[-5, 5], [4, -4]]
  */
 Matrix.prototype.additiveinverse = function () {
-  return Matrix.of(this).multiply(-1)
+  return this.multiply(-1)
 }
 
 /**
@@ -816,7 +816,7 @@ Matrix.prototype.additiveinverse = function () {
 
  */
 Matrix.prototype.hadamard = function (M) {
-  return Matrix.of(this).multiply(M)
+  return this.multiply(M)
 }
 
 /**
@@ -932,27 +932,8 @@ Matrix.prototype.solve = function (b) {
   const L = LU[0]
   const U = LU[1]
   const n = this.getRows()
-  // let s = 0
-  // const c = []
-  // const x = []
 
   return solve(n, L, U, b)
-
-  // for (let k = 0; k < n; ++k) {
-  //   for (let j = 0; j < k; ++j) {
-  //     s = s + L.__value[k][j] * c[j]
-  //   }
-  //   c[k] = b[k] - s
-  //   s = 0
-  // }
-  // for (let a = n - 1; a > -1; --a) {
-  //   let t = 0
-  //   for (let b = a + 1; b < n; ++b) {
-  //     t = t + U.__value[a][b] * x[b]
-  //   }
-  //   x[a] = (c[a] - t) / U.__value[a][a]
-  // }
-  // return x
 }
 
 /**

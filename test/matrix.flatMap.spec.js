@@ -15,6 +15,7 @@ describe('flatMap a Matrix', function () {
     const A = Matrix.of(a)
     chai.expect(A.__value).to.deep.equal(a)
     chai.expect(A.flatMap(x => x)).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    chai.expect(Matrix.flatMap(x => x, A)).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
   })
 
@@ -23,6 +24,7 @@ describe('flatMap a Matrix', function () {
     const A = Matrix.of(a)
     chai.expect(A.__value).to.deep.equal(a)
     chai.expect(A.flatten()).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    chai.expect(Matrix.flatten(A)).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9])
   })
 
 })

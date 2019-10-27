@@ -19,6 +19,16 @@ describe('getRow of Matrix', function () {
     chai.expect(A.getColumn(1)).to.deep.equal([2,5,8])
     chai.expect(A.getRow(0)).to.deep.equal([1,2,3])
     chai.expect(A.getRow(1)).to.deep.equal([4,5,6])
+
+    chai.expect(Matrix.getColumn(0, A)).to.deep.equal([1,4,7])
+    chai.expect(Matrix.getColumn(1, A)).to.deep.equal([2,5,8])
+    chai.expect(Matrix.getRow(0, A)).to.deep.equal([1,2,3])
+    chai.expect(Matrix.getRow(1, A)).to.deep.equal([4,5,6])
+
+    chai.expect(Matrix.getColumn(0, a)).to.deep.equal([1,4,7])
+    chai.expect(Matrix.getColumn(1, a)).to.deep.equal([2,5,8])
+    chai.expect(Matrix.getRow(0, a)).to.deep.equal([1,2,3])
+    chai.expect(Matrix.getRow(1, a)).to.deep.equal([4,5,6])
   })
 
 })

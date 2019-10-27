@@ -18,6 +18,13 @@ describe('create a Matrix', function () {
     const m = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
     const M = Matrix.of(m)
     chai.expect(M.__value).to.deep.equal([[1, 2, 3], [2, 3, 4], [3, 4, 5]])
+    // const M2 = M.of([[5,4,3], [2,1,0]])
+    // chai.expect(M2.__value).to.deep.equal([[5,4,3], [2,1,0]])
+    // chai.expect(M2.type).to.deep.equal('Matrix')
+    const M3 = Matrix.of(M)
+    chai.expect(M3.__value).to.deep.equal(m)
+    chai.expect(M3.type).to.deep.equal('Matrix')
+
   })
 
   it('create init matrix', () => {
@@ -419,6 +426,7 @@ describe('Matrix kronecker product', function () {
     const B = Matrix.of([[0, 5], [6, 7]])
     const kronecker = A.kronecker(B)
     chai.expect(kronecker.__value).to.deep.equal([[0, 5, 0, 10], [6, 7, 12, 14], [0, 15, 0, 20], [18, 21, 24, 28]])
+    chai.expect(Matrix.kronecker(A, B).__value).to.deep.equal([[0, 5, 0, 10], [6, 7, 12, 14], [0, 15, 0, 20], [18, 21, 24, 28]])
   })
 })
 
