@@ -1,8 +1,8 @@
-import { curry, map, fold, max, min, reduce, equals, not } from 'fun.js'
+import { curry, map, fold, max, min, reduce, equals, not, flatMap, identity } from 'fun.js'
 import concat from './util/concat'
 import empty from './util/empty'
 import dot from './util/dot'
-import identity from './util/identity'
+import matrixIdentity from './util/identity'
 import transpose from './util/transpose'
 import generate from './util/generate'
 
@@ -226,6 +226,72 @@ Matrix.map = curry(function (f, M) {
 
 /**
  * @memberOf Matrix
+ * @function Matrix#flatMap
+ * @description Runs flatMap on the value of hte Matrix
+ * @param {Function} fn Flatten function
+ * @returns {*}
+ * @example
+ *
+ * const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ * const A = Matrix.of(a)
+ * const flattenedArray = A.flatMap(x => x)  // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ *
+ */
+Matrix.prototype.flatMap = function (fn) {
+  return flatMap(fn)(this.__value)
+}
+
+/**
+ * @memberOf Matrix
+ * @function Matrix.flatMap
+ * @description Runs flatMap on the value of hte Matrix
+ * @param {Function} fn Flatten function
+ * @param {Matrix | Array} M
+ * @returns {*}
+ * @example
+ *
+ * const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ * const flattenedArray = Matrix.flatMap(x => x, a)  // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ *
+ */
+Matrix.flatMap = curry(function (fn, M) {
+  return Matrix.of(M).flatMap(fn)
+})
+
+/**
+ * @memberOf Matrix
+ * @function Matrix#flatten
+ * @description Flattens the value of a Matrix into an one dimensional array
+ * @returns {Array}
+ * @example
+ *
+ * const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ * const A = Matrix.of(a)
+ * const flattenedArray = A.flatten()  // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ *
+ */
+Matrix.prototype.flatten = function () {
+  return this.flatMap(identity)
+}
+
+/**
+ * @memberOf Matrix
+ * @function Matrix.flatten
+ * @description Flattens the value of a Matrix into an one dimensional array
+ * @returns {Array}
+ * @returns {*}
+ * @example
+ *
+ * const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+ * const flattenedArray = Matrix.flatten(a)  // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ *
+ */
+Matrix.flatten = function (M) {
+  return Matrix.of(M).flatMap(identity)
+}
+
+/**
+ * @memberOf Matrix
  * @function Matrix#fold
  * @description Reduce the matrix rows using a reduce function
  * @param {Function} f - A reduce/fold function
@@ -367,36 +433,36 @@ Matrix.empty = curry(function (rows = 0, cols = 0) {
 
 /**
  * @memberOf Matrix
- * @function Matrix#identity
- * @desc Returns an identity matrix
+ * @function Matrix#matrixIdentity
+ * @desc Returns an matrixIdentity matrix
  * @returns {Matrix}
  * @example
  *
  * const a = [[1, 2, 3], [4, 5, 6]]
  * const A = Matrix.of(a)
- * const Aidentity = A.identity()
+ * const Aidentity = A.matrixIdentity()
  * // [[1, 0, 0], [0, 1, 0]]
  *
  */
 Matrix.prototype.identity = function () {
-  return Matrix.of(identity).ap(this)
+  return Matrix.of(matrixIdentity).ap(this)
 }
 
 /**
  * @memberOf Matrix
  * @static
- * @function Matrix.identity
- * @desc curried fucntion that returns an identity matrix
+ * @function Matrix.matrixIdentity
+ * @desc curried fucntion that returns an matrixIdentity matrix
  * @returns {Matrix}
  * @example
  *
- * const A = Matrix.identity(3, 2)
+ * const A = Matrix.matrixIdentity(3, 2)
  * // [[1, 0, 0], [0, 1, 0]]
  *
  */
 Matrix.identity = curry(function (rows, cols) {
   const m = generate(rows, cols) // Array.apply(null, Array(rows)).map(x => Array.apply(null, Array(cols)))
-  return Matrix.of(identity).ap(m)
+  return Matrix.of(matrixIdentity).ap(m)
 })
 
 /**
@@ -436,11 +502,11 @@ Matrix.combine = curry(function (A, B) {
  * // Create matrix
  * const m = Matrix.of([[1, 2], [3, 4]])
  *
- * // Generate identity matrix
- * const I  = m.identity() // [[1, 0], [0, 1]]
+ * // Generate matrixIdentity matrix
+ * const I  = m.matrixIdentity() // [[1, 0], [0, 1]]
  *
  * if(m.dot(I).equals(m)) {
- *    console.log('Dot product with identity matrix returns the same matrix')
+ *    console.log('Dot product with matrixIdentity matrix returns the same matrix')
  * }
  *
  */
@@ -1176,5 +1242,51 @@ Matrix.prototype.divide = function (M) {
     return this.multiply(1 / M)
   }
 }
+
+/**
+ * @memberOf Matrix
+ * @function Matrix#getColumn
+ * @desc Returns the values of a Matrix column
+ * @param {Number} index Index of the column
+ * @returns {Array}
+ */
+Matrix.prototype.getColumn = function (index) {
+  return this.flatMap(x => x[index])
+}
+
+/**
+ * @memberOf Matrix
+ * @function Matrix.getColumn
+ * @desc Returns the values of a Matrix column
+ * @param {Number} index Index of the column
+ * @param {Matrix | Array} M
+ * @returns {Array}
+ */
+Matrix.getColumn = curry(function (index, M) {
+  return Matrix.of(M).getColumn(index)
+})
+
+/**
+ * @memberOf Matrix
+ * @function Matrix#getRow
+ * @desc Returns the values of a Matrix row
+ * @param {Number} index Index of the row
+ * @returns {Array}
+ */
+Matrix.prototype.getRow = function (index) {
+  return this.__value[index]
+}
+
+/**
+ * @memberOf Matrix
+ * @function Matrix.getRow
+ * @desc Returns the values of a Matrix row
+ * @param {Number} index Index of the row
+ * @param {Matrix | Array} M
+ * @returns {Array}
+ */
+Matrix.getRow = curry(function (index, M) {
+  return Matrix.of(M).getRow(index)
+})
 
 export default Matrix

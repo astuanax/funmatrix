@@ -62,7 +62,7 @@ describe('Matrix is immutable', function () {
 })
 
 describe('applies a Matrix to a function', function () {
-  it('it returns identity', function () {
+  it('it returns matrixIdentity', function () {
     const a = [[0, 1, 1], [2, 3, 4]]
     const identity = x => x.map(y => y)
     const A = Matrix.of(identity).ap(a)
@@ -129,7 +129,7 @@ describe('Semigroup concat', function () {
 })
 
 describe('DOT product', function () {
-  it('should multiply by identity', function () {
+  it('should multiply by matrixIdentity', function () {
     const a = [[0, 1, 0], [2, 4, 0], [3, 4, 0]]
     const b = [[2, 0, 0], [0, 2, 0], [0, 0, 2]]
 
@@ -166,7 +166,7 @@ describe('DOT product', function () {
 })
 
 describe('Identity Matrix', function () {
-  it('should return identity matrix', function () {
+  it('should return matrixIdentity matrix', function () {
     const a = [[1, 2, 3], [4, 5, 6]]
     const b = [[7, 8], [9, 10], [11, 12]]
 
@@ -195,7 +195,7 @@ describe('Transpose Matrix', function () {
     chai.expect(A.__value).to.deep.equal(result)
   })
 
-  it('should transpose an identity matrix', function () {
+  it('should transpose an matrixIdentity matrix', function () {
     const A = Matrix.identity(10, 10)
     const B = Matrix.identity(10, 10)
 

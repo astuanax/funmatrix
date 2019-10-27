@@ -1,7 +1,7 @@
 import { map } from 'fun.js'
 
 /**
- * @function identity
+ * @function matrixIdentity
  * @desc Creates an identiy matrix from an empty array
  * @param m {Array}
  * @param idx {Number}
