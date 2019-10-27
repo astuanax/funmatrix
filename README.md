@@ -11,7 +11,8 @@ Or a json format of the docs: docs.json
 Generate docs using:  ```npm run jsdocs```
 
 An example repository with machinelearning algorithms can be found at the [funml repository](https://github.com/astuanax/funml)
-The [funml repository](https://github.com/astuanax/funml) has a NeuralNetwork, a Perceptron and a DecisionTree algorithm 
+The [funml repository](https://github.com/astuanax/funml) has a NeuralNetwork, a Perceptron and a DecisionTree algorithm.
+The test folder contains an example solving the XOR problem with a Neural network, using Decisiontrees on the [Iris database](https://datahub.io/machine-learning/iris) and a simple Perceptron using the [sonar database](https://datahub.io/machine-learning/sonar)
 
 ## Install funmatrix.js
 
