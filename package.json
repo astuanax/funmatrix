@@ -69,6 +69,6 @@
     "yargs": "^10.0.3"
   },
   "dependencies": {
-    "fun.js": "^1.0.5"
+    "fun.js": "^1.0.6"
   }
 }
